@@ -1,0 +1,9 @@
+<launch>
+  <!-- Robot State Publisher 실행 -->
+  <node pkg="robot_state_publisher" exec="robot_state_publisher" name="robot_state_publisher" output="screen">
+      <param name="robot_description" command="cat /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/data/urdf/AVATAR_URDF_Test3/urdf/AVATAR_URDF_Test3.urdf" />
+  </node>
+
+  <!-- RViz 실행 -->
+  <node pkg="rviz2" exec="rviz2" name="rviz2" output="screen" />
+</launch>

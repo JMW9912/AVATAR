@@ -1,0 +1,1265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="AVATAR_URDF_Test3">
+  <link
+    name="Base">
+    <inertial>
+      <origin
+        xyz="0.000303243326167879 -0.000242347714140528 0.170803737218352"
+        rpy="0 0 0" />
+      <mass
+        value="4.6034714284956" />
+      <inertia
+        ixx="0.0290033647219628"
+        ixy="1.64284188590394E-07"
+        ixz="2.18867887595009E-09"
+        iyy="0.0311320594248545"
+        iyz="7.20585335229902E-08"
+        izz="0.00547620405416547" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/Base.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/Base.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Waist_Bottom">
+    <inertial>
+      <origin
+        xyz="-2.42245167183242E-05 -0.00334522502278586 0.311976626423601"
+        rpy="0 0 0" />
+      <mass
+        value="0.531312548786671" />
+      <inertia
+        ixx="0.00119335950860488"
+        ixy="1.58093822860754E-06"
+        ixz="8.85274488170103E-09"
+        iyy="0.000231775631538982"
+        iyz="-1.61190294553858E-07"
+        izz="0.00118158666774528" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/Waist_Bottom.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/Waist_Bottom.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint21"
+    type="revolute">
+    <origin
+      xyz="0 0 0.084"
+      rpy="0 0 0" />
+    <parent
+      link="Base" />
+    <child
+      link="Waist_Bottom" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Waist_Top">
+    <inertial>
+      <origin
+        xyz="0.00230333871667876 0.0221572223284396 0.198845059858091"
+        rpy="0 0 0" />
+      <mass
+        value="4.3469015612453" />
+      <inertia
+        ixx="0.0314705322393854"
+        ixy="-9.24811297745712E-09"
+        ixz="1.19346285971661E-07"
+        iyy="0.0174127352748354"
+        iyz="-1.32200547208725E-05"
+        izz="0.0180955754507868" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/Waist_Top.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/Waist_Top.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint20"
+    type="revolute">
+    <origin
+      xyz="0 0 0.334"
+      rpy="0 0 0" />
+    <parent
+      link="Waist_Bottom" />
+    <child
+      link="Waist_Top" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Neck1">
+    <inertial>
+      <origin
+        xyz="-2.30302027032225E-08 0.00281444186931717 0.0317914438373298"
+        rpy="0 0 0" />
+      <mass
+        value="0.206569749668231" />
+      <inertia
+        ixx="9.50254900314168E-05"
+        ixy="1.34717106493204E-11"
+        ixz="3.87620840061872E-13"
+        iyy="5.8528856103503E-05"
+        iyz="2.59110871376959E-08"
+        izz="8.23348577959084E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/Neck1.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/Neck1.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint17"
+    type="revolute">
+    <origin
+      xyz="0 0.00014877 0.545"
+      rpy="0 0 0" />
+    <parent
+      link="Waist_Top" />
+    <child
+      link="Neck1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Neck2">
+    <inertial>
+      <origin
+        xyz="0.00854491891680327 -2.3637120039055E-11 0.0492566356192752"
+        rpy="0 0 0" />
+      <mass
+        value="0.16912696282762" />
+      <inertia
+        ixx="5.39909683894887E-05"
+        ixy="6.5501864447379E-15"
+        ixz="-2.59110802879995E-08"
+        iyy="7.47516175505277E-05"
+        iyz="3.55325838391412E-13"
+        izz="8.22454172445823E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/Neck2.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/Neck2.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint18"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0385"
+      rpy="0 0 0" />
+    <parent
+      link="Neck1" />
+    <child
+      link="Neck2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Head">
+    <inertial>
+      <origin
+        xyz="0.011868632180432 -1.73841443054656E-06 0.0420062370189285"
+        rpy="0 0 0" />
+      <mass
+        value="0.228692319590113" />
+      <inertia
+        ixx="0.000519416418262081"
+        ixy="3.6302851140037E-09"
+        ixz="-3.88931145120359E-07"
+        iyy="0.000404644663196271"
+        iyz="1.74154474795361E-08"
+        izz="0.00012987386650223" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/Head.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/Head.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint19"
+    type="revolute">
+    <origin
+      xyz="0.051 0 0.061"
+      rpy="0 0 0" />
+    <parent
+      link="Neck2" />
+    <child
+      link="Head" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="R_Shoulder1">
+    <inertial>
+      <origin
+        xyz="-0.00252075965447164 0.0121593639745771 0.0296786139966227"
+        rpy="0 0 0" />
+      <mass
+        value="0.410805392974447" />
+      <inertia
+        ixx="0.000530690638124942"
+        ixy="7.61706374690236E-08"
+        ixz="1.76993271148482E-08"
+        iyy="0.000173389320055398"
+        iyz="-2.0508354153909E-07"
+        izz="0.000530075178211183" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/R_Shoulder1.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/R_Shoulder1.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="0 -0.15785 0.51"
+      rpy="0 0 0" />
+    <parent
+      link="Waist_Top" />
+    <child
+      link="R_Shoulder1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="R_Shoulder2">
+    <inertial>
+      <origin
+        xyz="-6.10622663543836E-16 -0.0222059958829576 2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.182373702997158" />
+      <inertia
+        ixx="0.000109130549741493"
+        ixy="-4.63541160383502E-21"
+        ixz="2.30846585098975E-10"
+        iyy="0.000178289560188981"
+        iyz="-1.85867664463217E-20"
+        izz="0.00018625573726423" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/R_Shoulder2.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/R_Shoulder2.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="revolute">
+    <origin
+      xyz="0 -0.047995 0.033"
+      rpy="0 0 0" />
+    <parent
+      link="R_Shoulder1" />
+    <child
+      link="R_Shoulder2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="R_Shoulder3">
+    <inertial>
+      <origin
+        xyz="-0.000803688860219268 4.46847804119743E-06 -0.0470056363073573"
+        rpy="0 0 0" />
+      <mass
+        value="0.731280740842248" />
+      <inertia
+        ixx="0.000603982320899008"
+        ixy="5.20431167910932E-09"
+        ixz="-3.18492330639882E-07"
+        iyy="0.000965249594039117"
+        iyz="4.59547965705601E-09"
+        izz="0.000640174610782945" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/R_Shoulder3.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/R_Shoulder3.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="revolute">
+    <origin
+      xyz="0 -0.062005 0"
+      rpy="0 0 0" />
+    <parent
+      link="R_Shoulder2" />
+    <child
+      link="R_Shoulder3" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="R_Upperarm">
+    <inertial>
+      <origin
+        xyz="-2.54857385195706E-11 -0.000679843103449984 -0.113884552409043"
+        rpy="0 0 0" />
+      <mass
+        value="0.580136792741574" />
+      <inertia
+        ixx="0.000889538746951816"
+        ixy="-6.21276551871808E-12"
+        ixz="3.84754853200853E-13"
+        iyy="0.000655419499386114"
+        iyz="-4.8641178942802E-08"
+        izz="0.000431186138600684" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/R_Upperarm.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/R_Upperarm.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.163"
+      rpy="0 0 1.57" />
+    <parent
+      link="R_Shoulder3" />
+    <child
+      link="R_Upperarm" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="R_Forearm">
+    <inertial>
+      <origin
+        xyz="2.37730210517206E-10 -8.45642979990791E-06 -0.0868969688774723"
+        rpy="0 0 0" />
+      <mass
+        value="0.523376663655262" />
+      <inertia
+        ixx="0.000391242591357743"
+        ixy="6.23870499052244E-12"
+        ixz="9.41918960385042E-13"
+        iyy="0.000350534331969182"
+        iyz="5.8072695135785E-08"
+        izz="0.000208506912802897" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/R_Forearm.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/R_Forearm.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.155"
+      rpy="0 0 0" />
+    <parent
+      link="R_Upperarm" />
+    <child
+      link="R_Forearm" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="R_Wrist1">
+    <inertial>
+      <origin
+        xyz="1.345126912633E-09 0.01122592939157 -0.03307940040027"
+        rpy="0 0 0" />
+      <mass
+        value="0.555405184095184" />
+      <inertia
+        ixx="0.000326336042461568"
+        ixy="7.91127751655736E-13"
+        ixz="-3.43756291852213E-12"
+        iyy="0.000163409853946009"
+        iyz="-2.02057400386373E-06"
+        izz="0.000281591850327162" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/R_Wrist1.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/R_Wrist1.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.148"
+      rpy="0 0 0" />
+    <parent
+      link="R_Forearm" />
+    <child
+      link="R_Wrist1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="R_Wrist2">
+    <inertial>
+      <origin
+        xyz="-0.00119322980257797 0.000860937985712074 -9.48286903401652E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.466729684502222" />
+      <inertia
+        ixx="0.000113472843914248"
+        ixy="1.3962784021659E-11"
+        ixz="-5.72958849987533E-08"
+        iyy="0.000270164186143069"
+        iyz="-1.9742367504101E-13"
+        izz="0.000261912601367446" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/R_Wrist2.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/R_Wrist2.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint7"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.1055"
+      rpy="0 0 0" />
+    <parent
+      link="R_Wrist1" />
+    <child
+      link="R_Wrist2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="R_Wrist3">
+    <inertial>
+      <origin
+        xyz="0.00150904925021786 0.00343555190006029 -0.106634948939387"
+        rpy="0 0 0" />
+      <mass
+        value="0.408588774804358" />
+      <inertia
+        ixx="0.00055571358233878"
+        ixy="-4.05452481802536E-05"
+        ixz="-6.40728794136174E-06"
+        iyy="0.00061200625448681"
+        iyz="-1.81696539432522E-06"
+        izz="0.00030061553786221" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/R_Wrist3.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/R_Wrist3.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint8"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="R_Wrist2" />
+    <child
+      link="R_Wrist3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L_Shoulder1">
+    <inertial>
+      <origin
+        xyz="-0.00252075965447164 -0.0121593639745771 0.0296786139966227"
+        rpy="0 0 0" />
+      <mass
+        value="0.410805392974447" />
+      <inertia
+        ixx="0.000530690638124942"
+        ixy="7.61706374690236E-08"
+        ixz="1.76993271148482E-08"
+        iyy="0.000173389320055398"
+        iyz="-2.0508354153909E-07"
+        izz="0.000530075178211183" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/L_Shoulder1.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/L_Shoulder1.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint9"
+    type="revolute">
+    <origin
+      xyz="0 0.15785 0.51"
+      rpy="0 0 0" />
+    <parent
+      link="Waist_Top" />
+    <child
+      link="L_Shoulder1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L_Shoulder2">
+    <inertial>
+      <origin
+        xyz="-6.10622663543836E-16 0.0222059958829576 2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.182373702997158" />
+      <inertia
+        ixx="0.000109130549741493"
+        ixy="-4.63541160383502E-21"
+        ixz="2.30846585098975E-10"
+        iyy="0.000178289560188981"
+        iyz="-1.85867664463217E-20"
+        izz="0.00018625573726423" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/L_Shoulder2.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/L_Shoulder2.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint10"
+    type="revolute">
+    <origin
+      xyz="0 0.047995 0.033"
+      rpy="0 0 0" />
+    <parent
+      link="L_Shoulder1" />
+    <child
+      link="L_Shoulder2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L_Shoulder3">
+    <inertial>
+      <origin
+        xyz="-0.000803688860219268 -4.46847804119743E-06 -0.0470056363073573"
+        rpy="0 0 0" />
+      <mass
+        value="0.731280740842248" />
+      <inertia
+        ixx="0.000603982320899008"
+        ixy="5.20431167910932E-09"
+        ixz="-3.18492330639882E-07"
+        iyy="0.000965249594039117"
+        iyz="4.59547965705601E-09"
+        izz="0.000640174610782945" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/L_Shoulder3.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/L_Shoulder3.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint11"
+    type="revolute">
+    <origin
+      xyz="0 0.062005 0"
+      rpy="0 0 0" />
+    <parent
+      link="L_Shoulder2" />
+    <child
+      link="L_Shoulder3" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L_Upperarm">
+    <inertial>
+      <origin
+        xyz="-2.54857385195706E-11 0.000679843103449984 -0.113884552409043"
+        rpy="0 0 0" />
+      <mass
+        value="0.580136792741574" />
+      <inertia
+        ixx="0.000889538746951816"
+        ixy="-6.21276551871808E-12"
+        ixz="3.84754853200853E-13"
+        iyy="0.000655419499386114"
+        iyz="-4.8641178942802E-08"
+        izz="0.000431186138600684" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/L_Upperarm.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/L_Upperarm.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint12"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.163"
+      rpy="0 0 -1.57" />
+    <parent
+      link="L_Shoulder3" />
+    <child
+      link="L_Upperarm" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L_Forearm">
+    <inertial>
+      <origin
+        xyz="2.37730210517206E-10 8.45642979990791E-06 -0.0868969688774723"
+        rpy="0 0 0" />
+      <mass
+        value="0.523376663655262" />
+      <inertia
+        ixx="0.000391242591357743"
+        ixy="6.23870499052244E-12"
+        ixz="9.41918960385042E-13"
+        iyy="0.000350534331969182"
+        iyz="5.8072695135785E-08"
+        izz="0.000208506912802897" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/L_Forearm.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/L_Forearm.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint13"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.155"
+      rpy="0 0 0" />
+    <parent
+      link="L_Upperarm" />
+    <child
+      link="L_Forearm" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L_Wrist1">
+    <inertial>
+      <origin
+        xyz="1.345126912633E-09 -0.01122592939157 -0.03307940040027"
+        rpy="0 0 0" />
+      <mass
+        value="0.555405184095184" />
+      <inertia
+        ixx="0.000326336042461568"
+        ixy="7.91127751655736E-13"
+        ixz="-3.43756291852213E-12"
+        iyy="0.000163409853946009"
+        iyz="-2.02057400386373E-06"
+        izz="0.000281591850327162" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/L_Wrist1.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/L_Wrist1.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint14"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.148"
+      rpy="0 0 0" />
+    <parent
+      link="L_Forearm" />
+    <child
+      link="L_Wrist1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L_Wrist2">
+    <inertial>
+      <origin
+        xyz="-0.00119322980257797 -0.000860937985712074 -9.48286903401652E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.466729684502222" />
+      <inertia
+        ixx="0.000113472843914248"
+        ixy="1.3962784021659E-11"
+        ixz="-5.72958849987533E-08"
+        iyy="0.000270164186143069"
+        iyz="-1.9742367504101E-13"
+        izz="0.000261912601367446" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/L_Wrist2.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/L_Wrist2.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint15"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.1055"
+      rpy="0 0 0" />
+    <parent
+      link="L_Wrist1" />
+    <child
+      link="L_Wrist2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L_Wrist3">
+    <inertial>
+      <origin
+        xyz="0.00150904925021786 -0.00343555190006029 -0.106634948939387"
+        rpy="0 0 0" />
+      <mass
+        value="0.408588774804358" />
+      <inertia
+        ixx="0.00055571358233878"
+        ixy="-4.05452481802536E-05"
+        ixz="-6.40728794136174E-06"
+        iyy="0.00061200625448681"
+        iyz="-1.81696539432522E-06"
+        izz="0.00030061553786221" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/L_Wrist3.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dynamixel_control/urdf/meshes/L_Wrist3.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint16"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="L_Wrist2" />
+    <child
+      link="L_Wrist3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

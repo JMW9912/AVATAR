@@ -1,0 +1,31 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/sjlee/ws_moveit2/install/moveit_task_constructor_visualization/include/**",
+        "/home/sjlee/ws_moveit2/install/moveit_task_constructor_demo/include/**",
+        "/home/sjlee/ws_moveit2/install/moveit_task_constructor_core/include/**",
+        "/home/sjlee/ws_moveit2/install/rviz_marker_tools/include/**",
+        "/home/sjlee/ws_moveit2/install/moveit_task_constructor_msgs/include/**",
+        "/home/sjlee/ros2_ws/install/ros2_aruco_interfaces/include/**",
+        "/home/sjlee/ros2_ws/install/realsense2_camera/include/**",
+        "/home/sjlee/ros2_ws/install/realsense2_camera_msgs/include/**",
+        "/home/sjlee/ros2_ws/install/dynamixel_sdk/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/sjlee/ros2_ws/src/birc_arm_control/Dynamixel/dynamixel_sdk/include/**",
+        "/home/sjlee/ros2_ws/src/realsense-ros/realsense2_camera/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
