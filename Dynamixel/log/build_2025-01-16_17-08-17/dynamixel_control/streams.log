@@ -1,0 +1,143 @@
+[0.006s] Invoking command in '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_control -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control
+[0.014s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.097s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.102s] -- Found dynamixel_sdk: 3.7.60 (/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/share/dynamixel_sdk/cmake)
+[0.103s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[0.123s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.124s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.129s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.136s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.145s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.169s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.170s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.234s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.272s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.294s] -- Found std_srvs: 4.2.4 (/opt/ros/humble/share/std_srvs/cmake)
+[0.301s] -- Found urdf: 2.6.1 (/opt/ros/humble/share/urdf/cmake)
+[0.316s] -- Found rviz_visual_tools: 4.1.4 (/opt/ros/humble/share/rviz_visual_tools/cmake)
+[0.442s] -- Setting assimp_DIR to: '/opt/ros/humble/share/rviz_assimp_vendor/cmake/../../../opt/rviz_assimp_vendor/lib/cmake/assimp-4.1'
+[0.446s] -- Setting OGRE_DIR to: '/opt/ros/humble/share/rviz_ogre_vendor/cmake/../../../opt/rviz_ogre_vendor/lib/OGRE/cmake'
+[0.447s] -- Found OGRE
+[0.447s] --   static     : OFF
+[0.447s] --   components : HLMS;MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume
+[0.447s] --   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[0.448s] --   media      : /opt/ros/humble/opt/rviz_ogre_vendor/share/OGRE/Media
+[0.448s] -- OGRE_LIBRARIES: OgreHLMS;OgreMeshLodGenerator;OgreOverlay;OgrePaging;OgreProperty;OgreRTShaderSystem;OgreTerrain;OgreVolume;OgreMain
+[0.448s] -- OGRE_LIBRARY_DIRS: /opt/ros/humble/opt/rviz_ogre_vendor/lib
+[0.448s] -- OGRE_PLUGINS: Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[0.448s] -- OGRE_PLUGIN_DIR: /opt/ros/humble/opt/rviz_ogre_vendor/lib/OGRE
+[0.448s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_RELEASE: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[0.448s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_DEBUG: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[0.448s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_RELEASE: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[0.448s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_DEBUG: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[0.449s] -- Could not find freeimage library
+[0.461s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11") 
+[0.464s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
+[0.515s] -- Found X11: /usr/include   
+[0.515s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so
+[0.590s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found
+[0.590s] -- Looking for gethostbyname
+[0.634s] -- Looking for gethostbyname - found
+[0.635s] -- Looking for connect
+[0.679s] -- Looking for connect - found
+[0.679s] -- Looking for remove
+[0.723s] -- Looking for remove - found
+[0.724s] -- Looking for shmat
+[0.768s] -- Looking for shmat - found
+[0.768s] -- Looking for IceConnectionNumber in ICE
+[0.814s] -- Looking for IceConnectionNumber in ICE - found
+[0.859s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[0.871s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[0.871s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.996s] -- Found tf2_eigen: 0.25.9 (/opt/ros/humble/share/tf2_eigen/cmake)
+[1.003s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.063s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.067s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.068s] -- Configured cppcheck include dirs: /home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_control/include
+[1.068s] -- Configured cppcheck exclude dirs and/or files: 
+[1.072s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.072s] -- Configured cpplint exclude dirs and/or files: 
+[1.073s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.074s] -- Added test 'lint_cmake' to check CMake code style
+[1.075s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.079s] -- Added test 'uncrustify' to check C / C++ code style
+[1.079s] -- Configured uncrustify additional arguments: 
+[1.080s] -- Added test 'xmllint' to check XML markup files
+[1.081s] -- Configuring done
+[1.190s] -- Generating done
+[1.209s] -- Build files have been written to: /home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control
+[1.219s] Invoked command in '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_control -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control
+[1.220s] Invoking command in '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control -- -j12 -l12
+[1.255s] [ 10%] [32mBuilding CXX object CMakeFiles/joint_state_publisher.dir/src/joint_state_publisher.cpp.o[0m
+[1.255s] [ 20%] [32mBuilding CXX object CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.o[0m
+[1.255s] [ 30%] [32mBuilding CXX object CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o[0m
+[1.255s] [ 40%] [32mBuilding CXX object CMakeFiles/csv_joint_state_publisher.dir/src/csv_joint_state_publisher.cpp.o[0m
+[1.256s] [ 50%] [32mBuilding CXX object CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.o[0m
+[4.847s] [ 60%] [32m[1mLinking CXX executable joint_state_publisher[0m
+[4.908s] [ 70%] [32m[1mLinking CXX executable csv_joint_state_publisher[0m
+[5.009s] [ 70%] Built target joint_state_publisher
+[5.066s] [ 70%] Built target csv_joint_state_publisher
+[8.169s] [ 80%] [32m[1mLinking CXX executable rviz_visualization_node[0m
+[8.684s] [ 80%] Built target rviz_visualization_node
+[10.204s] [ 90%] [32m[1mLinking CXX executable read_write_node[0m
+[10.581s] [ 90%] Built target read_write_node
+[10.789s] [100%] [32m[1mLinking CXX executable torque_compensation_node[0m
+[11.161s] [100%] Built target torque_compensation_node
+[11.169s] Invoked command in '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control -- -j12 -l12
+[11.170s] Invoking command in '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control
+[11.175s] -- Install configuration: ""
+[11.176s] -- Execute custom install script
+[11.176s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/lib/dynamixel_control/read_write_node
+[11.182s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/lib/dynamixel_control/joint_state_publisher
+[11.187s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/lib/dynamixel_control/csv_joint_state_publisher
+[11.193s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/lib/dynamixel_control/rviz_visualization_node
+[11.198s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/lib/dynamixel_control/torque_compensation_node
+[11.204s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/__pycache__/robot_visualization.launch.cpython-310.pyc
+[11.209s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/robot_visualization.launch.py
+[11.214s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/robot_visualization.launch.xml
+[11.219s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/01_Default_두리번.csv
+[11.225s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/02_Default_두리번2.csv
+[11.230s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/03_Default_두리번3.csv
+[11.235s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/04_호객행위.csv
+[11.241s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/05_인사.csv
+[11.246s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/06_춤.csv
+[11.251s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/sincostra.csv
+[11.257s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/AVATAR_URDF_Test3.urdf
+[11.262s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Base.stl
+[11.268s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Head.stl
+[11.273s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Forearm.stl
+[11.278s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Shoulder1.stl
+[11.284s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Shoulder2.stl
+[11.289s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Shoulder3.stl
+[11.293s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Upperarm.stl
+[11.299s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Wrist1.stl
+[11.304s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Wrist2.stl
+[11.309s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Wrist3.stl
+[11.314s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Neck1.stl
+[11.319s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Neck2.stl
+[11.324s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Forearm.stl
+[11.329s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Shoulder1.stl
+[11.334s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Shoulder2.stl
+[11.339s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Shoulder3.stl
+[11.344s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Upperarm.stl
+[11.349s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Wrist1.stl
+[11.355s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Wrist2.stl
+[11.360s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Wrist3.stl
+[11.365s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Waist_Bottom.stl
+[11.371s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Waist_Top.stl
+[11.377s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/ament_index/resource_index/package_run_dependencies/dynamixel_control
+[11.382s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/ament_index/resource_index/parent_prefix_path/dynamixel_control
+[11.388s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/ament_prefix_path.sh
+[11.393s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/ament_prefix_path.dsv
+[11.399s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/path.sh
+[11.404s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/path.dsv
+[11.410s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.bash
+[11.415s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.sh
+[11.420s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.zsh
+[11.425s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.dsv
+[11.431s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/package.dsv
+[11.437s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/ament_index/resource_index/packages/dynamixel_control
+[11.442s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/cmake/dynamixel_controlConfig.cmake
+[11.448s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/cmake/dynamixel_controlConfig-version.cmake
+[11.454s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/package.xml
+[11.460s] Invoked command in '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control

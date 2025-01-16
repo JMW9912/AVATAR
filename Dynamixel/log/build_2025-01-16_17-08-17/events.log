@@ -1,0 +1,312 @@
+[0.000000] (-) TimerEvent: {}
+[0.000393] (dynamixel_sdk) JobQueued: {'identifier': 'dynamixel_sdk', 'dependencies': OrderedDict()}
+[0.000506] (dynamixel_control) JobQueued: {'identifier': 'dynamixel_control', 'dependencies': OrderedDict([('dynamixel_sdk', '/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk')])}
+[0.000539] (dynamixel_sdk) JobStarted: {'identifier': 'dynamixel_sdk'}
+[0.006070] (dynamixel_sdk) JobProgress: {'identifier': 'dynamixel_sdk', 'progress': 'cmake'}
+[0.006536] (dynamixel_sdk) JobProgress: {'identifier': 'dynamixel_sdk', 'progress': 'build'}
+[0.007012] (dynamixel_sdk) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk', '--', '-j12', '-l12'], 'cwd': '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jmw'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/jmw'), ('OLDPWD', '/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_control'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1609'), ('SYSTEMD_EXEC_PID', '1789'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3016'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/jmw/ROS2/AVATAR/Dynamixel/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'kime'), ('LOGNAME', 'jmw'), ('JOURNAL_STREAM', '8:3063'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jmw'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/jmw-Lenovo:@/tmp/.ICE-unix/1752,unix/jmw-Lenovo:/tmp/.ICE-unix/1752'), ('INVOCATION_ID', 'fed496f16e6648308b49efcfb27770af'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=kime'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.7RII02'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:b67c4478-a1fe-457e-854d-56966f0727b8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'kime'), ('PWD', '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk:/opt/ros/humble')]), 'shell': False}
+[0.041056] (dynamixel_sdk) StdoutLine: {'line': b'[100%] Built target dynamixel_sdk\n'}
+[0.048001] (dynamixel_sdk) CommandEnded: {'returncode': 0}
+[0.048603] (dynamixel_sdk) JobProgress: {'identifier': 'dynamixel_sdk', 'progress': 'install'}
+[0.054053] (dynamixel_sdk) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk'], 'cwd': '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jmw'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/jmw'), ('OLDPWD', '/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_control'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1609'), ('SYSTEMD_EXEC_PID', '1789'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3016'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/jmw/ROS2/AVATAR/Dynamixel/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'kime'), ('LOGNAME', 'jmw'), ('JOURNAL_STREAM', '8:3063'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jmw'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/jmw-Lenovo:@/tmp/.ICE-unix/1752,unix/jmw-Lenovo:/tmp/.ICE-unix/1752'), ('INVOCATION_ID', 'fed496f16e6648308b49efcfb27770af'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=kime'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.7RII02'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:b67c4478-a1fe-457e-854d-56966f0727b8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'kime'), ('PWD', '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk:/opt/ros/humble')]), 'shell': False}
+[0.058932] (dynamixel_sdk) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.059329] (dynamixel_sdk) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.059649] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/include//dynamixel_sdk/dynamixel_sdk.h\n'}
+[0.059754] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_read.h\n'}
+[0.059851] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_write.h\n'}
+[0.059950] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_read.h\n'}
+[0.060055] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_write.h\n'}
+[0.060147] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/include//dynamixel_sdk/packet_handler.h\n'}
+[0.060250] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/include//dynamixel_sdk/port_handler.h\n'}
+[0.060361] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_arduino.h\n'}
+[0.060452] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_linux.h\n'}
+[0.060538] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_mac.h\n'}
+[0.060622] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_windows.h\n'}
+[0.060705] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/include//dynamixel_sdk/protocol1_packet_handler.h\n'}
+[0.060788] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/include//dynamixel_sdk/protocol2_packet_handler.h\n'}
+[0.060870] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/lib/libdynamixel_sdk.so\n'}
+[0.060940] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.sh\n'}
+[0.061022] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.dsv\n'}
+[0.061107] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk\n'}
+[0.061211] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk\n'}
+[0.061349] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.sh\n'}
+[0.061439] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.dsv\n'}
+[0.061528] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.sh\n'}
+[0.061629] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.dsv\n'}
+[0.061729] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.bash\n'}
+[0.061841] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.sh\n'}
+[0.061937] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.zsh\n'}
+[0.062033] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.dsv\n'}
+[0.062118] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/share/dynamixel_sdk/package.dsv\n'}
+[0.067649] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/share/ament_index/resource_index/packages/dynamixel_sdk\n'}
+[0.067767] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.067871] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.067983] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig.cmake\n'}
+[0.068082] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig-version.cmake\n'}
+[0.068196] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/share/dynamixel_sdk/package.xml\n'}
+[0.069292] (dynamixel_sdk) CommandEnded: {'returncode': 0}
+[0.084424] (dynamixel_sdk) JobEnded: {'identifier': 'dynamixel_sdk', 'rc': 0}
+[0.085259] (dynamixel_control) JobStarted: {'identifier': 'dynamixel_control'}
+[0.089655] (dynamixel_control) JobProgress: {'identifier': 'dynamixel_control', 'progress': 'cmake'}
+[0.090160] (dynamixel_control) Command: {'cmd': ['/usr/bin/cmake', '/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_control', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control'], 'cwd': '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jmw'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/jmw'), ('OLDPWD', '/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_control'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1609'), ('SYSTEMD_EXEC_PID', '1789'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3016'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/jmw/ROS2/AVATAR/Dynamixel/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'kime'), ('LOGNAME', 'jmw'), ('JOURNAL_STREAM', '8:3063'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jmw'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/jmw-Lenovo:@/tmp/.ICE-unix/1752,unix/jmw-Lenovo:/tmp/.ICE-unix/1752'), ('INVOCATION_ID', 'fed496f16e6648308b49efcfb27770af'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=kime'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.7RII02'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:b67c4478-a1fe-457e-854d-56966f0727b8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'kime'), ('PWD', '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk:/opt/ros/humble')]), 'shell': False}
+[0.099121] (dynamixel_control) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099846] (-) TimerEvent: {}
+[0.182101] (dynamixel_control) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.187104] (dynamixel_control) StdoutLine: {'line': b'-- Found dynamixel_sdk: 3.7.60 (/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/share/dynamixel_sdk/cmake)\n'}
+[0.188019] (dynamixel_control) StdoutLine: {'line': b'-- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.199915] (-) TimerEvent: {}
+[0.207744] (dynamixel_control) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.209577] (dynamixel_control) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.213791] (dynamixel_control) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.220784] (dynamixel_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.230381] (dynamixel_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.254621] (dynamixel_control) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.255684] (dynamixel_control) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.300000] (-) TimerEvent: {}
+[0.319199] (dynamixel_control) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.357572] (dynamixel_control) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[0.379355] (dynamixel_control) StdoutLine: {'line': b'-- Found std_srvs: 4.2.4 (/opt/ros/humble/share/std_srvs/cmake)\n'}
+[0.386039] (dynamixel_control) StdoutLine: {'line': b'-- Found urdf: 2.6.1 (/opt/ros/humble/share/urdf/cmake)\n'}
+[0.400089] (-) TimerEvent: {}
+[0.401415] (dynamixel_control) StdoutLine: {'line': b'-- Found rviz_visual_tools: 4.1.4 (/opt/ros/humble/share/rviz_visual_tools/cmake)\n'}
+[0.500128] (-) TimerEvent: {}
+[0.527505] (dynamixel_control) StdoutLine: {'line': b"-- Setting assimp_DIR to: '/opt/ros/humble/share/rviz_assimp_vendor/cmake/../../../opt/rviz_assimp_vendor/lib/cmake/assimp-4.1'\n"}
+[0.531271] (dynamixel_control) StdoutLine: {'line': b"-- Setting OGRE_DIR to: '/opt/ros/humble/share/rviz_ogre_vendor/cmake/../../../opt/rviz_ogre_vendor/lib/OGRE/cmake'\n"}
+[0.532401] (dynamixel_control) StdoutLine: {'line': b'-- Found OGRE\n'}
+[0.532514] (dynamixel_control) StdoutLine: {'line': b'--   static     : OFF\n'}
+[0.532590] (dynamixel_control) StdoutLine: {'line': b'--   components : HLMS;MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume\n'}
+[0.532685] (dynamixel_control) StdoutLine: {'line': b'--   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI\n'}
+[0.532761] (dynamixel_control) StdoutLine: {'line': b'--   media      : /opt/ros/humble/opt/rviz_ogre_vendor/share/OGRE/Media\n'}
+[0.532849] (dynamixel_control) StdoutLine: {'line': b'-- OGRE_LIBRARIES: OgreHLMS;OgreMeshLodGenerator;OgreOverlay;OgrePaging;OgreProperty;OgreRTShaderSystem;OgreTerrain;OgreVolume;OgreMain\n'}
+[0.532923] (dynamixel_control) StdoutLine: {'line': b'-- OGRE_LIBRARY_DIRS: /opt/ros/humble/opt/rviz_ogre_vendor/lib\n'}
+[0.532995] (dynamixel_control) StdoutLine: {'line': b'-- OGRE_PLUGINS: Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI\n'}
+[0.533066] (dynamixel_control) StdoutLine: {'line': b'-- OGRE_PLUGIN_DIR: /opt/ros/humble/opt/rviz_ogre_vendor/lib/OGRE\n'}
+[0.533158] (dynamixel_control) StdoutLine: {'line': b'-- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_RELEASE: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreOverlay.so\n'}
+[0.533234] (dynamixel_control) StdoutLine: {'line': b'-- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_DEBUG: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreOverlay.so\n'}
+[0.533325] (dynamixel_control) StdoutLine: {'line': b'-- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_RELEASE: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so\n'}
+[0.533404] (dynamixel_control) StdoutLine: {'line': b'-- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_DEBUG: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so\n'}
+[0.534001] (dynamixel_control) StdoutLine: {'line': b'-- Could not find freeimage library\n'}
+[0.545808] (dynamixel_control) StdoutLine: {'line': b'-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11") \n'}
+[0.548944] (dynamixel_control) StdoutLine: {'line': b'-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   \n'}
+[0.600213] (-) TimerEvent: {}
+[0.600471] (dynamixel_control) StdoutLine: {'line': b'-- Found X11: /usr/include   \n'}
+[0.600633] (dynamixel_control) StdoutLine: {'line': b'-- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so\n'}
+[0.674806] (dynamixel_control) StdoutLine: {'line': b'-- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found\n'}
+[0.674996] (dynamixel_control) StdoutLine: {'line': b'-- Looking for gethostbyname\n'}
+[0.700289] (-) TimerEvent: {}
+[0.719547] (dynamixel_control) StdoutLine: {'line': b'-- Looking for gethostbyname - found\n'}
+[0.719721] (dynamixel_control) StdoutLine: {'line': b'-- Looking for connect\n'}
+[0.763937] (dynamixel_control) StdoutLine: {'line': b'-- Looking for connect - found\n'}
+[0.764117] (dynamixel_control) StdoutLine: {'line': b'-- Looking for remove\n'}
+[0.800412] (-) TimerEvent: {}
+[0.808686] (dynamixel_control) StdoutLine: {'line': b'-- Looking for remove - found\n'}
+[0.808834] (dynamixel_control) StdoutLine: {'line': b'-- Looking for shmat\n'}
+[0.853268] (dynamixel_control) StdoutLine: {'line': b'-- Looking for shmat - found\n'}
+[0.853467] (dynamixel_control) StdoutLine: {'line': b'-- Looking for IceConnectionNumber in ICE\n'}
+[0.899550] (dynamixel_control) StdoutLine: {'line': b'-- Looking for IceConnectionNumber in ICE - found\n'}
+[0.900474] (-) TimerEvent: {}
+[0.944025] (dynamixel_control) StdoutLine: {'line': b'-- library: /usr/lib/x86_64-linux-gnu/libcurl.so\n'}
+[0.955834] (dynamixel_control) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[0.955953] (dynamixel_control) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.000547] (-) TimerEvent: {}
+[1.080971] (dynamixel_control) StdoutLine: {'line': b'-- Found tf2_eigen: 0.25.9 (/opt/ros/humble/share/tf2_eigen/cmake)\n'}
+[1.088551] (dynamixel_control) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.100623] (-) TimerEvent: {}
+[1.147899] (dynamixel_control) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.152075] (dynamixel_control) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.152970] (dynamixel_control) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_control/include\n'}
+[1.153101] (dynamixel_control) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.156981] (dynamixel_control) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[1.157094] (dynamixel_control) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[1.157814] (dynamixel_control) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.159091] (dynamixel_control) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.159926] (dynamixel_control) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[1.163827] (dynamixel_control) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.163937] (dynamixel_control) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.164705] (dynamixel_control) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.165762] (dynamixel_control) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.200772] (-) TimerEvent: {}
+[1.274967] (dynamixel_control) StdoutLine: {'line': b'-- Generating done\n'}
+[1.294388] (dynamixel_control) StdoutLine: {'line': b'-- Build files have been written to: /home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control\n'}
+[1.300840] (-) TimerEvent: {}
+[1.303596] (dynamixel_control) CommandEnded: {'returncode': 0}
+[1.304178] (dynamixel_control) JobProgress: {'identifier': 'dynamixel_control', 'progress': 'build'}
+[1.304950] (dynamixel_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control', '--', '-j12', '-l12'], 'cwd': '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jmw'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/jmw'), ('OLDPWD', '/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_control'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1609'), ('SYSTEMD_EXEC_PID', '1789'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3016'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/jmw/ROS2/AVATAR/Dynamixel/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'kime'), ('LOGNAME', 'jmw'), ('JOURNAL_STREAM', '8:3063'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jmw'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/jmw-Lenovo:@/tmp/.ICE-unix/1752,unix/jmw-Lenovo:/tmp/.ICE-unix/1752'), ('INVOCATION_ID', 'fed496f16e6648308b49efcfb27770af'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=kime'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.7RII02'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:b67c4478-a1fe-457e-854d-56966f0727b8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'kime'), ('PWD', '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk:/opt/ros/humble')]), 'shell': False}
+[1.340181] (dynamixel_control) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding CXX object CMakeFiles/joint_state_publisher.dir/src/joint_state_publisher.cpp.o\x1b[0m\n'}
+[1.340444] (dynamixel_control) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.o\x1b[0m\n'}
+[1.340549] (dynamixel_control) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o\x1b[0m\n'}
+[1.340671] (dynamixel_control) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/csv_joint_state_publisher.dir/src/csv_joint_state_publisher.cpp.o\x1b[0m\n'}
+[1.341293] (dynamixel_control) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.o\x1b[0m\n'}
+[1.400941] (-) TimerEvent: {}
+[1.501226] (-) TimerEvent: {}
+[1.601514] (-) TimerEvent: {}
+[1.701828] (-) TimerEvent: {}
+[1.802140] (-) TimerEvent: {}
+[1.902475] (-) TimerEvent: {}
+[2.002786] (-) TimerEvent: {}
+[2.103092] (-) TimerEvent: {}
+[2.203422] (-) TimerEvent: {}
+[2.303681] (-) TimerEvent: {}
+[2.404003] (-) TimerEvent: {}
+[2.504288] (-) TimerEvent: {}
+[2.604525] (-) TimerEvent: {}
+[2.704762] (-) TimerEvent: {}
+[2.804995] (-) TimerEvent: {}
+[2.905229] (-) TimerEvent: {}
+[3.005476] (-) TimerEvent: {}
+[3.105719] (-) TimerEvent: {}
+[3.205966] (-) TimerEvent: {}
+[3.306206] (-) TimerEvent: {}
+[3.406462] (-) TimerEvent: {}
+[3.506690] (-) TimerEvent: {}
+[3.606919] (-) TimerEvent: {}
+[3.707142] (-) TimerEvent: {}
+[3.807390] (-) TimerEvent: {}
+[3.907707] (-) TimerEvent: {}
+[4.008000] (-) TimerEvent: {}
+[4.108314] (-) TimerEvent: {}
+[4.208625] (-) TimerEvent: {}
+[4.308849] (-) TimerEvent: {}
+[4.409064] (-) TimerEvent: {}
+[4.509288] (-) TimerEvent: {}
+[4.609515] (-) TimerEvent: {}
+[4.709738] (-) TimerEvent: {}
+[4.810114] (-) TimerEvent: {}
+[4.910377] (-) TimerEvent: {}
+[4.932586] (dynamixel_control) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking CXX executable joint_state_publisher\x1b[0m\n'}
+[4.993190] (dynamixel_control) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX executable csv_joint_state_publisher\x1b[0m\n'}
+[5.010469] (-) TimerEvent: {}
+[5.094228] (dynamixel_control) StdoutLine: {'line': b'[ 70%] Built target joint_state_publisher\n'}
+[5.110575] (-) TimerEvent: {}
+[5.150830] (dynamixel_control) StdoutLine: {'line': b'[ 70%] Built target csv_joint_state_publisher\n'}
+[5.210671] (-) TimerEvent: {}
+[5.310892] (-) TimerEvent: {}
+[5.411110] (-) TimerEvent: {}
+[5.511333] (-) TimerEvent: {}
+[5.611554] (-) TimerEvent: {}
+[5.711763] (-) TimerEvent: {}
+[5.811996] (-) TimerEvent: {}
+[5.912250] (-) TimerEvent: {}
+[6.012502] (-) TimerEvent: {}
+[6.112745] (-) TimerEvent: {}
+[6.212985] (-) TimerEvent: {}
+[6.313259] (-) TimerEvent: {}
+[6.413564] (-) TimerEvent: {}
+[6.513819] (-) TimerEvent: {}
+[6.614054] (-) TimerEvent: {}
+[6.714285] (-) TimerEvent: {}
+[6.814528] (-) TimerEvent: {}
+[6.914764] (-) TimerEvent: {}
+[7.015002] (-) TimerEvent: {}
+[7.115227] (-) TimerEvent: {}
+[7.215446] (-) TimerEvent: {}
+[7.315700] (-) TimerEvent: {}
+[7.415985] (-) TimerEvent: {}
+[7.516265] (-) TimerEvent: {}
+[7.616503] (-) TimerEvent: {}
+[7.716715] (-) TimerEvent: {}
+[7.816953] (-) TimerEvent: {}
+[7.917279] (-) TimerEvent: {}
+[8.017494] (-) TimerEvent: {}
+[8.117716] (-) TimerEvent: {}
+[8.217944] (-) TimerEvent: {}
+[8.253932] (dynamixel_control) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking CXX executable rviz_visualization_node\x1b[0m\n'}
+[8.318035] (-) TimerEvent: {}
+[8.418278] (-) TimerEvent: {}
+[8.518520] (-) TimerEvent: {}
+[8.618759] (-) TimerEvent: {}
+[8.719005] (-) TimerEvent: {}
+[8.768780] (dynamixel_control) StdoutLine: {'line': b'[ 80%] Built target rviz_visualization_node\n'}
+[8.819104] (-) TimerEvent: {}
+[8.919371] (-) TimerEvent: {}
+[9.019606] (-) TimerEvent: {}
+[9.119859] (-) TimerEvent: {}
+[9.220093] (-) TimerEvent: {}
+[9.320355] (-) TimerEvent: {}
+[9.420588] (-) TimerEvent: {}
+[9.520789] (-) TimerEvent: {}
+[9.621022] (-) TimerEvent: {}
+[9.721326] (-) TimerEvent: {}
+[9.821571] (-) TimerEvent: {}
+[9.921801] (-) TimerEvent: {}
+[10.022033] (-) TimerEvent: {}
+[10.122289] (-) TimerEvent: {}
+[10.222527] (-) TimerEvent: {}
+[10.289145] (dynamixel_control) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking CXX executable read_write_node\x1b[0m\n'}
+[10.322620] (-) TimerEvent: {}
+[10.422912] (-) TimerEvent: {}
+[10.523238] (-) TimerEvent: {}
+[10.623498] (-) TimerEvent: {}
+[10.665885] (dynamixel_control) StdoutLine: {'line': b'[ 90%] Built target read_write_node\n'}
+[10.723587] (-) TimerEvent: {}
+[10.823844] (-) TimerEvent: {}
+[10.873999] (dynamixel_control) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable torque_compensation_node\x1b[0m\n'}
+[10.923930] (-) TimerEvent: {}
+[11.024173] (-) TimerEvent: {}
+[11.124455] (-) TimerEvent: {}
+[11.224715] (-) TimerEvent: {}
+[11.245997] (dynamixel_control) StdoutLine: {'line': b'[100%] Built target torque_compensation_node\n'}
+[11.254030] (dynamixel_control) CommandEnded: {'returncode': 0}
+[11.254707] (dynamixel_control) JobProgress: {'identifier': 'dynamixel_control', 'progress': 'install'}
+[11.255074] (dynamixel_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control'], 'cwd': '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jmw'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/jmw'), ('OLDPWD', '/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_control'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1609'), ('SYSTEMD_EXEC_PID', '1789'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3016'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/jmw/ROS2/AVATAR/Dynamixel/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'kime'), ('LOGNAME', 'jmw'), ('JOURNAL_STREAM', '8:3063'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jmw'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/jmw-Lenovo:@/tmp/.ICE-unix/1752,unix/jmw-Lenovo:/tmp/.ICE-unix/1752'), ('INVOCATION_ID', 'fed496f16e6648308b49efcfb27770af'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=kime'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.7RII02'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:b67c4478-a1fe-457e-854d-56966f0727b8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'kime'), ('PWD', '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk:/opt/ros/humble')]), 'shell': False}
+[11.260483] (dynamixel_control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[11.260867] (dynamixel_control) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[11.261118] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/lib/dynamixel_control/read_write_node\n'}
+[11.266852] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/lib/dynamixel_control/joint_state_publisher\n'}
+[11.272326] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/lib/dynamixel_control/csv_joint_state_publisher\n'}
+[11.277778] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/lib/dynamixel_control/rviz_visualization_node\n'}
+[11.283384] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/lib/dynamixel_control/torque_compensation_node\n'}
+[11.288954] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/__pycache__/robot_visualization.launch.cpython-310.pyc\n'}
+[11.293989] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/robot_visualization.launch.py\n'}
+[11.299114] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/robot_visualization.launch.xml\n'}
+[11.304675] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/01_Default_\xeb\x91\x90\xeb\xa6\xac\xeb\xb2\x88.csv\n'}
+[11.309727] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/02_Default_\xeb\x91\x90\xeb\xa6\xac\xeb\xb2\x882.csv\n'}
+[11.315044] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/03_Default_\xeb\x91\x90\xeb\xa6\xac\xeb\xb2\x883.csv\n'}
+[11.320132] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/04_\xed\x98\xb8\xea\xb0\x9d\xed\x96\x89\xec\x9c\x84.csv\n'}
+[11.324782] (-) TimerEvent: {}
+[11.325867] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/05_\xec\x9d\xb8\xec\x82\xac.csv\n'}
+[11.331239] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/06_\xec\xb6\xa4.csv\n'}
+[11.336590] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/sincostra.csv\n'}
+[11.342039] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/AVATAR_URDF_Test3.urdf\n'}
+[11.347321] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Base.stl\n'}
+[11.352671] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Head.stl\n'}
+[11.358396] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Forearm.stl\n'}
+[11.363622] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Shoulder1.stl\n'}
+[11.368680] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Shoulder2.stl\n'}
+[11.373768] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Shoulder3.stl\n'}
+[11.378688] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Upperarm.stl\n'}
+[11.383715] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Wrist1.stl\n'}
+[11.388771] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Wrist2.stl\n'}
+[11.393838] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Wrist3.stl\n'}
+[11.398790] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Neck1.stl\n'}
+[11.403749] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Neck2.stl\n'}
+[11.408742] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Forearm.stl\n'}
+[11.413849] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Shoulder1.stl\n'}
+[11.418779] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Shoulder2.stl\n'}
+[11.423992] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Shoulder3.stl\n'}
+[11.424845] (-) TimerEvent: {}
+[11.429541] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Upperarm.stl\n'}
+[11.434678] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Wrist1.stl\n'}
+[11.439822] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Wrist2.stl\n'}
+[11.444900] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Wrist3.stl\n'}
+[11.449957] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Waist_Bottom.stl\n'}
+[11.456382] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Waist_Top.stl\n'}
+[11.461769] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/ament_index/resource_index/package_run_dependencies/dynamixel_control\n'}
+[11.467573] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/ament_index/resource_index/parent_prefix_path/dynamixel_control\n'}
+[11.473096] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/ament_prefix_path.sh\n'}
+[11.478549] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/ament_prefix_path.dsv\n'}
+[11.483814] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/path.sh\n'}
+[11.489365] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/path.dsv\n'}
+[11.494848] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.bash\n'}
+[11.500141] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.sh\n'}
+[11.505380] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.zsh\n'}
+[11.510585] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.dsv\n'}
+[11.516081] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/package.dsv\n'}
+[11.521839] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/ament_index/resource_index/packages/dynamixel_control\n'}
+[11.524949] (-) TimerEvent: {}
+[11.527588] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/cmake/dynamixel_controlConfig.cmake\n'}
+[11.533104] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/cmake/dynamixel_controlConfig-version.cmake\n'}
+[11.538800] (dynamixel_control) StdoutLine: {'line': b'-- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/package.xml\n'}
+[11.544977] (dynamixel_control) CommandEnded: {'returncode': 0}
+[11.554968] (dynamixel_control) JobEnded: {'identifier': 'dynamixel_control', 'rc': 0}
+[11.555584] (-) EventReactorShutdown: {}

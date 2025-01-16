@@ -1,3 +1,6 @@
+//GitCheck
+//branch work
+
 // terminal #1: ros2 run dynamixel_examples read_write_node
 // terminal #2: 
 // position control:        ros2 topic pub -1 /joint_states sensor_msgs/msg/JointState "data: [0,0,0,0,0,0,0,0]" (radian단위, 정수 입력도 가능)
