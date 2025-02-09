@@ -18,7 +18,8 @@ public:
 
         publisher_ = this->create_publisher<sensor_msgs::msg::JointState>("/joint_states", 10);
 
-        std::string csv_file = "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/data/csv/torquecheck2.csv"; // torquecheck2.csv Update this path
+        // std::string csv_file = "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/data/csv/torquecheck2.csv"; // torquecheck2.csv Update this path
+        std::string csv_file = "/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_control/data/csv/torquecheck2.csv";
         loadCSV(csv_file);
 
         RCLCPP_INFO(this->get_logger(), "Waiting for keyboard input to publish joint states...");

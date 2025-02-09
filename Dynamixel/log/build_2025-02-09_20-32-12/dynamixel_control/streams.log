@@ -1,0 +1,74 @@
+[0.006s] Invoking command in '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control': CMAKE_PREFIX_PATH=/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk:/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control:/opt/ros/humble /usr/bin/cmake --build /home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control -- -j12 -l12
+[0.041s] [35m[1mConsolidate compiler generated dependencies of target torque_read_degree_write[0m
+[0.052s] [ 14%] Built target csv_joint_state_publisher
+[0.052s] [ 28%] Built target joint_state_publisher
+[0.054s] [ 42%] Built target read_write_node
+[0.054s] [ 57%] Built target torque_compensation_node
+[0.056s] [ 71%] Built target torque_check
+[0.056s] [ 85%] Built target rviz_visualization_node
+[0.058s] [ 92%] [32mBuilding CXX object CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.o[0m
+[6.845s] [100%] [32m[1mLinking CXX executable torque_read_degree_write[0m
+[7.138s] [100%] Built target torque_read_degree_write
+[7.146s] Invoked command in '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control' returned '0': CMAKE_PREFIX_PATH=/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk:/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control:/opt/ros/humble /usr/bin/cmake --build /home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control -- -j12 -l12
+[7.147s] Invoking command in '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control': CMAKE_PREFIX_PATH=/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk:/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control:/opt/ros/humble /usr/bin/cmake --install /home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control
+[7.153s] -- Install configuration: ""
+[7.154s] -- Execute custom install script
+[7.154s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/lib/dynamixel_control/read_write_node
+[7.154s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/lib/dynamixel_control/joint_state_publisher
+[7.154s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/lib/dynamixel_control/csv_joint_state_publisher
+[7.154s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/lib/dynamixel_control/torque_check
+[7.155s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/lib/dynamixel_control/rviz_visualization_node
+[7.155s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/lib/dynamixel_control/torque_compensation_node
+[7.155s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/lib/dynamixel_control/torque_read_degree_write
+[7.155s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/__pycache__/robot_visualization.launch.cpython-310.pyc
+[7.155s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/robot_visualization.launch.py
+[7.155s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/robot_visualization.launch.xml
+[7.156s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/01_Default_두리번.csv
+[7.156s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/02_Default_두리번2.csv
+[7.156s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/03_Default_두리번3.csv
+[7.156s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/04_호객행위.csv
+[7.156s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/05_인사.csv
+[7.156s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/06_춤.csv
+[7.156s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/sincostra.csv
+[7.156s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/torquecheck.csv
+[7.157s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/torquecheck.xlsx
+[7.157s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/torquecheck2.csv
+[7.157s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/AVATAR_URDF_Test3.urdf
+[7.157s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Base.stl
+[7.157s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Head.stl
+[7.157s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Forearm.stl
+[7.157s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Shoulder1.stl
+[7.158s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Shoulder2.stl
+[7.158s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Shoulder3.stl
+[7.158s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Upperarm.stl
+[7.158s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Wrist1.stl
+[7.158s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Wrist2.stl
+[7.158s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Wrist3.stl
+[7.158s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Neck1.stl
+[7.158s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Neck2.stl
+[7.159s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Forearm.stl
+[7.159s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Shoulder1.stl
+[7.159s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Shoulder2.stl
+[7.159s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Shoulder3.stl
+[7.159s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Upperarm.stl
+[7.159s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Wrist1.stl
+[7.159s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Wrist2.stl
+[7.159s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Wrist3.stl
+[7.160s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Waist_Bottom.stl
+[7.160s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Waist_Top.stl
+[7.160s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/ament_index/resource_index/package_run_dependencies/dynamixel_control
+[7.160s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/ament_index/resource_index/parent_prefix_path/dynamixel_control
+[7.160s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/ament_prefix_path.sh
+[7.160s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/ament_prefix_path.dsv
+[7.160s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/path.sh
+[7.160s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/path.dsv
+[7.160s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.bash
+[7.161s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.sh
+[7.161s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.zsh
+[7.161s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.dsv
+[7.161s] -- Symlinking: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/package.dsv
+[7.166s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/ament_index/resource_index/packages/dynamixel_control
+[7.167s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/cmake/dynamixel_controlConfig.cmake
+[7.167s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/cmake/dynamixel_controlConfig-version.cmake
+[7.167s] -- Up-to-date symlink: /home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control/share/dynamixel_control/package.xml
+[7.169s] Invoked command in '/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control' returned '0': CMAKE_PREFIX_PATH=/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk:/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_control:/opt/ros/humble /usr/bin/cmake --install /home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control

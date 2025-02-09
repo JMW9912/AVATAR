@@ -49,7 +49,7 @@ const std::set<uint8_t> SMALL_MOTOR = {17, 19};                                 
 
 #define GOAL_VEL                        260
 
-#define CSV_NAME                        "tor_data2.csv"
+#define CSV_NAME                        "250209_torque_test_2.csv"
 
 std::map<int, std::pair<int, int>> CONST_DEG = {
     {1, {-30, 60}},
@@ -58,16 +58,16 @@ std::map<int, std::pair<int, int>> CONST_DEG = {
     {4, {-90, 90}},
     {5, {0, 120}},
     {6, {-90, 90}},
-    {7, {-65, 65}},
-    {8, {-90, 90}},
+    {7, {-60, 60}},
+    {8, {-90, 60}},
     {9, {-60, 30}},
     {10, {-160, 45}},
     {11, {-160, 0}},
     {12, {-90, 90}},
     {13, {-120, 0}},
     {14, {-90, 90}},
-    {15, {-65, 65}},
-    {16, {-90, 90}},
+    {15, {-60, 60}},
+    {16, {-90, 60}},
     {17, {-90, 90}},
     {18, {-90, 90}},
     {19, {-90, 90}},
@@ -89,7 +89,8 @@ public:
     data_file_.open(CSV_NAME, std::ios::out | std::ios::trunc);
     if (data_file_.is_open()) {
       std::ostringstream header_stream;
-      header_stream << "Timestamp,";
+      header_stream << "Timestamp,"
+                    << "TimerCallback Average Time,";
 
       // "Desired Position" 헤더 작성
       for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; ++dxl_id) {
@@ -162,7 +163,10 @@ private:
   std::vector<int> param_goal_position;
   bool dxl_addparam_result = false; // Topic callback 변수 확인
   int dxl_comm_result = COMM_TX_FAIL;
-  uint8_t joint_sequence[8] = {1, 2}; // joint 순서? 필요한지 확인
+  // uint8_t joint_sequence[8] = {1, 2}; // joint 순서? 필요한지 확인
+  // 응답속도 확인용
+  long long total_time_ = 0;  // 총 시간 누적
+  int callback_count_ = 0;    // 콜백 호출 횟수
 
   void enableTorque() {
     for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++) {
@@ -232,6 +236,7 @@ private:
 
   void timerCallback() {
     std::ostringstream log_stream; // 로그를 버퍼에 저장할 스트림
+    auto start_time = std::chrono::high_resolution_clock::now(); // 응답 시간 체크
     for(int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++) {
 
       // 현재 각도 읽기
@@ -253,20 +258,32 @@ private:
       log_stream << "Motor#" << dxl_id 
                  << ": " << Rad2Deg(Pos2Rad(dxl_id, dxl_present_position[dxl_id - DXL_MIN_ID]))
                  << ": " << dxl_present_current[dxl_id - DXL_MIN_ID];
-      if (dxl_id == DXL_MAX_ID) {
-          log_stream << "\n";
+      if (dxl_id == 8 || dxl_id == 16 || dxl_id == 19 || dxl_id == 21) {
+         log_stream << "\n"; // 그룹별 줄바꿈
       } else {
-          log_stream << " | ";
+         log_stream << " | "; // 그룹 내 모터 간 구분
       }
     }
 
     // 로그 스트림 출력
     std::cout << log_stream.str() << std::endl;
 
+    // 응답 시간 체크
+    auto end_time = std::chrono::high_resolution_clock::now();
+                                           
+    // 걸린 시간 계산 (마이크로초 단위)
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time).count();
+
+    // 시간 누적 및 평균 계산
+    total_time_ += duration;
+    callback_count_++;
+    double average_time = total_time_ / static_cast<double>(callback_count_);
+
     // csv 데이터 저장
     if (data_file_.is_open()) {
       auto now = this->get_clock()->now(); // 현재 시간
-      data_file_ << now.seconds() << ",";
+      data_file_ << now.seconds() << ","
+                 << average_time << ",";
 
       // 모든 모터의 목표 각도 기록
       for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++) {
@@ -304,7 +321,7 @@ private:
     std::vector<float> raw_goal_position(num_joints, 0.0); // 크기를 동적으로 설정
 
     for(int i = 0; i <= (DXL_MAX_ID - DXL_MIN_ID); i++){
-        raw_goal_position[i] = msg->position[joint_sequence[i]-1];
+        raw_goal_position[i] = msg->position[i]; //[joint_sequence[i]-1]
         // Change radian value to position with integer value and proceed clipping
         RCLCPP_DEBUG(this->get_logger(), "Joint %i: original goal position = %d, raw_goal position = %f", i+1, param_goal_position[i], raw_goal_position[i]);
         param_goal_position[i] = Clipping(i + DXL_MIN_ID, Rad2Pos(i + DXL_MIN_ID, raw_goal_position[i]));

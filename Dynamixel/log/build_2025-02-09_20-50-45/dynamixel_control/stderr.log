@@ -1,0 +1,10 @@
+[01m[K/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:[m[K In member function ‘[01m[Kvoid TorqueReadDegreeWrite::timerCallback()[m[K’:
+[01m[K/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:275:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktotal_time_[m[K’ was not declared in this scope
+  275 |     [01;31m[Ktotal_time_[m[K += duration;
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:276:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcallback_count_[m[K’ was not declared in this scope
+  276 |     [01;31m[Kcallback_count_[m[K++;
+      |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/torque_read_degree_write.dir/build.make:76: CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/torque_read_degree_write.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
