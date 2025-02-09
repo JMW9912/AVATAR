@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_control
+CMAKE_SOURCE_DIR = /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control
+CMAKE_BINARY_DIR = /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control/CMakeFiles /home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control/CMakeFiles /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -237,6 +237,19 @@ csv_joint_state_publisher/fast:
 .PHONY : csv_joint_state_publisher/fast
 
 #=============================================================================
+# Target rules for targets named torque_check
+
+# Build rule for target.
+torque_check: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 torque_check
+.PHONY : torque_check
+
+# fast build rule for target.
+torque_check/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_check.dir/build.make CMakeFiles/torque_check.dir/build
+.PHONY : torque_check/fast
+
+#=============================================================================
 # Target rules for targets named rviz_visualization_node
 
 # Build rule for target.
@@ -261,6 +274,19 @@ torque_compensation_node: cmake_check_build_system
 torque_compensation_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_compensation_node.dir/build.make CMakeFiles/torque_compensation_node.dir/build
 .PHONY : torque_compensation_node/fast
+
+#=============================================================================
+# Target rules for targets named torque_read_degree_write
+
+# Build rule for target.
+torque_read_degree_write: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 torque_read_degree_write
+.PHONY : torque_read_degree_write
+
+# fast build rule for target.
+torque_read_degree_write/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_read_degree_write.dir/build.make CMakeFiles/torque_read_degree_write.dir/build
+.PHONY : torque_read_degree_write/fast
 
 src/csv_joint_state_publisher.o: src/csv_joint_state_publisher.cpp.o
 .PHONY : src/csv_joint_state_publisher.o
@@ -358,6 +384,30 @@ src/rviz_visualization_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rviz_visualization_node.dir/build.make CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.s
 .PHONY : src/rviz_visualization_node.cpp.s
 
+src/torque_check.o: src/torque_check.cpp.o
+.PHONY : src/torque_check.o
+
+# target to build an object file
+src/torque_check.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_check.dir/build.make CMakeFiles/torque_check.dir/src/torque_check.cpp.o
+.PHONY : src/torque_check.cpp.o
+
+src/torque_check.i: src/torque_check.cpp.i
+.PHONY : src/torque_check.i
+
+# target to preprocess a source file
+src/torque_check.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_check.dir/build.make CMakeFiles/torque_check.dir/src/torque_check.cpp.i
+.PHONY : src/torque_check.cpp.i
+
+src/torque_check.s: src/torque_check.cpp.s
+.PHONY : src/torque_check.s
+
+# target to generate assembly for a file
+src/torque_check.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_check.dir/build.make CMakeFiles/torque_check.dir/src/torque_check.cpp.s
+.PHONY : src/torque_check.cpp.s
+
 src/torque_compensation_node.o: src/torque_compensation_node.cpp.o
 .PHONY : src/torque_compensation_node.o
 
@@ -382,6 +432,30 @@ src/torque_compensation_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_compensation_node.dir/build.make CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.s
 .PHONY : src/torque_compensation_node.cpp.s
 
+src/torque_read_degree_write.o: src/torque_read_degree_write.cpp.o
+.PHONY : src/torque_read_degree_write.o
+
+# target to build an object file
+src/torque_read_degree_write.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_read_degree_write.dir/build.make CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.o
+.PHONY : src/torque_read_degree_write.cpp.o
+
+src/torque_read_degree_write.i: src/torque_read_degree_write.cpp.i
+.PHONY : src/torque_read_degree_write.i
+
+# target to preprocess a source file
+src/torque_read_degree_write.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_read_degree_write.dir/build.make CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.i
+.PHONY : src/torque_read_degree_write.cpp.i
+
+src/torque_read_degree_write.s: src/torque_read_degree_write.cpp.s
+.PHONY : src/torque_read_degree_write.s
+
+# target to generate assembly for a file
+src/torque_read_degree_write.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_read_degree_write.dir/build.make CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.s
+.PHONY : src/torque_read_degree_write.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -401,7 +475,9 @@ help:
 	@echo "... joint_state_publisher"
 	@echo "... read_write_node"
 	@echo "... rviz_visualization_node"
+	@echo "... torque_check"
 	@echo "... torque_compensation_node"
+	@echo "... torque_read_degree_write"
 	@echo "... src/csv_joint_state_publisher.o"
 	@echo "... src/csv_joint_state_publisher.i"
 	@echo "... src/csv_joint_state_publisher.s"
@@ -414,9 +490,15 @@ help:
 	@echo "... src/rviz_visualization_node.o"
 	@echo "... src/rviz_visualization_node.i"
 	@echo "... src/rviz_visualization_node.s"
+	@echo "... src/torque_check.o"
+	@echo "... src/torque_check.i"
+	@echo "... src/torque_check.s"
 	@echo "... src/torque_compensation_node.o"
 	@echo "... src/torque_compensation_node.i"
 	@echo "... src/torque_compensation_node.s"
+	@echo "... src/torque_read_degree_write.o"
+	@echo "... src/torque_read_degree_write.i"
+	@echo "... src/torque_read_degree_write.s"
 .PHONY : help
 
 

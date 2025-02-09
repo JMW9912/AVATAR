@@ -1,0 +1,50 @@
+[35m[1mConsolidate compiler generated dependencies of target torque_read_degree_write[0m
+[ 42%] Built target csv_joint_state_publisher
+[ 42%] Built target rviz_visualization_node
+[ 42%] Built target torque_check
+[ 57%] Built target read_write_node
+[ 71%] Built target joint_state_publisher
+[ 85%] Built target torque_compensation_node
+[ 92%] [32mBuilding CXX object CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.o[0m
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:8[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:[m[K In member function ‘[01m[Kint TorqueReadDegreeWrite::Clipping(uint8_t, int)[m[K’:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:352:46:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KTorqueReadDegreeWrite::Pos2Rad(int&)[m[K’
+  352 |                       dxl_id, Rad2Deg([01;31m[KPos2Rad(original_position)[m[K), Rad2Deg(Pos2Rad(goal_position)), min_degree, max_degree);
+      |                                       [01;31m[K~~~~~~~^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:359:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kfloat TorqueReadDegreeWrite::Pos2Rad(uint8_t, int)[m[K’
+  359 |   float [01;36m[KPos2Rad[m[K(uint8_t dxl_id, int position) {
+      |         [01;36m[K^~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:359:9:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:8[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:352:83:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KTorqueReadDegreeWrite::Pos2Rad(int&)[m[K’
+  352 |                       dxl_id, Rad2Deg(Pos2Rad(original_position)), Rad2Deg([01;31m[KPos2Rad(goal_position)[m[K), min_degree, max_degree);
+      |                                                                            [01;31m[K~~~~~~~^~~~~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:359:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kfloat TorqueReadDegreeWrite::Pos2Rad(uint8_t, int)[m[K’
+  359 |   float [01;36m[KPos2Rad[m[K(uint8_t dxl_id, int position) {
+      |         [01;36m[K^~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:359:9:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+gmake[2]: *** [CMakeFiles/torque_read_degree_write.dir/build.make:76: CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/torque_read_degree_write.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

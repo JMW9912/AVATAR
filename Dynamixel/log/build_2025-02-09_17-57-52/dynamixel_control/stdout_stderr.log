@@ -1,0 +1,120 @@
+[35m[1mConsolidate compiler generated dependencies of target torque_read_degree_write[0m
+[ 28%] Built target torque_check
+[ 28%] Built target joint_state_publisher
+[ 42%] Built target torque_compensation_node
+[ 57%] Built target read_write_node
+[ 71%] Built target csv_joint_state_publisher
+[ 85%] Built target rviz_visualization_node
+[ 92%] [32mBuilding CXX object CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.o[0m
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:8[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:[m[K In member function ‘[01m[Kint TorqueReadDegreeWrite::Clipping(uint8_t, int)[m[K’:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:351:23:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 6 has type ‘[01m[Kdouble[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  351 |                       [01;35m[K"Clipping occurred for Motor ID %d: Original Position: %d, Clipped Position: %d (Min: %d, Max: %d)"[m[K,
+      |                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  352 |                       dxl_id, [32m[KRad2Deg(Pos2Rad(dxl_id, original_position))[m[K, Rad2Deg(Pos2Rad(dxl_id, goal_position)), min_degree, max_degree);
+      |                               [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                      [32m[K|[m[K
+      |                                      [32m[Kdouble[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:351:79:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  351 |                       "Clipping occurred for Motor ID %d: Original Position: [01;36m[K%d[m[K, Clipped Position: %d (Min: %d, Max: %d)",
+      |                                                                              [01;36m[K~^[m[K
+      |                                                                               [01;36m[K|[m[K
+      |                                                                               [01;36m[Kint[m[K
+      |                                                                              [32m[K%f[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:8[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:351:23:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 7 has type ‘[01m[Kdouble[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  351 |                       [01;35m[K"Clipping occurred for Motor ID %d: Original Position: %d, Clipped Position: %d (Min: %d, Max: %d)"[m[K,
+      |                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  352 |                       dxl_id, Rad2Deg(Pos2Rad(dxl_id, original_position)), [32m[KRad2Deg(Pos2Rad(dxl_id, goal_position))[m[K, min_degree, max_degree);
+      |                                                                            [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                                   [32m[K|[m[K
+      |                                                                                   [32m[Kdouble[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:351:101:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  351 |                       "Clipping occurred for Motor ID %d: Original Position: %d, Clipped Position: [01;36m[K%d[m[K (Min: %d, Max: %d)",
+      |                                                                                                    [01;36m[K~^[m[K
+      |                                                                                                     [01;36m[K|[m[K
+      |                                                                                                     [01;36m[Kint[m[K
+      |                                                                                                    [32m[K%f[m[K
+[100%] [32m[1mLinking CXX executable torque_read_degree_write[0m
+[100%] Built target torque_read_degree_write
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/read_write_node
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/joint_state_publisher
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/csv_joint_state_publisher
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/torque_check
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/rviz_visualization_node
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/torque_compensation_node
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/torque_read_degree_write
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/__pycache__/robot_visualization.launch.cpython-310.pyc
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/robot_visualization.launch.py
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/robot_visualization.launch.xml
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/01_Default_두리번.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/02_Default_두리번2.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/03_Default_두리번3.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/04_호객행위.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/05_인사.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/06_춤.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/sincostra.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/torquecheck.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/torquecheck.xlsx
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/AVATAR_URDF_Test3.urdf
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Base.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Head.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Forearm.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Shoulder1.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Shoulder2.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Shoulder3.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Upperarm.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Wrist1.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Wrist2.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Wrist3.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Neck1.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Neck2.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Forearm.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Shoulder1.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Shoulder2.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Shoulder3.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Upperarm.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Wrist1.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Wrist2.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Wrist3.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Waist_Bottom.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Waist_Top.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/ament_index/resource_index/package_run_dependencies/dynamixel_control
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/ament_index/resource_index/parent_prefix_path/dynamixel_control
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/path.sh
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/path.dsv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.bash
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.sh
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.zsh
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.dsv
+-- Symlinking: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/package.dsv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/ament_index/resource_index/packages/dynamixel_control
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/cmake/dynamixel_controlConfig.cmake
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/cmake/dynamixel_controlConfig-version.cmake
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/package.xml

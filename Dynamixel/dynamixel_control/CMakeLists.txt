@@ -47,6 +47,12 @@ ament_target_dependencies(csv_joint_state_publisher
   sensor_msgs
   std_msgs
 )
+add_executable(torque_check src/torque_check.cpp)
+ament_target_dependencies(torque_check
+  rclcpp
+  sensor_msgs
+  std_msgs
+)
 # RViz 시각화 노드 추가
 add_executable(rviz_visualization_node src/rviz_visualization_node.cpp)
 ament_target_dependencies(rviz_visualization_node
@@ -65,15 +71,25 @@ ament_target_dependencies(torque_compensation_node
   std_msgs
   sensor_msgs
 )
+add_executable(torque_read_degree_write src/torque_read_degree_write.cpp)
+ament_target_dependencies(torque_read_degree_write
+  dynamixel_sdk
+  rclcpp
+  std_msgs
+  sensor_msgs
+  # moveit_ros_planning_interface
+)
 
 # Install
 install(TARGETS
   read_write_node
   joint_state_publisher
   csv_joint_state_publisher
+  torque_check
   #DIRECTORY data
   rviz_visualization_node
   torque_compensation_node
+  torque_read_degree_write
   DESTINATION lib/${PROJECT_NAME}
 )
 

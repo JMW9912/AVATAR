@@ -1,1 +1,1 @@
-/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_control/ament_cmake_environment_hooks/local_setup.zsh
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control/ament_cmake_environment_hooks/local_setup.zsh

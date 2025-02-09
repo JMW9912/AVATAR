@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_sdk/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +123,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_sdk/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +181,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_sdk/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +251,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk/${destination}")
+      set(destination "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_sdk/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -311,61 +311,61 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install(DIRECTORY "include/" "DESTINATION" "include/")
-ament_cmake_symlink_install_directory("/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk" DIRECTORY "include/" "DESTINATION" "include/")
+ament_cmake_symlink_install_directory("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk" DIRECTORY "include/" "DESTINATION" "include/")
 
 # install("TARGETS" "dynamixel_sdk" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")
-include("/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/dynamixel_sdk/environment")
-ament_cmake_symlink_install_files("/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk" FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/dynamixel_sdk/environment")
+ament_cmake_symlink_install_files("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk" FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/dynamixel_sdk/environment")
 
-# install(FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/dynamixel_sdk/environment")
-ament_cmake_symlink_install_files("/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk" FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/dynamixel_sdk/environment")
+# install(FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/dynamixel_sdk/environment")
+ament_cmake_symlink_install_files("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk" FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/dynamixel_sdk/environment")
 
-# install(FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk" FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk" FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk" FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk" FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/dynamixel_sdk/environment")
-ament_cmake_symlink_install_files("/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/dynamixel_sdk/environment")
+ament_cmake_symlink_install_files("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/dynamixel_sdk/environment")
 
-# install(FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/dynamixel_sdk/environment")
-ament_cmake_symlink_install_files("/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk" FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/dynamixel_sdk/environment")
+# install(FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/dynamixel_sdk/environment")
+ament_cmake_symlink_install_files("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk" FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/dynamixel_sdk/environment")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/dynamixel_sdk/environment")
-ament_cmake_symlink_install_files("/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/dynamixel_sdk/environment")
+ament_cmake_symlink_install_files("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/dynamixel_sdk/environment")
 
-# install(FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/dynamixel_sdk/environment")
-ament_cmake_symlink_install_files("/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk" FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/dynamixel_sdk/environment")
+# install(FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/dynamixel_sdk/environment")
+ament_cmake_symlink_install_files("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk" FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/dynamixel_sdk/environment")
 
-# install(FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/dynamixel_sdk")
-ament_cmake_symlink_install_files("/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk" FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/dynamixel_sdk")
+# install(FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/dynamixel_sdk")
+ament_cmake_symlink_install_files("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk" FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/dynamixel_sdk")
 
-# install(FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/dynamixel_sdk")
-ament_cmake_symlink_install_files("/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk" FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/dynamixel_sdk")
+# install(FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/dynamixel_sdk")
+ament_cmake_symlink_install_files("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk" FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/dynamixel_sdk")
 
-# install(FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/dynamixel_sdk")
-ament_cmake_symlink_install_files("/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk" FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/dynamixel_sdk")
+# install(FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/dynamixel_sdk")
+ament_cmake_symlink_install_files("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk" FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/dynamixel_sdk")
 
-# install(FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/dynamixel_sdk")
-ament_cmake_symlink_install_files("/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk" FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/dynamixel_sdk")
+# install(FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/dynamixel_sdk")
+ament_cmake_symlink_install_files("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk" FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/dynamixel_sdk")
 
-# install(FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/dynamixel_sdk")
-ament_cmake_symlink_install_files("/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk" FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/dynamixel_sdk")
+# install(FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/dynamixel_sdk")
+ament_cmake_symlink_install_files("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk" FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/dynamixel_sdk")
 
-# install(FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_index/share/ament_index/resource_index/packages/dynamixel_sdk" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk" FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_index/share/ament_index/resource_index/packages/dynamixel_sdk" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_index/share/ament_index/resource_index/packages/dynamixel_sdk" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk" FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_index/share/ament_index/resource_index/packages/dynamixel_sdk" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/dynamixel_sdk/cmake")
-ament_cmake_symlink_install_files("/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk" FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/dynamixel_sdk/cmake")
+# install(FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/dynamixel_sdk/cmake")
+ament_cmake_symlink_install_files("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk" FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/dynamixel_sdk/cmake")
 
-# install(FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/dynamixel_sdk/cmake")
-ament_cmake_symlink_install_files("/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk" FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/dynamixel_sdk/cmake")
+# install(FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/dynamixel_sdk/cmake")
+ament_cmake_symlink_install_files("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk" FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/dynamixel_sdk/cmake")
 
-# install(FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_core/dynamixel_sdkConfig.cmake" "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_core/dynamixel_sdkConfig-version.cmake" "DESTINATION" "share/dynamixel_sdk/cmake")
-ament_cmake_symlink_install_files("/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk" FILES "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_core/dynamixel_sdkConfig.cmake" "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_core/dynamixel_sdkConfig-version.cmake" "DESTINATION" "share/dynamixel_sdk/cmake")
+# install(FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_core/dynamixel_sdkConfig.cmake" "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_core/dynamixel_sdkConfig-version.cmake" "DESTINATION" "share/dynamixel_sdk/cmake")
+ament_cmake_symlink_install_files("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk" FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_core/dynamixel_sdkConfig.cmake" "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_core/dynamixel_sdkConfig-version.cmake" "DESTINATION" "share/dynamixel_sdk/cmake")
 
-# install(FILES "/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk/package.xml" "DESTINATION" "share/dynamixel_sdk")
-ament_cmake_symlink_install_files("/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk" FILES "/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk/package.xml" "DESTINATION" "share/dynamixel_sdk")
+# install(FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk/package.xml" "DESTINATION" "share/dynamixel_sdk")
+ament_cmake_symlink_install_files("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk" FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk/package.xml" "DESTINATION" "share/dynamixel_sdk")

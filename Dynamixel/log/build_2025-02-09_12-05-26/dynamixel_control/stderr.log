@@ -1,0 +1,594 @@
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:216:5:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kdo[m[K’
+  216 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "csv End");
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:216:5:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kwhile[m[K’
+  216 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "csv End");
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:217:4:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+  217 |   }
+      |    [01;31m[K^[m[K
+      |    [32m[K;[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:[m[K In constructor ‘[01m[KTorqueReadDegreeWrite::TorqueReadDegreeWrite()[m[K’:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:78:62:[m[K [01;31m[Kerror: [m[K‘[01m[KtopicCallback[m[K’ is not a member of ‘[01m[KTorqueReadDegreeWrite[m[K’
+   78 |       "/joint_states", 10, std::bind(&TorqueReadDegreeWrite::[01;31m[KtopicCallback[m[K, this, std::placeholders::_1));
+      |                                                              [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:[m[K In member function ‘[01m[Kvoid TorqueReadDegreeWrite::timerCallback()[m[K’:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:170:37:[m[K [01;31m[Kerror: [m[K‘[01m[KPos2Rad[m[K’ was not declared in this scope
+  170 |                  << ": " << Rad2Deg([01;31m[KPos2Rad[m[K(dxl_id, dxl_present_position[dxl_id - DXL_MIN_ID]));
+      |                                     [01;31m[K^~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:170:29:[m[K [01;31m[Kerror: [m[K‘[01m[KRad2Deg[m[K’ was not declared in this scope
+  170 |                  << ": " << [01;31m[KRad2Deg[m[K(Pos2Rad(dxl_id, dxl_present_position[dxl_id - DXL_MIN_ID]));
+      |                             [01;31m[K^~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:191:31:[m[K [01;31m[Kerror: [m[K‘[01m[KPos2Rad[m[K’ was not declared in this scope
+  191 |         data_file_ << Rad2Deg([01;31m[KPos2Rad[m[K(dxl_id, param_goal_position[dxl_id - DXL_MIN_ID])) << ",";
+      |                               [01;31m[K^~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:191:23:[m[K [01;31m[Kerror: [m[K‘[01m[KRad2Deg[m[K’ was not declared in this scope
+  191 |         data_file_ << [01;31m[KRad2Deg[m[K(Pos2Rad(dxl_id, param_goal_position[dxl_id - DXL_MIN_ID])) << ",";
+      |                       [01;31m[K^~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:195:31:[m[K [01;31m[Kerror: [m[K‘[01m[KPos2Rad[m[K’ was not declared in this scope
+  195 |         data_file_ << Rad2Deg([01;31m[KPos2Rad[m[K(dxl_id, dxl_present_position[dxl_id - DXL_MIN_ID])) << ",";
+      |                               [01;31m[K^~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:195:23:[m[K [01;31m[Kerror: [m[K‘[01m[KRad2Deg[m[K’ was not declared in this scope
+  195 |         data_file_ << [01;31m[KRad2Deg[m[K(Pos2Rad(dxl_id, dxl_present_position[dxl_id - DXL_MIN_ID])) << ",";
+      |                       [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:[m[K In function ‘[01m[Kvoid topicCallback(sensor_msgs::msg::JointState_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:221:18:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  221 |     RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "Received /joint_states message");
+      |                  [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:221:18:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:221:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  221 |     [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "Received /joint_states message");
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:221:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  221 |     [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "Received /joint_states message");
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:221:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  221 |     [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "Received /joint_states message");
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:221:18:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  221 |     RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "Received /joint_states message");
+      |                  [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:221:18:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  221 |     RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "Received /joint_states message");
+      |                  [01;31m[K^~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:224:20:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  224 |       RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "Joint %zu: %f rad", i + 1, msg->position[i]);
+      |                    [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:224:20:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:224:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  224 |       [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "Joint %zu: %f rad", i + 1, msg->position[i]);
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:224:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  224 |       [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "Joint %zu: %f rad", i + 1, msg->position[i]);
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:224:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  224 |       [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "Joint %zu: %f rad", i + 1, msg->position[i]);
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:224:20:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  224 |       RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "Joint %zu: %f rad", i + 1, msg->position[i]);
+      |                    [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:224:20:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  224 |       RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "Joint %zu: %f rad", i + 1, msg->position[i]);
+      |                    [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:232:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoint_sequence[m[K’ was not declared in this scope
+  232 |         raw_goal_position[i] = msg->position[[01;31m[Kjoint_sequence[m[K[i]-1];
+      |                                              [01;31m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:234:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  234 |         RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "Joint %i: original goal position = %d, raw_goal position = %f", i+1, param_goal_position[i], raw_goal_position[i]);
+      |                      [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:234:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:234:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  234 |         [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "Joint %i: original goal position = %d, raw_goal position = %f", i+1, param_goal_position[i], raw_goal_position[i]);
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:234:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  234 |         [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "Joint %i: original goal position = %d, raw_goal position = %f", i+1, param_goal_position[i], raw_goal_position[i]);
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:234:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  234 |         [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "Joint %i: original goal position = %d, raw_goal position = %f", i+1, param_goal_position[i], raw_goal_position[i]);
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:234:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  234 |         RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "Joint %i: original goal position = %d, raw_goal position = %f", i+1, param_goal_position[i], raw_goal_position[i]);
+      |                      [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:234:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  234 |         RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "Joint %i: original goal position = %d, raw_goal position = %f", i+1, param_goal_position[i], raw_goal_position[i]);
+      |                      [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:234:112:[m[K [01;31m[Kerror: [m[K‘[01m[Kparam_goal_position[m[K’ was not declared in this scope; did you mean ‘[01m[Kraw_goal_position[m[K’?
+  234 |         RCLCPP_DEBUG(this->get_logger(), "Joint %i: original goal position = %d, raw_goal position = %f", i+1, [01;31m[Kparam_goal_position[m[K[i], raw_goal_position[i]);
+      |                                                                                                                [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:235:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kparam_goal_position[m[K’ was not declared in this scope; did you mean ‘[01m[Kraw_goal_position[m[K’?
+  235 |         [01;31m[Kparam_goal_position[m[K[i] = Clipping(i + DXL_MIN_ID, Rad2Pos(i + DXL_MIN_ID, raw_goal_position[i]));
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+      |         [32m[Kraw_goal_position[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:235:59:[m[K [01;31m[Kerror: [m[K‘[01m[KRad2Pos[m[K’ was not declared in this scope
+  235 |         param_goal_position[i] = Clipping(i + DXL_MIN_ID, [01;31m[KRad2Pos[m[K(i + DXL_MIN_ID, raw_goal_position[i]));
+      |                                                           [01;31m[K^~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:235:34:[m[K [01;31m[Kerror: [m[K‘[01m[KClipping[m[K’ was not declared in this scope
+  235 |         param_goal_position[i] = [01;31m[KClipping[m[K(i + DXL_MIN_ID, Rad2Pos(i + DXL_MIN_ID, raw_goal_position[i]));
+      |                                  [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:236:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  236 |         RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "Joint %i: clipped goal position = %d", i+1, param_goal_position[i]);
+      |                      [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:236:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:236:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  236 |         [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "Joint %i: clipped goal position = %d", i+1, param_goal_position[i]);
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:236:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  236 |         [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "Joint %i: clipped goal position = %d", i+1, param_goal_position[i]);
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:236:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  236 |         [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "Joint %i: clipped goal position = %d", i+1, param_goal_position[i]);
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:236:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  236 |         RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "Joint %i: clipped goal position = %d", i+1, param_goal_position[i]);
+      |                      [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:236:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  236 |         RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "Joint %i: clipped goal position = %d", i+1, param_goal_position[i]);
+      |                      [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:242:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kdxl_addparam_result[m[K’ was not declared in this scope
+  242 |       [01;31m[Kdxl_addparam_result[m[K = groupSyncWrite->addParam(dxl_id, reinterpret_cast<uint8_t*>(&param_goal_position[dxl_id - DXL_MIN_ID]));
+      |       [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:242:29:[m[K [01;31m[Kerror: [m[K‘[01m[KgroupSyncWrite[m[K’ was not declared in this scope
+  242 |       dxl_addparam_result = [01;31m[KgroupSyncWrite[m[K->addParam(dxl_id, reinterpret_cast<uint8_t*>(&param_goal_position[dxl_id - DXL_MIN_ID]));
+      |                             [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:242:90:[m[K [01;31m[Kerror: [m[K‘[01m[Kparam_goal_position[m[K’ was not declared in this scope; did you mean ‘[01m[Kraw_goal_position[m[K’?
+  242 |       dxl_addparam_result = groupSyncWrite->addParam(dxl_id, reinterpret_cast<uint8_t*>(&[01;31m[Kparam_goal_position[m[K[dxl_id - DXL_MIN_ID]));
+      |                                                                                          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                                          [32m[Kraw_goal_position[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:243:20:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  243 |       RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "Add parameter complete %d.", dxl_id);
+      |                    [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:243:20:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:243:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  243 |       [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "Add parameter complete %d.", dxl_id);
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:243:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  243 |       [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "Add parameter complete %d.", dxl_id);
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:243:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  243 |       [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "Add parameter complete %d.", dxl_id);
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:243:20:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  243 |       RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "Add parameter complete %d.", dxl_id);
+      |                    [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:243:20:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  243 |       RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "Add parameter complete %d.", dxl_id);
+      |                    [01;31m[K^~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:245:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  245 |         RCLCPP_ERROR([01;31m[Kthis[m[K->get_logger(), "Failed to add Dynamixel#%d goal position to the Syncwrite parameter storage", dxl_id);
+      |                      [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:245:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:245:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  245 |         [01;31m[KRCLCPP_ERROR[m[K(this->get_logger(), "Failed to add Dynamixel#%d goal position to the Syncwrite parameter storage", dxl_id);
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:245:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  245 |         [01;31m[KRCLCPP_ERROR[m[K(this->get_logger(), "Failed to add Dynamixel#%d goal position to the Syncwrite parameter storage", dxl_id);
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:245:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  245 |         [01;31m[KRCLCPP_ERROR[m[K(this->get_logger(), "Failed to add Dynamixel#%d goal position to the Syncwrite parameter storage", dxl_id);
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:245:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  245 |         RCLCPP_ERROR([01;31m[Kthis[m[K->get_logger(), "Failed to add Dynamixel#%d goal position to the Syncwrite parameter storage", dxl_id);
+      |                      [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:245:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  245 |         RCLCPP_ERROR([01;31m[Kthis[m[K->get_logger(), "Failed to add Dynamixel#%d goal position to the Syncwrite parameter storage", dxl_id);
+      |                      [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:251:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kdxl_comm_result[m[K’ was not declared in this scope
+  251 |     [01;31m[Kdxl_comm_result[m[K = groupSyncWrite->txPacket();
+      |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:251:23:[m[K [01;31m[Kerror: [m[K‘[01m[KgroupSyncWrite[m[K’ was not declared in this scope
+  251 |     dxl_comm_result = [01;31m[KgroupSyncWrite[m[K->txPacket();
+      |                       [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:252:42:[m[K [01;31m[Kerror: [m[K‘[01m[KpacketHandler[m[K’ was not declared in this scope
+  252 |     if (dxl_comm_result != COMM_SUCCESS) [01;31m[KpacketHandler[m[K->getTxRxResult(dxl_comm_result);
+      |                                          [01;31m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:[m[K In function ‘[01m[Kint Clipping(uint8_t, int)[m[K’:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:259:18:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  259 |     RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "Get dxl_id: %i, goal position: %i", dxl_id, goal_position);
+      |                  [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:259:18:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:259:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  259 |     [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "Get dxl_id: %i, goal position: %i", dxl_id, goal_position);
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:259:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  259 |     [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "Get dxl_id: %i, goal position: %i", dxl_id, goal_position);
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:259:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  259 |     [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "Get dxl_id: %i, goal position: %i", dxl_id, goal_position);
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:259:18:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  259 |     RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "Get dxl_id: %i, goal position: %i", dxl_id, goal_position);
+      |                  [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:259:18:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  259 |     RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "Get dxl_id: %i, goal position: %i", dxl_id, goal_position);
+      |                  [01;31m[K^~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:263:24:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  263 |           RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "%d motor is BIG, and clipped to %i", dxl_id, goal_position);
+      |                        [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:263:24:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:263:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  263 |           [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "%d motor is BIG, and clipped to %i", dxl_id, goal_position);
+      |           [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:263:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  263 |           [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "%d motor is BIG, and clipped to %i", dxl_id, goal_position);
+      |           [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:263:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  263 |           [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "%d motor is BIG, and clipped to %i", dxl_id, goal_position);
+      |           [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:263:24:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  263 |           RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "%d motor is BIG, and clipped to %i", dxl_id, goal_position);
+      |                        [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:263:24:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  263 |           RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "%d motor is BIG, and clipped to %i", dxl_id, goal_position);
+      |                        [01;31m[K^~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:267:24:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  267 |           RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "%d motor is SMALL, and clipped to %i", dxl_id, goal_position);
+      |                        [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:267:24:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:267:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  267 |           [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "%d motor is SMALL, and clipped to %i", dxl_id, goal_position);
+      |           [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:267:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  267 |           [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "%d motor is SMALL, and clipped to %i", dxl_id, goal_position);
+      |           [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:267:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  267 |           [01;31m[KRCLCPP_DEBUG[m[K(this->get_logger(), "%d motor is SMALL, and clipped to %i", dxl_id, goal_position);
+      |           [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:267:24:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  267 |           RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "%d motor is SMALL, and clipped to %i", dxl_id, goal_position);
+      |                        [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:267:24:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  267 |           RCLCPP_DEBUG([01;31m[Kthis[m[K->get_logger(), "%d motor is SMALL, and clipped to %i", dxl_id, goal_position);
+      |                        [01;31m[K^~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:269:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  269 |           RCLCPP_WARN([01;31m[Kthis[m[K->get_logger(), "Unknown motor ID for Clipping: %d", dxl_id);
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:269:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:269:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  269 |           [01;31m[KRCLCPP_WARN[m[K(this->get_logger(), "Unknown motor ID for Clipping: %d", dxl_id);
+      |           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:269:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  269 |           [01;31m[KRCLCPP_WARN[m[K(this->get_logger(), "Unknown motor ID for Clipping: %d", dxl_id);
+      |           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:269:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  269 |           [01;31m[KRCLCPP_WARN[m[K(this->get_logger(), "Unknown motor ID for Clipping: %d", dxl_id);
+      |           [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:269:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  269 |           RCLCPP_WARN([01;31m[Kthis[m[K->get_logger(), "Unknown motor ID for Clipping: %d", dxl_id);
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:269:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  269 |           RCLCPP_WARN([01;31m[Kthis[m[K->get_logger(), "Unknown motor ID for Clipping: %d", dxl_id);
+      |                       [01;31m[K^~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:[m[K In function ‘[01m[Kfloat Pos2Rad(uint8_t, int)[m[K’:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:282:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  282 |           RCLCPP_WARN([01;31m[Kthis[m[K->get_logger(), "Unknown motor ID for Pos2Rad: %d", dxl_id);
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:282:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:282:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  282 |           [01;31m[KRCLCPP_WARN[m[K(this->get_logger(), "Unknown motor ID for Pos2Rad: %d", dxl_id);
+      |           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:282:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  282 |           [01;31m[KRCLCPP_WARN[m[K(this->get_logger(), "Unknown motor ID for Pos2Rad: %d", dxl_id);
+      |           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:282:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  282 |           [01;31m[KRCLCPP_WARN[m[K(this->get_logger(), "Unknown motor ID for Pos2Rad: %d", dxl_id);
+      |           [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:282:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  282 |           RCLCPP_WARN([01;31m[Kthis[m[K->get_logger(), "Unknown motor ID for Pos2Rad: %d", dxl_id);
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:282:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  282 |           RCLCPP_WARN([01;31m[Kthis[m[K->get_logger(), "Unknown motor ID for Pos2Rad: %d", dxl_id);
+      |                       [01;31m[K^~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:[m[K In function ‘[01m[Kint Rad2Pos(uint8_t, float)[m[K’:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:295:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  295 |           RCLCPP_WARN([01;31m[Kthis[m[K->get_logger(), "Unknown motor ID for Rad2Pos: %d", dxl_id);
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:295:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:295:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  295 |           [01;31m[KRCLCPP_WARN[m[K(this->get_logger(), "Unknown motor ID for Rad2Pos: %d", dxl_id);
+      |           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:295:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  295 |           [01;31m[KRCLCPP_WARN[m[K(this->get_logger(), "Unknown motor ID for Rad2Pos: %d", dxl_id);
+      |           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:295:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  295 |           [01;31m[KRCLCPP_WARN[m[K(this->get_logger(), "Unknown motor ID for Rad2Pos: %d", dxl_id);
+      |           [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:6[m[K:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:295:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  295 |           RCLCPP_WARN([01;31m[Kthis[m[K->get_logger(), "Unknown motor ID for Rad2Pos: %d", dxl_id);
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:295:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  295 |           RCLCPP_WARN([01;31m[Kthis[m[K->get_logger(), "Unknown motor ID for Rad2Pos: %d", dxl_id);
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:[m[K At global scope:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:305:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+  305 | [01;31m[K}[m[K;
+      | [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/torque_read_degree_write.dir/build.make:76: CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/torque_read_degree_write.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

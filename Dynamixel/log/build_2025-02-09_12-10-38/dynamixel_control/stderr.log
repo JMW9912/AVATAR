@@ -1,0 +1,51 @@
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:303:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  303 | }
+      |  [01;31m[K^[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:47:51:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   47 | class TorqueReadDegreeWrite : public rclcpp::Node [01;36m[K{[m[K
+      |                                                   [01;36m[K^[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:[m[K In constructor ‘[01m[KTorqueReadDegreeWrite::TorqueReadDegreeWrite()[m[K’:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:79:62:[m[K [01;31m[Kerror: [m[K‘[01m[KtopicCallback[m[K’ is not a member of ‘[01m[KTorqueReadDegreeWrite[m[K’
+   79 |       "/joint_states", 10, std::bind(&TorqueReadDegreeWrite::[01;31m[KtopicCallback[m[K, this, std::placeholders::_1));
+      |                                                              [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:[m[K In member function ‘[01m[Kvoid TorqueReadDegreeWrite::timerCallback()[m[K’:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:169:37:[m[K [01;31m[Kerror: [m[K‘[01m[KPos2Rad[m[K’ was not declared in this scope
+  169 |                  << ": " << Rad2Deg([01;31m[KPos2Rad[m[K(dxl_id, dxl_present_position[dxl_id - DXL_MIN_ID]))
+      |                                     [01;31m[K^~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:169:29:[m[K [01;31m[Kerror: [m[K‘[01m[KRad2Deg[m[K’ was not declared in this scope
+  169 |                  << ": " << [01;31m[KRad2Deg[m[K(Pos2Rad(dxl_id, dxl_present_position[dxl_id - DXL_MIN_ID]))
+      |                             [01;31m[K^~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:188:31:[m[K [01;31m[Kerror: [m[K‘[01m[KPos2Rad[m[K’ was not declared in this scope
+  188 |         data_file_ << Rad2Deg([01;31m[KPos2Rad[m[K(dxl_id, param_goal_position[dxl_id - DXL_MIN_ID])) << ",";
+      |                               [01;31m[K^~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:188:23:[m[K [01;31m[Kerror: [m[K‘[01m[KRad2Deg[m[K’ was not declared in this scope
+  188 |         data_file_ << [01;31m[KRad2Deg[m[K(Pos2Rad(dxl_id, param_goal_position[dxl_id - DXL_MIN_ID])) << ",";
+      |                       [01;31m[K^~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:192:31:[m[K [01;31m[Kerror: [m[K‘[01m[KPos2Rad[m[K’ was not declared in this scope
+  192 |         data_file_ << Rad2Deg([01;31m[KPos2Rad[m[K(dxl_id, dxl_present_position[dxl_id - DXL_MIN_ID])) << ",";
+      |                               [01;31m[K^~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:192:23:[m[K [01;31m[Kerror: [m[K‘[01m[KRad2Deg[m[K’ was not declared in this scope
+  192 |         data_file_ << [01;31m[KRad2Deg[m[K(Pos2Rad(dxl_id, dxl_present_position[dxl_id - DXL_MIN_ID])) << ",";
+      |                       [01;31m[K^~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:210:73:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  210 |   void topicCallback(const sensor_msgs::msg::JointState::SharedPtr msg) [01;31m[K{[m[K
+      |                                                                         [01;31m[K^[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:249:51:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  249 |   int Clipping(uint8_t dxl_id, int goal_position) [01;31m[K{[m[K
+      |                                                   [01;31m[K^[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:266:47:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  266 |   float Pos2Rad(uint8_t dxl_id, int position) [01;31m[K{[m[K
+      |                                               [01;31m[K^[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:279:45:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  279 |   int Rad2Pos(uint8_t dxl_id, float degree) [01;31m[K{[m[K
+      |                                             [01;31m[K^[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:291:31:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  291 |   float Rad2Deg(float degree) [01;31m[K{[m[K
+      |                               [01;31m[K^[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:[m[K At global scope:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp:303:2:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+  303 | }
+      |  [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/torque_read_degree_write.dir/build.make:76: CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/torque_read_degree_write.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

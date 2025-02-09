@@ -1,0 +1,73 @@
+[0.006s] Invoking command in '/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control': CMAKE_PREFIX_PATH=/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_sdk:/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control:/opt/ros/humble /usr/bin/cmake --build /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control -- -j24 -l24
+[0.036s] [35m[1mConsolidate compiler generated dependencies of target torque_read_degree_write[0m
+[0.045s] [ 28%] Built target read_write_node
+[0.045s] [ 28%] Built target joint_state_publisher
+[0.045s] [ 42%] Built target torque_check
+[0.045s] [ 85%] Built target torque_compensation_node
+[0.045s] [ 85%] Built target csv_joint_state_publisher
+[0.045s] [ 85%] Built target rviz_visualization_node
+[0.048s] [ 92%] [32mBuilding CXX object CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.o[0m
+[4.227s] [100%] [32m[1mLinking CXX executable torque_read_degree_write[0m
+[4.426s] [100%] Built target torque_read_degree_write
+[4.433s] Invoked command in '/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control' returned '0': CMAKE_PREFIX_PATH=/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_sdk:/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control:/opt/ros/humble /usr/bin/cmake --build /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control -- -j24 -l24
+[4.434s] Invoking command in '/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control': CMAKE_PREFIX_PATH=/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_sdk:/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control:/opt/ros/humble /usr/bin/cmake --install /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control
+[4.438s] -- Install configuration: ""
+[4.439s] -- Execute custom install script
+[4.439s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/read_write_node
+[4.439s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/joint_state_publisher
+[4.439s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/csv_joint_state_publisher
+[4.439s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/torque_check
+[4.439s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/rviz_visualization_node
+[4.439s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/torque_compensation_node
+[4.439s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/torque_read_degree_write
+[4.440s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/__pycache__/robot_visualization.launch.cpython-310.pyc
+[4.440s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/robot_visualization.launch.py
+[4.440s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/robot_visualization.launch.xml
+[4.440s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/01_Default_두리번.csv
+[4.440s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/02_Default_두리번2.csv
+[4.440s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/03_Default_두리번3.csv
+[4.440s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/04_호객행위.csv
+[4.440s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/05_인사.csv
+[4.440s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/06_춤.csv
+[4.440s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/sincostra.csv
+[4.440s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/torquecheck.csv
+[4.440s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/torquecheck.xlsx
+[4.441s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/AVATAR_URDF_Test3.urdf
+[4.441s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Base.stl
+[4.441s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Head.stl
+[4.441s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Forearm.stl
+[4.441s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Shoulder1.stl
+[4.441s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Shoulder2.stl
+[4.441s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Shoulder3.stl
+[4.441s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Upperarm.stl
+[4.441s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Wrist1.stl
+[4.441s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Wrist2.stl
+[4.441s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Wrist3.stl
+[4.441s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Neck1.stl
+[4.441s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Neck2.stl
+[4.441s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Forearm.stl
+[4.442s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Shoulder1.stl
+[4.442s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Shoulder2.stl
+[4.442s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Shoulder3.stl
+[4.442s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Upperarm.stl
+[4.442s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Wrist1.stl
+[4.442s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Wrist2.stl
+[4.442s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Wrist3.stl
+[4.442s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Waist_Bottom.stl
+[4.442s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Waist_Top.stl
+[4.442s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/ament_index/resource_index/package_run_dependencies/dynamixel_control
+[4.442s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/ament_index/resource_index/parent_prefix_path/dynamixel_control
+[4.442s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/ament_prefix_path.sh
+[4.442s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/ament_prefix_path.dsv
+[4.443s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/path.sh
+[4.443s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/path.dsv
+[4.443s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.bash
+[4.443s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.sh
+[4.443s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.zsh
+[4.443s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.dsv
+[4.443s] -- Symlinking: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/package.dsv
+[4.448s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/ament_index/resource_index/packages/dynamixel_control
+[4.448s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/cmake/dynamixel_controlConfig.cmake
+[4.449s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/cmake/dynamixel_controlConfig-version.cmake
+[4.449s] -- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/package.xml
+[4.450s] Invoked command in '/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control' returned '0': CMAKE_PREFIX_PATH=/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_sdk:/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control:/opt/ros/humble /usr/bin/cmake --install /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control
