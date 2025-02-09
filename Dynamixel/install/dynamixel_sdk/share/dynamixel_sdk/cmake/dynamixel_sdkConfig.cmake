@@ -1,1 +1,1 @@
-/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_core/dynamixel_sdkConfig.cmake
+/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_core/dynamixel_sdkConfig.cmake

@@ -1,5 +1,5 @@
 CMakeFiles/torque_check.dir/src/torque_check.cpp.o: \
- /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_check.cpp \
+ /home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_control/src/torque_check.cpp \
  /usr/include/stdc-predef.h \
  /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp \
  /usr/include/c++/11/csignal \

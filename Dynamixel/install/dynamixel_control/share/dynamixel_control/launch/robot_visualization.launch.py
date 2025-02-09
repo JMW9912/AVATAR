@@ -1,1 +1,1 @@
-/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/launch/robot_visualization.launch.py
+/home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_control/launch/robot_visualization.launch.py

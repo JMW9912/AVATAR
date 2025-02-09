@@ -29,15 +29,15 @@
 
 // Define BIG_MOTOR and SMALL_MOTOR sets
 #define DXL_MIN_ID                      1
-#define DXL_MAX_ID                      2 // number of motor
-//const std::set<uint8_t> WHOLE_MOTOR = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21};
-//const std::set<uint8_t> BIG_MOTOR = {1, 2, 3, 4, 5, 9, 10, 11, 12, 13, 20, 21}; // 200W, 100W motor
-//const std::set<uint8_t> MIDDLE_MOTOR = {6, 7, 8, 14, 15, 16, 18};               // 20W motor
-//const std::set<uint8_t> SMALL_MOTOR = {17, 19};                                 // 10W motor
-const std::set<uint8_t> WHOLE_MOTOR = {1, 2};
-const std::set<uint8_t> BIG_MOTOR = {1};     // 200W, 100W motor
-const std::set<uint8_t> MIDDLE_MOTOR = {2};               // 20W motor
-const std::set<uint8_t> SMALL_MOTOR = {};               // 10W motor
+#define DXL_MAX_ID                      21 // number of motor
+const std::set<uint8_t> WHOLE_MOTOR = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21};
+const std::set<uint8_t> BIG_MOTOR = {1, 2, 3, 4, 5, 9, 10, 11, 12, 13, 20, 21}; // 200W, 100W motor
+const std::set<uint8_t> MIDDLE_MOTOR = {6, 7, 8, 14, 15, 16, 18};               // 20W motor
+const std::set<uint8_t> SMALL_MOTOR = {17, 19};                                 // 10W motor
+// const std::set<uint8_t> WHOLE_MOTOR = {1, 2};
+// const std::set<uint8_t> BIG_MOTOR = {1};     // 200W, 100W motor
+// const std::set<uint8_t> MIDDLE_MOTOR = {2};               // 20W motor
+// const std::set<uint8_t> SMALL_MOTOR = {};               // 10W motor
 #define BIG_MOTOR_POS                   501923  //Motor ID: {1~5, 9~13, 20~21} 2788.46
 #define MIDDLE_MOTOR_POS                303750  //Motor ID: {6~8, 14~16, 18}   1687.5
 #define SMALL_MOTOR_POS                 263187    //Motor ID: {17, 19}           1462.15
@@ -56,17 +56,17 @@ std::map<int, std::pair<int, int>> CONST_DEG = {
     {2, {-45, 160}},
     {3, {0, 160}},
     {4, {-90, 90}},
-    {5, {0, 160}},
+    {5, {0, 120}},
     {6, {-90, 90}},
-    {7, {-90, 90}},
+    {7, {-65, 65}},
     {8, {-90, 90}},
     {9, {-60, 30}},
     {10, {-160, 45}},
     {11, {-160, 0}},
     {12, {-90, 90}},
-    {13, {-160, 0}},
+    {13, {-120, 0}},
     {14, {-90, 90}},
-    {15, {-90, 90}},
+    {15, {-65, 65}},
     {16, {-90, 90}},
     {17, {-90, 90}},
     {18, {-90, 90}},

@@ -1,8 +1,8 @@
-# Install script for directory: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk
+# Install script for directory: /home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_sdk")
+  set(CMAKE_INSTALL_PREFIX "/home/jmw/ROS2/AVATAR/Dynamixel/install/dynamixel_sdk")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,7 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  include("/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -54,5 +54,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

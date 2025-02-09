@@ -1,7 +1,7 @@
 # generated from
 # ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_uninstall_script.cmake.in
 
-set(install_manifest "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/symlink_install_manifest.txt")
+set(install_manifest "/home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/symlink_install_manifest.txt")
 if(NOT EXISTS "${install_manifest}")
   message(FATAL_ERROR "Cannot find symlink install manifest: ${install_manifest}")
 endif()

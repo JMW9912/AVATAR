@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk
+CMAKE_SOURCE_DIR = /home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk
+CMAKE_BINARY_DIR = /home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_sdk /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_sdk/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk /home/jmw/ROS2/AVATAR/Dynamixel/dynamixel_sdk /home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk /home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk /home/jmw/ROS2/AVATAR/Dynamixel/build/dynamixel_sdk/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 
