@@ -1,9 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target torque_read_degree_write[0m
-[35m[1mConsolidate compiler generated dependencies of target torque_check[0m
-[ 14%] Built target joint_state_publisher
-[ 28%] Built target read_write_node
-[ 42%] Built target csv_joint_state_publisher
-[ 57%] Built target rviz_visualization_node
-[ 71%] Built target torque_compensation_node
-[ 78%] [32mBuilding CXX object CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.o[0m
-[ 92%] Built target torque_check

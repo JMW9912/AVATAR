@@ -1,0 +1,6 @@
+[35m[1mConsolidate compiler generated dependencies of target csv_joint_state_publisher[0m
+[ 40%] Built target joint_state_publisher
+[ 40%] Built target read_write_node
+[ 60%] Built target torque_compensation_node
+[ 80%] Built target rviz_visualization_node
+[ 90%] [32mBuilding CXX object CMakeFiles/csv_joint_state_publisher.dir/src/csv_joint_state_publisher.cpp.o[0m

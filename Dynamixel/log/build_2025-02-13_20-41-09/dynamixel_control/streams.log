@@ -1,0 +1,19 @@
+[0.006s] Invoking command in '/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control': CMAKE_PREFIX_PATH=/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_sdk:/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control:/opt/ros/humble /usr/bin/cmake --build /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control -- -j24 -l24
+[0.034s] [35m[1mConsolidate compiler generated dependencies of target csv_joint_state_publisher[0m
+[0.042s] [ 40%] Built target joint_state_publisher
+[0.042s] [ 40%] Built target read_write_node
+[0.042s] [ 60%] Built target torque_compensation_node
+[0.043s] [ 80%] Built target rviz_visualization_node
+[0.047s] [ 90%] [32mBuilding CXX object CMakeFiles/csv_joint_state_publisher.dir/src/csv_joint_state_publisher.cpp.o[0m
+[1.305s] [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:[m[K In lambda function:
+[1.305s] [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:61:24:[m[K [01;31m[Kerror: [m[K‘[01m[KINT_MAX[m[K’ was not declared in this scope
+[1.305s]    61 |                 return [01;31m[KINT_MAX[m[K; // 숫자가 없을 경우 큰 값 반환
+[1.305s]       |                        [01;31m[K^~~~~~~[m[K
+[1.305s] [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:11:1:[m[K [01;36m[Knote: [m[K‘[01m[KINT_MAX[m[K’ is defined in header ‘[01m[K<climits>[m[K’; did you forget to ‘[01m[K#include <climits>[m[K’?
+[1.305s]    10 | #include <poll.h>
+[1.305s]   +++ |+[32m[K#include <climits>[m[K
+[1.305s]    11 | 
+[1.734s] gmake[2]: *** [CMakeFiles/csv_joint_state_publisher.dir/build.make:76: CMakeFiles/csv_joint_state_publisher.dir/src/csv_joint_state_publisher.cpp.o] Error 1
+[1.734s] gmake[1]: *** [CMakeFiles/Makefile2:197: CMakeFiles/csv_joint_state_publisher.dir/all] Error 2
+[1.734s] gmake: *** [Makefile:146: all] Error 2
+[1.736s] Invoked command in '/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control' returned '2': CMAKE_PREFIX_PATH=/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_sdk:/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control:/opt/ros/humble /usr/bin/cmake --build /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control -- -j24 -l24

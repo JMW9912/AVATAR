@@ -8,6 +8,7 @@
 #include <thread>
 #include <chrono>
 #include <poll.h>
+#include <climits>
 
 namespace fs = std::filesystem;
 
@@ -17,7 +18,8 @@ public:
         : Node("csv_joint_state_publisher"),
           default_folder_("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/data/csv"),
           default_file_(),
-          stop_current_(false) {
+          stop_current_(false), 
+          is_first_csv_executed_(false) { 
 
         publisher_ = this->create_publisher<sensor_msgs::msg::JointState>("/joint_states", 10);
 
@@ -30,6 +32,8 @@ public:
         }
 
         default_file_ = file_list_[0]; // 기본 CSV 파일은 첫 번째 파일로 설정
+        processCSVFile(default_file_); // 첫 번째 CSV 파일 실행
+        is_first_csv_executed_ = true; // 첫 번째 파일이 실행되었음을 기록
         mainLoop();
     }
 
@@ -39,6 +43,7 @@ private:
     std::string default_file_;
     rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr publisher_;
     bool stop_current_;
+    bool is_first_csv_executed_; // 첫 번째 CSV 실행 여부를 저장하는 상태 변수
 
     std::vector<std::string> listCSVFiles(const std::string &folder_path) {
         std::vector<std::string> csv_files;
@@ -47,13 +52,37 @@ private:
                 csv_files.push_back(entry.path().string());
             }
         }
+    
+        // 파일 이름 정렬
+        std::sort(csv_files.begin(), csv_files.end(), [](const std::string &a, const std::string &b) {
+            auto extractNumber = [](const std::string &filename) -> int {
+                size_t pos = filename.find_last_of("/\\");
+                std::string base_name = (pos == std::string::npos) ? filename : filename.substr(pos + 1);
+                size_t num_start = base_name.find_first_of("0123456789");
+                if (num_start != std::string::npos) {
+                    size_t num_end = base_name.find_first_not_of("0123456789", num_start);
+                    return std::stoi(base_name.substr(num_start, num_end - num_start));
+                }
+                return INT_MAX; // 숫자가 없을 경우 큰 값 반환
+            };
+    
+            return extractNumber(a) < extractNumber(b);
+        });
+    
         return csv_files;
     }
+    
+
+    
 
     void mainLoop() {
         while (rclcpp::ok()) {
             size_t selected_index = getUserInput();
 
+            if (selected_index == 1 && is_first_csv_executed_) {
+                RCLCPP_WARN(this->get_logger(), "First CSV file has already been executed. Skipping...");
+                continue;
+            }
             if (selected_index < 1 || selected_index > file_list_.size()) {
                 RCLCPP_WARN(this->get_logger(), "Invalid index. Using default file: %s", default_file_.c_str());
                 processCSVFile(default_file_);
@@ -61,6 +90,10 @@ private:
                 std::string selected_file = file_list_[selected_index - 1];
                 RCLCPP_INFO(this->get_logger(), "Selected file: %s", selected_file.c_str());
                 processCSVFile(selected_file);
+
+                // 첫 번째 CSV 파일이 실행된 경우 상태 업데이트
+                if (selected_index == 1) {
+                    is_first_csv_executed_ = true;}
             }
         }
     }
@@ -84,7 +117,7 @@ private:
                 std::chrono::duration_cast<std::chrono::seconds>(start_time.time_since_epoch()).count(),
                 std::chrono::duration_cast<std::chrono::seconds>(std::chrono::steady_clock::now().time_since_epoch()).count());
 
-            if (std::chrono::steady_clock::now() - start_time > std::chrono::seconds(3)) {
+            if (std::chrono::steady_clock::now() - start_time > std::chrono::seconds(10)) {
                 RCLCPP_INFO(this->get_logger(), "No input detected. Using default file.");
                 return 1; // 디폴트 파일
             }
@@ -98,6 +131,7 @@ private:
             std::this_thread::sleep_for(std::chrono::milliseconds(100)); // 짧은 대기
         }
     }
+    
 
     void processCSVFile(const std::string &file_path) {
         std::ifstream file(file_path);
@@ -142,7 +176,7 @@ private:
             }
 
             publisher_->publish(message);
-            std::this_thread::sleep_for(std::chrono::milliseconds(100)); // 50ms 간격으로 퍼블리시
+            std::this_thread::sleep_for(std::chrono::milliseconds(100)); // 100ms 간격으로 퍼블리시
         }
 
         RCLCPP_INFO(this->get_logger(), "Finished publishing file: %s", file_path.c_str());

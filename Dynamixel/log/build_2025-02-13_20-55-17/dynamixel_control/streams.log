@@ -1,0 +1,15 @@
+[0.006s] Invoking command in '/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control': CMAKE_PREFIX_PATH=/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_sdk:/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control:/opt/ros/humble /usr/bin/cmake --build /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control -- -j24 -l24
+[0.035s] [35m[1mConsolidate compiler generated dependencies of target csv_joint_state_publisher[0m
+[0.043s] [ 40%] Built target torque_compensation_node
+[0.043s] [ 40%] Built target joint_state_publisher
+[0.043s] [ 60%] Built target rviz_visualization_node
+[0.043s] [ 80%] Built target read_write_node
+[0.047s] [ 90%] [32mBuilding CXX object CMakeFiles/csv_joint_state_publisher.dir/src/csv_joint_state_publisher.cpp.o[0m
+[1.211s] [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:[m[K In constructor ‘[01m[KCSVJointStatePublisher::CSVJointStatePublisher()[m[K’:
+[1.211s] [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:22:11:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[Kis_first_csv_executed_[m[K’
+[1.211s]    22 |           [01;31m[Kis_first_csv_executed_[m[K(false) {
+[1.211s]       |           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.490s] gmake[2]: *** [CMakeFiles/csv_joint_state_publisher.dir/build.make:76: CMakeFiles/csv_joint_state_publisher.dir/src/csv_joint_state_publisher.cpp.o] Error 1
+[1.490s] gmake[1]: *** [CMakeFiles/Makefile2:197: CMakeFiles/csv_joint_state_publisher.dir/all] Error 2
+[1.490s] gmake: *** [Makefile:146: all] Error 2
+[1.492s] Invoked command in '/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control' returned '2': CMAKE_PREFIX_PATH=/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_sdk:/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control:/opt/ros/humble /usr/bin/cmake --build /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control -- -j24 -l24

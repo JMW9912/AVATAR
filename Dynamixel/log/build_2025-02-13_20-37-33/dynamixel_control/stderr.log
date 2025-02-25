@@ -1,0 +1,37 @@
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:[m[K In lambda function:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:29:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+   29 |             return [01;31m[KextractNumber(a)[m[K < extractNumber(b);
+      |                    [01;31m[K~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:29:33:[m[K [01;31m[Kerror: [m[Kcannot call member function ‘[01m[Kint CSVJointStatePublisher::extractNumber(const string&)[m[K’ without object
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:29:52:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+   29 |             return extractNumber(a) < [01;31m[KextractNumber(b)[m[K;
+      |                                       [01;31m[K~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:29:52:[m[K [01;31m[Kerror: [m[Kcannot call member function ‘[01m[Kint CSVJointStatePublisher::extractNumber(const string&)[m[K’ without object
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:[m[K In member function ‘[01m[Kint CSVJointStatePublisher::extractNumber(const string&)[m[K’:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:75:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kregex[m[K’ is not a member of ‘[01m[Kstd[m[K’
+   75 |         std::[01;31m[Kregex[m[K number_regex(R"(^(\d+))");
+      |              [01;31m[K^~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:76:14:[m[K [01;31m[Kerror: [m[K‘[01m[Ksmatch[m[K’ is not a member of ‘[01m[Kstd[m[K’; did you mean ‘[01m[Ksearch[m[K’?
+   76 |         std::[01;31m[Ksmatch[m[K match;
+      |              [01;31m[K^~~~~~[m[K
+      |              [32m[Ksearch[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:77:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kregex_search[m[K’ is not a member of ‘[01m[Kstd[m[K’
+   77 |         if (std::[01;31m[Kregex_search[m[K(filename, match, number_regex)) {
+      |                  [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:77:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatch[m[K’ was not declared in this scope; did you mean ‘[01m[Krpmatch[m[K’?
+   77 |         if (std::regex_search(filename, [01;31m[Kmatch[m[K, number_regex)) {
+      |                                         [01;31m[K^~~~~[m[K
+      |                                         [32m[Krpmatch[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:77:48:[m[K [01;31m[Kerror: [m[K‘[01m[Knumber_regex[m[K’ was not declared in this scope
+   77 |         if (std::regex_search(filename, match, [01;31m[Knumber_regex[m[K)) {
+      |                                                [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:80:16:[m[K [01;31m[Kerror: [m[K‘[01m[KINT_MAX[m[K’ was not declared in this scope
+   80 |         return [01;31m[KINT_MAX[m[K; // 숫자가 없는 경우, 큰 값으로 처리
+      |                [01;31m[K^~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:11:1:[m[K [01;36m[Knote: [m[K‘[01m[KINT_MAX[m[K’ is defined in header ‘[01m[K<climits>[m[K’; did you forget to ‘[01m[K#include <climits>[m[K’?
+   10 | #include <poll.h>
+  +++ |+[32m[K#include <climits>[m[K
+   11 | 
+gmake[2]: *** [CMakeFiles/csv_joint_state_publisher.dir/build.make:76: CMakeFiles/csv_joint_state_publisher.dir/src/csv_joint_state_publisher.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:197: CMakeFiles/csv_joint_state_publisher.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

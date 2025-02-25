@@ -1,0 +1,53 @@
+[35m[1mConsolidate compiler generated dependencies of target csv_joint_state_publisher[0m
+[ 60%] Built target torque_compensation_node
+[ 60%] Built target read_write_node
+[ 60%] Built target rviz_visualization_node
+[ 80%] Built target joint_state_publisher
+[ 90%] [32mBuilding CXX object CMakeFiles/csv_joint_state_publisher.dir/src/csv_joint_state_publisher.cpp.o[0m
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:207:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  207 | }
+      |  [01;31m[K^[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:15:52:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   15 | class CSVJointStatePublisher : public rclcpp::Node [01;36m[K{[m[K
+      |                                                    [01;36m[K^[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:[m[K In constructor ‘[01m[KCSVJointStatePublisher::CSVJointStatePublisher()[m[K’:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:22:11:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[Kis_first_csv_executed_[m[K’
+   22 |           [01;31m[Kis_first_csv_executed_[m[K(false) {
+      |           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:[m[K In member function ‘[01m[Kvoid CSVJointStatePublisher::mainLoop()[m[K’:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:80:37:[m[K [01;31m[Kerror: [m[K‘[01m[KgetUserInput[m[K’ was not declared in this scope
+   80 |             size_t selected_index = [01;31m[KgetUserInput[m[K();
+      |                                     [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:88:17:[m[K [01;31m[Kerror: [m[K‘[01m[KprocessCSVFile[m[K’ was not declared in this scope
+   88 |                 [01;31m[KprocessCSVFile[m[K(default_file_);
+      |                 [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:92:17:[m[K [01;31m[Kerror: [m[K‘[01m[KprocessCSVFile[m[K’ was not declared in this scope
+   92 |                 [01;31m[KprocessCSVFile[m[K(selected_file);
+      |                 [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:101:24:[m[K [01;35m[Kwarning: [m[Kempty parentheses were disambiguated as a function declaration [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wvexing-parse-Wvexing-parse]8;;[m[K]
+  101 |     size_t getUserInput[01;35m[K()[m[K {
+      |                        [01;35m[K^~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:101:24:[m[K [01;36m[Knote: [m[Kremove parentheses to default-initialize a variable
+  101 |     size_t getUserInput[01;36m[K()[m[K {
+      |                        [01;36m[K^~[m[K
+      |                        [31m[K--[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:101:24:[m[K [01;36m[Knote: [m[Kor replace parentheses with braces to value-initialize a variable
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:101:27:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  101 |     size_t getUserInput() [01;31m[K{[m[K
+      |                           [01;31m[K^[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:136:55:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  136 |     void processCSVFile(const std::string &file_path) [01;31m[K{[m[K
+      |                                                       [01;31m[K^[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:185:63:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  185 |     std::vector<std::string> generateJointNames(size_t count) [01;31m[K{[m[K
+      |                                                               [01;31m[K^[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:193:78:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  193 |     std::vector<double> degreesToRadians(const std::vector<double> &degrees) [01;31m[K{[m[K
+      |                                                                              [01;31m[K^[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:[m[K At global scope:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/csv_joint_state_publisher.cpp:207:2:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+  207 | }
+      |  [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/csv_joint_state_publisher.dir/build.make:76: CMakeFiles/csv_joint_state_publisher.dir/src/csv_joint_state_publisher.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:197: CMakeFiles/csv_joint_state_publisher.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
