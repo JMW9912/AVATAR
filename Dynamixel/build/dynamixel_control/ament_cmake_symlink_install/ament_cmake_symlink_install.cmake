@@ -310,7 +310,7 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install("TARGETS" "read_write_node" "joint_state_publisher" "csv_joint_state_publisher" "rviz_visualization_node" "torque_compensation_node" "torque_read_degree_write" "DESTINATION" "lib/dynamixel_control")
+# install("TARGETS" "read_write_node" "joint_state_publisher" "csv_joint_state_publisher" "h1_csv_joint_state_publisher" "poppy_csv_joint_state_publisher" "rviz_visualization_node" "torque_compensation_node" "torque_read_degree_write" "DESTINATION" "lib/dynamixel_control")
 include("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "launch" "DESTINATION" "share/dynamixel_control/")
@@ -321,6 +321,12 @@ ament_cmake_symlink_install_directory("/home/minwoong/OneDrive/JMW/dynamixel_8DO
 
 # install(DIRECTORY "urdf" "DESTINATION" "share/dynamixel_control/")
 ament_cmake_symlink_install_directory("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control" DIRECTORY "urdf" "DESTINATION" "share/dynamixel_control/")
+
+# install(DIRECTORY "h1_2_description" "DESTINATION" "share/dynamixel_control/")
+ament_cmake_symlink_install_directory("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control" DIRECTORY "h1_2_description" "DESTINATION" "share/dynamixel_control/")
+
+# install(DIRECTORY "poppy_description" "DESTINATION" "share/dynamixel_control/")
+ament_cmake_symlink_install_directory("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control" DIRECTORY "poppy_description" "DESTINATION" "share/dynamixel_control/")
 
 # install(FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/dynamixel_control" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control" FILES "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/dynamixel_control" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

@@ -237,6 +237,32 @@ csv_joint_state_publisher/fast:
 .PHONY : csv_joint_state_publisher/fast
 
 #=============================================================================
+# Target rules for targets named h1_csv_joint_state_publisher
+
+# Build rule for target.
+h1_csv_joint_state_publisher: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 h1_csv_joint_state_publisher
+.PHONY : h1_csv_joint_state_publisher
+
+# fast build rule for target.
+h1_csv_joint_state_publisher/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/h1_csv_joint_state_publisher.dir/build.make CMakeFiles/h1_csv_joint_state_publisher.dir/build
+.PHONY : h1_csv_joint_state_publisher/fast
+
+#=============================================================================
+# Target rules for targets named poppy_csv_joint_state_publisher
+
+# Build rule for target.
+poppy_csv_joint_state_publisher: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 poppy_csv_joint_state_publisher
+.PHONY : poppy_csv_joint_state_publisher
+
+# fast build rule for target.
+poppy_csv_joint_state_publisher/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_csv_joint_state_publisher.dir/build.make CMakeFiles/poppy_csv_joint_state_publisher.dir/build
+.PHONY : poppy_csv_joint_state_publisher/fast
+
+#=============================================================================
 # Target rules for targets named rviz_visualization_node
 
 # Build rule for target.
@@ -299,6 +325,30 @@ src/csv_joint_state_publisher.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/csv_joint_state_publisher.dir/build.make CMakeFiles/csv_joint_state_publisher.dir/src/csv_joint_state_publisher.cpp.s
 .PHONY : src/csv_joint_state_publisher.cpp.s
 
+src/h1_csv_joint_state_publisher.o: src/h1_csv_joint_state_publisher.cpp.o
+.PHONY : src/h1_csv_joint_state_publisher.o
+
+# target to build an object file
+src/h1_csv_joint_state_publisher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/h1_csv_joint_state_publisher.dir/build.make CMakeFiles/h1_csv_joint_state_publisher.dir/src/h1_csv_joint_state_publisher.cpp.o
+.PHONY : src/h1_csv_joint_state_publisher.cpp.o
+
+src/h1_csv_joint_state_publisher.i: src/h1_csv_joint_state_publisher.cpp.i
+.PHONY : src/h1_csv_joint_state_publisher.i
+
+# target to preprocess a source file
+src/h1_csv_joint_state_publisher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/h1_csv_joint_state_publisher.dir/build.make CMakeFiles/h1_csv_joint_state_publisher.dir/src/h1_csv_joint_state_publisher.cpp.i
+.PHONY : src/h1_csv_joint_state_publisher.cpp.i
+
+src/h1_csv_joint_state_publisher.s: src/h1_csv_joint_state_publisher.cpp.s
+.PHONY : src/h1_csv_joint_state_publisher.s
+
+# target to generate assembly for a file
+src/h1_csv_joint_state_publisher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/h1_csv_joint_state_publisher.dir/build.make CMakeFiles/h1_csv_joint_state_publisher.dir/src/h1_csv_joint_state_publisher.cpp.s
+.PHONY : src/h1_csv_joint_state_publisher.cpp.s
+
 src/joint_state_publisher.o: src/joint_state_publisher.cpp.o
 .PHONY : src/joint_state_publisher.o
 
@@ -322,6 +372,30 @@ src/joint_state_publisher.s: src/joint_state_publisher.cpp.s
 src/joint_state_publisher.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/joint_state_publisher.dir/build.make CMakeFiles/joint_state_publisher.dir/src/joint_state_publisher.cpp.s
 .PHONY : src/joint_state_publisher.cpp.s
+
+src/poppy_csv_joint_state_publisher.o: src/poppy_csv_joint_state_publisher.cpp.o
+.PHONY : src/poppy_csv_joint_state_publisher.o
+
+# target to build an object file
+src/poppy_csv_joint_state_publisher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_csv_joint_state_publisher.dir/build.make CMakeFiles/poppy_csv_joint_state_publisher.dir/src/poppy_csv_joint_state_publisher.cpp.o
+.PHONY : src/poppy_csv_joint_state_publisher.cpp.o
+
+src/poppy_csv_joint_state_publisher.i: src/poppy_csv_joint_state_publisher.cpp.i
+.PHONY : src/poppy_csv_joint_state_publisher.i
+
+# target to preprocess a source file
+src/poppy_csv_joint_state_publisher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_csv_joint_state_publisher.dir/build.make CMakeFiles/poppy_csv_joint_state_publisher.dir/src/poppy_csv_joint_state_publisher.cpp.i
+.PHONY : src/poppy_csv_joint_state_publisher.cpp.i
+
+src/poppy_csv_joint_state_publisher.s: src/poppy_csv_joint_state_publisher.cpp.s
+.PHONY : src/poppy_csv_joint_state_publisher.s
+
+# target to generate assembly for a file
+src/poppy_csv_joint_state_publisher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_csv_joint_state_publisher.dir/build.make CMakeFiles/poppy_csv_joint_state_publisher.dir/src/poppy_csv_joint_state_publisher.cpp.s
+.PHONY : src/poppy_csv_joint_state_publisher.cpp.s
 
 src/read_write_node.o: src/read_write_node.cpp.o
 .PHONY : src/read_write_node.o
@@ -435,7 +509,9 @@ help:
 	@echo "... dynamixel_control_uninstall"
 	@echo "... uninstall"
 	@echo "... csv_joint_state_publisher"
+	@echo "... h1_csv_joint_state_publisher"
 	@echo "... joint_state_publisher"
+	@echo "... poppy_csv_joint_state_publisher"
 	@echo "... read_write_node"
 	@echo "... rviz_visualization_node"
 	@echo "... torque_compensation_node"
@@ -443,9 +519,15 @@ help:
 	@echo "... src/csv_joint_state_publisher.o"
 	@echo "... src/csv_joint_state_publisher.i"
 	@echo "... src/csv_joint_state_publisher.s"
+	@echo "... src/h1_csv_joint_state_publisher.o"
+	@echo "... src/h1_csv_joint_state_publisher.i"
+	@echo "... src/h1_csv_joint_state_publisher.s"
 	@echo "... src/joint_state_publisher.o"
 	@echo "... src/joint_state_publisher.i"
 	@echo "... src/joint_state_publisher.s"
+	@echo "... src/poppy_csv_joint_state_publisher.o"
+	@echo "... src/poppy_csv_joint_state_publisher.i"
+	@echo "... src/poppy_csv_joint_state_publisher.s"
 	@echo "... src/read_write_node.o"
 	@echo "... src/read_write_node.i"
 	@echo "... src/read_write_node.s"

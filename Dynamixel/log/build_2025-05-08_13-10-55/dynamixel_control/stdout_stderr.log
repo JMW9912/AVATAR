@@ -1,0 +1,98 @@
+[35m[1mConsolidate compiler generated dependencies of target h1_csv_joint_state_publisher[0m
+[ 57%] Built target joint_state_publisher
+[ 57%] Built target csv_joint_state_publisher
+[ 57%] Built target torque_read_degree_write
+[ 57%] Built target torque_compensation_node
+[ 71%] Built target read_write_node
+[ 85%] Built target rviz_visualization_node
+[ 92%] [32mBuilding CXX object CMakeFiles/h1_csv_joint_state_publisher.dir/src/h1_csv_joint_state_publisher.cpp.o[0m
+[100%] [32m[1mLinking CXX executable h1_csv_joint_state_publisher[0m
+[100%] Built target h1_csv_joint_state_publisher
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/read_write_node
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/joint_state_publisher
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/csv_joint_state_publisher
+-- Symlinking: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/h1_csv_joint_state_publisher
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/rviz_visualization_node
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/torque_compensation_node
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/torque_read_degree_write
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/__pycache__/robot_visualization.launch.cpython-310.pyc
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/robot_visualization.launch.py
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/robot_visualization.launch.xml
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/.data/02_Default_두리번2.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/.data/02_Default_두리번두번.xlsx
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/.data/03_Default_두리번3.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/.data/0501_1908_shoulder1_animation_semina_21degree.mp4_motor_degree.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/.data/0501_1911_Anysong_1_animation_semina_21degree.mp4_motor_degree.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/.data/0501_1912_Anysong_2_animation_semina_21degree.mp4_motor_degree.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/.data/0501_1940_WMCA_Dance_animation_semina_21degree_Neck.mp4_motor_degree.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/.data/06_shoulder1_Test.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/.data/06_춤.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/.data/07_anysong_2_Test.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/.data/09_WMCA_BothArm.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/.data/sincostra.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/.data/torquecheck.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/.data/torquecheck2.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/00_Sync.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/01_Default_두리번.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/02_Default_두리번두번.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/04_호객행위.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/0501_1956_elbow_animation_semina_21degree_Complete.mp4_motor_degree.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/0501_1957_shoulder1_animation_semina_21degree_Complete.mp4_motor_degree.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/0501_1957_submotions_animation_semina_21degree_Complete.mp4_motor_degree.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/0501_2001_WMCA_Dance_animation_semina_21degree_Complete.mp4_motor_degree.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/0501_2006_Anysong_1_animation_semina_21degree_Complete.mp4_motor_degree.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/0501_2011_Anysong_2_animation_semina_21degree_Complete.mp4_motor_degree.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/0502_1401_Semina_collar_animation_semina_21degree_Complete.mp4_motor_degree.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/0502_1403_Semina_shoulder_animation_semina_21degree_Complete.mp4_motor_degree.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/0502_1409_Semina_elbow_animation_semina_21degree_Complete.mp4_motor_degree.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/0502_1411_Semina_wrist_animation_semina_21degree_Complete.mp4_motor_degree.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/0502_1413_Semina_neck_animation_semina_21degree_Complete.mp4_motor_degree.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/0502_1415_Semina_Robot_joint_animation_semina_21degree_Complete.mp4_motor_degree.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/0502_1419_gymnast_2_animation_semina_21degree_Complete.mp4_motor_degree.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/0502_1423_final_closing_animation_semina_21degree_Complete.mp4_motor_degree.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/05_인사.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/06_WMCA_Test.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/07_WMCA_Test2.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/08_WMCA_Test3.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/09_WMCA_BothArm.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/Desync.csv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/AVATAR_URDF_Test3.urdf
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Base.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Head.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Forearm.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Shoulder1.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Shoulder2.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Shoulder3.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Upperarm.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Wrist1.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Wrist2.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/L_Wrist3.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Neck1.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Neck2.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Forearm.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Shoulder1.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Shoulder2.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Shoulder3.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Upperarm.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Wrist1.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Wrist2.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Wrist3.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Waist_Bottom.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Waist_Top.stl
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/ament_index/resource_index/package_run_dependencies/dynamixel_control
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/ament_index/resource_index/parent_prefix_path/dynamixel_control
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/path.sh
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/environment/path.dsv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.bash
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.sh
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.zsh
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/local_setup.dsv
+-- Symlinking: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/package.dsv
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/ament_index/resource_index/packages/dynamixel_control
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/cmake/dynamixel_controlConfig.cmake
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/cmake/dynamixel_controlConfig-version.cmake
+-- Up-to-date symlink: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/package.xml

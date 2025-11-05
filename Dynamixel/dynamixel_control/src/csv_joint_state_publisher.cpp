@@ -176,7 +176,7 @@ private:
             }
 
             publisher_->publish(message);
-            std::this_thread::sleep_for(std::chrono::milliseconds(100)); // 100ms 간격으로 퍼블리시
+            std::this_thread::sleep_for(std::chrono::milliseconds(1000/30)); // 100ms 간격으로 퍼블리시 // 30fps 간격으로 퍼블리시
         }
 
         RCLCPP_INFO(this->get_logger(), "Finished publishing file: %s", file_path.c_str());

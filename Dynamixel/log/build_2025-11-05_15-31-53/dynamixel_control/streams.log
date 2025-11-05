@@ -1,0 +1,17 @@
+[0.006s] Invoking command in '/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control': CMAKE_PREFIX_PATH=/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_sdk:/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control:/opt/ros/humble /usr/bin/cmake --build /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control -- -j24 -l24
+[0.039s] [  6%] [32mBuilding CXX object CMakeFiles/poppy_csv_joint_state_publisher.dir/src/poppy_csv_joint_state_publisher.cpp.o[0m
+[0.042s] [ 18%] Built target joint_state_publisher
+[0.042s] [ 31%] Built target read_write_node
+[0.043s] [ 43%] Built target h1_csv_joint_state_publisher
+[0.043s] [ 81%] Built target torque_compensation_node
+[0.043s] [ 81%] Built target csv_joint_state_publisher
+[0.043s] [ 81%] Built target torque_read_degree_write
+[0.043s] [ 93%] Built target rviz_visualization_node
+[0.044s] [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/poppy_csv_joint_state_publisher.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Krclcpp/rclcpp.hpp: No such file or directory
+[0.044s]     1 | #include [01;31m[K<rclcpp/rclcpp.hpp>[m[K
+[0.044s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[0.044s] compilation terminated.
+[0.044s] gmake[2]: *** [CMakeFiles/poppy_csv_joint_state_publisher.dir/build.make:76: CMakeFiles/poppy_csv_joint_state_publisher.dir/src/poppy_csv_joint_state_publisher.cpp.o] Error 1
+[0.045s] gmake[1]: *** [CMakeFiles/Makefile2:255: CMakeFiles/poppy_csv_joint_state_publisher.dir/all] Error 2
+[0.045s] gmake: *** [Makefile:146: all] Error 2
+[0.046s] Invoked command in '/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control' returned '2': CMAKE_PREFIX_PATH=/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_sdk:/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control:/opt/ros/humble /usr/bin/cmake --build /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control -- -j24 -l24

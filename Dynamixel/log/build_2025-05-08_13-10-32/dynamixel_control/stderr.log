@@ -1,0 +1,7 @@
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/h1_csv_joint_state_publisher.cpp:[m[K In constructor ‘[01m[KCSVJointStatePublisher::CSVJointStatePublisher()[m[K’:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/h1_csv_joint_state_publisher.cpp:22:11:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KCSVJointStatePublisher[m[K’ does not have any field named ‘[01m[Kis_first_csv_executed_[m[K’
+   22 |           [01;31m[Kis_first_csv_executed_[m[K(false) {
+      |           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/h1_csv_joint_state_publisher.dir/build.make:76: CMakeFiles/h1_csv_joint_state_publisher.dir/src/h1_csv_joint_state_publisher.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:227: CMakeFiles/h1_csv_joint_state_publisher.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

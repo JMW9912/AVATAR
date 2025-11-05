@@ -1,0 +1,8 @@
+[  6%] [32mBuilding CXX object CMakeFiles/poppy_csv_joint_state_publisher.dir/src/poppy_csv_joint_state_publisher.cpp.o[0m
+[ 18%] Built target joint_state_publisher
+[ 31%] Built target read_write_node
+[ 43%] Built target h1_csv_joint_state_publisher
+[ 81%] Built target torque_compensation_node
+[ 81%] Built target csv_joint_state_publisher
+[ 81%] Built target torque_read_degree_write
+[ 93%] Built target rviz_visualization_node

@@ -6,11 +6,13 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /Grid1
+        - /Grid1/Offset1
         - /TF1
         - /TF1/Frames1
         - /TF1/Tree1
         - /RobotModel1
-      Splitter Ratio: 0.5
+      Splitter Ratio: 0.5588235259056091
     Tree Height: 746
   - Class: rviz_common/Selection
     Name: Selection
@@ -36,7 +38,7 @@ Visualization Manager:
     - Alpha: 0.5
       Cell Size: 1
       Class: rviz_default_plugins/Grid
-      Color: 160; 160; 164
+      Color: 255; 255; 255
       Enabled: true
       Line Style:
         Line Width: 0.029999999329447746
@@ -47,96 +49,28 @@ Visualization Manager:
         X: 0
         Y: 0
         Z: 0
-      Plane: XY
+      Plane: XZ
       Plane Cell Count: 10
-      Reference Frame: <Fixed Frame>
+      Reference Frame: spine
       Value: true
     - Class: rviz_default_plugins/TF
-      Enabled: true
+      Enabled: false
       Frame Timeout: 15
       Frames:
         All Enabled: true
-        Base:
-          Value: true
-        Head:
-          Value: true
-        L_Forearm:
-          Value: true
-        L_Shoulder1:
-          Value: true
-        L_Shoulder2:
-          Value: true
-        L_Shoulder3:
-          Value: true
-        L_Upperarm:
-          Value: true
-        L_Wrist1:
-          Value: true
-        L_Wrist2:
-          Value: true
-        L_Wrist3:
-          Value: true
-        Neck1:
-          Value: true
-        Neck2:
-          Value: true
-        R_Forearm:
-          Value: true
-        R_Shoulder1:
-          Value: true
-        R_Shoulder2:
-          Value: true
-        R_Shoulder3:
-          Value: true
-        R_Upperarm:
-          Value: true
-        R_Wrist1:
-          Value: true
-        R_Wrist2:
-          Value: true
-        R_Wrist3:
-          Value: true
-        Waist_Bottom:
-          Value: true
-        Waist_Top:
-          Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: false
       Tree:
-        Base:
-          Waist_Bottom:
-            Waist_Top:
-              L_Shoulder1:
-                L_Shoulder2:
-                  L_Shoulder3:
-                    L_Upperarm:
-                      L_Forearm:
-                        L_Wrist1:
-                          L_Wrist2:
-                            L_Wrist3:
-                              {}
-              Neck1:
-                Neck2:
-                  Head:
-                    {}
-              R_Shoulder1:
-                R_Shoulder2:
-                  R_Shoulder3:
-                    R_Upperarm:
-                      R_Forearm:
-                        R_Wrist1:
-                          R_Wrist2:
-                            R_Wrist3:
-                              {}
+        {}
       Update Interval: 0
-      Value: true
+      Value: false
     - Alpha: 1
       Class: rviz_default_plugins/RobotModel
       Collision Enabled: false
-      Description File: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/urdf/AVATAR_URDF_Test3.urdf
+      Description File: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control/poppy_description/robots/Poppy_Humanoid.URDF
       Description Source: File
       Description Topic:
         Depth: 5
@@ -147,116 +81,124 @@ Visualization Manager:
       Enabled: true
       Links:
         All Links Enabled: true
-        Base:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
-        Head:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        L_Forearm:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        L_Shoulder1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        L_Shoulder2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        L_Shoulder3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        L_Upperarm:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        L_Wrist1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        L_Wrist2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        L_Wrist3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         Link Tree Style: Links in Alphabetic Order
-        Neck1:
+        abdomen:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        Neck2:
+        abs_motors:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        bust_motors:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        R_Forearm:
+        chest:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        R_Shoulder1:
+        head:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        R_Shoulder2:
+        l_foot:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        l_forearm:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        R_Shoulder3:
+        l_hip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        l_hip_motor:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        l_shin:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        l_shoulder:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        R_Upperarm:
+        l_shoulder_motor:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        R_Wrist1:
+        l_thigh:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        l_upper_arm:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        R_Wrist2:
+        neck:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        R_Wrist3:
+        pelvis:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        r_foot:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        r_forearm:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        Waist_Bottom:
+        r_hip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        r_hip_motor:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        r_shin:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        r_shoulder:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        Waist_Top:
+        r_shoulder_motor:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_thigh:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        r_upper_arm:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        spine:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -271,8 +213,8 @@ Visualization Manager:
       Visual Enabled: true
   Enabled: true
   Global Options:
-    Background Color: 48; 48; 48
-    Fixed Frame: Base
+    Background Color: 94; 92; 100
+    Fixed Frame: spine
     Frame Rate: 30
   Name: root
   Tools:
@@ -315,25 +257,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 2.016369581222534
+      Distance: 1.1912853717803955
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.16720055043697357
-        Y: 0.026138590648770332
-        Z: 0.6909081339836121
+        X: 0.001872978638857603
+        Y: 0.29248857498168945
+        Z: 0.09159780293703079
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.0147970914840698
-      Target Frame: <Fixed Frame>
-      Value: Orbit (rviz)
-      Yaw: 0.20540666580200195
+      Pitch: 1.5697963237762451
+      Target Frame: spine
+      Value: Orbit (rviz_default_plugins)
+      Yaw: 4.711747646331787
     Saved: ~
 Window Geometry:
   Displays:
@@ -352,4 +294,4 @@ Window Geometry:
     collapsed: false
   Width: 1920
   X: 3000
-  Y: 197
+  Y: 203

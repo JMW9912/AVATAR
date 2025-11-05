@@ -47,6 +47,18 @@ ament_target_dependencies(csv_joint_state_publisher
   sensor_msgs
   std_msgs
 )
+add_executable(h1_csv_joint_state_publisher src/h1_csv_joint_state_publisher.cpp)
+ament_target_dependencies(h1_csv_joint_state_publisher
+  rclcpp
+  sensor_msgs
+  std_msgs
+)
+add_executable(poppy_csv_joint_state_publisher src/poppy_csv_joint_state_publisher.cpp)
+ament_target_dependencies(poppy_csv_joint_state_publisher
+  rclcpp
+  sensor_msgs
+  std_msgs
+)
 # RViz 시각화 노드 추가
 add_executable(rviz_visualization_node src/rviz_visualization_node.cpp)
 ament_target_dependencies(rviz_visualization_node
@@ -78,6 +90,8 @@ install(TARGETS
   read_write_node
   joint_state_publisher
   csv_joint_state_publisher
+  h1_csv_joint_state_publisher
+  poppy_csv_joint_state_publisher
   #DIRECTORY data
   rviz_visualization_node
   torque_compensation_node
@@ -96,6 +110,14 @@ install(DIRECTORY data
 )
 
 install(DIRECTORY urdf
+  DESTINATION share/${PROJECT_NAME}/
+)
+
+install(DIRECTORY h1_2_description
+  DESTINATION share/${PROJECT_NAME}/
+)
+
+install(DIRECTORY poppy_description
   DESTINATION share/${PROJECT_NAME}/
 )
 
