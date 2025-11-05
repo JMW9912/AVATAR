@@ -310,7 +310,7 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install("TARGETS" "read_write_node" "joint_state_publisher" "csv_joint_state_publisher" "h1_csv_joint_state_publisher" "poppy_csv_joint_state_publisher" "rviz_visualization_node" "torque_compensation_node" "torque_read_degree_write" "DESTINATION" "lib/dynamixel_control")
+# install("TARGETS" "read_write_node" "poppy_read_write_node" "joint_state_publisher" "csv_joint_state_publisher" "h1_csv_joint_state_publisher" "poppy_csv_joint_state_publisher" "rviz_visualization_node" "torque_compensation_node" "torque_read_degree_write" "DESTINATION" "lib/dynamixel_control")
 include("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "launch" "DESTINATION" "share/dynamixel_control/")

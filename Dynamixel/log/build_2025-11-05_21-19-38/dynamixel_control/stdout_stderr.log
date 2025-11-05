@@ -1,0 +1,31 @@
+[35m[1mConsolidate compiler generated dependencies of target poppy_read_write_node[0m
+[ 33%] Built target h1_csv_joint_state_publisher
+[ 33%] Built target csv_joint_state_publisher
+[ 33%] Built target joint_state_publisher
+[ 44%] Built target torque_read_degree_write
+[ 77%] Built target poppy_csv_joint_state_publisher
+[ 77%] Built target read_write_node
+[ 77%] Built target torque_compensation_node
+[ 88%] Built target rviz_visualization_node
+[ 94%] [32mBuilding CXX object CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.o[0m
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/poppy_read_write_node.cpp:[m[K In constructor ‘[01m[KPoppyController::PoppyController()[m[K’:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/poppy_read_write_node.cpp:111:34:[m[K [01;31m[Kerror: [m[K‘[01m[KGOAL_VEL[m[K’ was not declared in this scope
+  111 |     setGoalVelocity(WHOLE_MOTOR, [01;31m[KGOAL_VEL[m[K);
+      |                                  [01;31m[K^~~~~~~~[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/poppy_read_write_node.cpp:[m[K In member function ‘[01m[Kvoid PoppyController::enableTorque()[m[K’:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/poppy_read_write_node.cpp:170:76:[m[K [01;31m[Kerror: [m[K‘[01m[KADDR_PRO_TORQUE_ENABLE[m[K’ was not declared in this scope; did you mean ‘[01m[KADDR_MX28_TORQUE_ENABLE[m[K’?
+  170 |       dxl_comm_result = packetHandler->write1ByteTxRx(portHandler, dxl_id, [01;31m[KADDR_PRO_TORQUE_ENABLE[m[K, 1, &dxl_error);
+      |                                                                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                            [32m[KADDR_MX28_TORQUE_ENABLE[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/poppy_read_write_node.cpp:[m[K In member function ‘[01m[Kvoid PoppyController::disableTorque()[m[K’:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/poppy_read_write_node.cpp:181:76:[m[K [01;31m[Kerror: [m[K‘[01m[KADDR_PRO_TORQUE_ENABLE[m[K’ was not declared in this scope; did you mean ‘[01m[KADDR_MX28_TORQUE_ENABLE[m[K’?
+  181 |       dxl_comm_result = packetHandler->write1ByteTxRx(portHandler, dxl_id, [01;31m[KADDR_PRO_TORQUE_ENABLE[m[K, 0, &dxl_error);
+      |                                                                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                            [32m[KADDR_MX28_TORQUE_ENABLE[m[K
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/poppy_read_write_node.cpp:[m[K In member function ‘[01m[Kvoid PoppyController::setGoalVelocity(const std::set<unsigned char>&, int)[m[K’:
+[01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/poppy_read_write_node.cpp:192:76:[m[K [01;31m[Kerror: [m[K‘[01m[KADDR_PRO_GOAL_VEL[m[K’ was not declared in this scope
+  192 |       dxl_comm_result = packetHandler->write4ByteTxRx(portHandler, dxl_id, [01;31m[KADDR_PRO_GOAL_VEL[m[K, value, &dxl_error);
+      |                                                                            [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/poppy_read_write_node.dir/build.make:76: CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:179: CMakeFiles/poppy_read_write_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,10 @@
+[35m[1mConsolidate compiler generated dependencies of target poppy_read_write_node[0m
+[ 33%] Built target h1_csv_joint_state_publisher
+[ 33%] Built target torque_compensation_node
+[ 33%] Built target joint_state_publisher
+[ 61%] Built target poppy_csv_joint_state_publisher
+[ 55%] Built target read_write_node
+[ 66%] Built target csv_joint_state_publisher
+[ 77%] Built target torque_read_degree_write
+[ 88%] Built target rviz_visualization_node
+[ 94%] [32mBuilding CXX object CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.o[0m

@@ -211,6 +211,19 @@ read_write_node/fast:
 .PHONY : read_write_node/fast
 
 #=============================================================================
+# Target rules for targets named poppy_read_write_node
+
+# Build rule for target.
+poppy_read_write_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 poppy_read_write_node
+.PHONY : poppy_read_write_node
+
+# fast build rule for target.
+poppy_read_write_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_read_write_node.dir/build.make CMakeFiles/poppy_read_write_node.dir/build
+.PHONY : poppy_read_write_node/fast
+
+#=============================================================================
 # Target rules for targets named joint_state_publisher
 
 # Build rule for target.
@@ -397,6 +410,30 @@ src/poppy_csv_joint_state_publisher.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_csv_joint_state_publisher.dir/build.make CMakeFiles/poppy_csv_joint_state_publisher.dir/src/poppy_csv_joint_state_publisher.cpp.s
 .PHONY : src/poppy_csv_joint_state_publisher.cpp.s
 
+src/poppy_read_write_node.o: src/poppy_read_write_node.cpp.o
+.PHONY : src/poppy_read_write_node.o
+
+# target to build an object file
+src/poppy_read_write_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_read_write_node.dir/build.make CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.o
+.PHONY : src/poppy_read_write_node.cpp.o
+
+src/poppy_read_write_node.i: src/poppy_read_write_node.cpp.i
+.PHONY : src/poppy_read_write_node.i
+
+# target to preprocess a source file
+src/poppy_read_write_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_read_write_node.dir/build.make CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.i
+.PHONY : src/poppy_read_write_node.cpp.i
+
+src/poppy_read_write_node.s: src/poppy_read_write_node.cpp.s
+.PHONY : src/poppy_read_write_node.s
+
+# target to generate assembly for a file
+src/poppy_read_write_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_read_write_node.dir/build.make CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.s
+.PHONY : src/poppy_read_write_node.cpp.s
+
 src/read_write_node.o: src/read_write_node.cpp.o
 .PHONY : src/read_write_node.o
 
@@ -512,6 +549,7 @@ help:
 	@echo "... h1_csv_joint_state_publisher"
 	@echo "... joint_state_publisher"
 	@echo "... poppy_csv_joint_state_publisher"
+	@echo "... poppy_read_write_node"
 	@echo "... read_write_node"
 	@echo "... rviz_visualization_node"
 	@echo "... torque_compensation_node"
@@ -528,6 +566,9 @@ help:
 	@echo "... src/poppy_csv_joint_state_publisher.o"
 	@echo "... src/poppy_csv_joint_state_publisher.i"
 	@echo "... src/poppy_csv_joint_state_publisher.s"
+	@echo "... src/poppy_read_write_node.o"
+	@echo "... src/poppy_read_write_node.i"
+	@echo "... src/poppy_read_write_node.s"
 	@echo "... src/read_write_node.o"
 	@echo "... src/read_write_node.i"
 	@echo "... src/read_write_node.s"

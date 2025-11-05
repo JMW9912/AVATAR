@@ -129,19 +129,50 @@ private:
 
         std::vector<std::vector<double>> angle_data;
         std::string line;
+
         while (std::getline(file, line)) {
-            std::istringstream stream(line);
-            std::vector<double> row_data;
-            std::string value;
-            for (size_t col = 0; col < 15 && std::getline(stream, value, ','); ++col) {
+            std::stringstream ss(line);
+            std::string cell;
+            std::vector<double> row;
+
+            while (std::getline(ss, cell, ',')) {
                 try {
-                    row_data.push_back(std::stod(value));
-                } catch (const std::invalid_argument &e) {
-                    RCLCPP_WARN(this->get_logger(), "Invalid data in file. Skipping row.");
+                    // 공백 제거
+                    cell.erase(std::remove_if(cell.begin(), cell.end(), ::isspace), cell.end());
+
+                    // 숫자 변환
+                    double value = std::stod(cell);
+                    row.push_back(value);
+                } catch (const std::invalid_argument&) {
+                    // 숫자가 아닌 경우 (예: 헤더)
+                    RCLCPP_WARN(rclcpp::get_logger("csv_loader"), "Skipping non-numeric value: %s", cell.c_str());
+                    continue;
+                } catch (const std::out_of_range&) {
+                    // 너무 큰 값
+                    RCLCPP_WARN(rclcpp::get_logger("csv_loader"), "Skipping out-of-range value: %s", cell.c_str());
+                    continue;
                 }
             }
-            angle_data.push_back(row_data);
+
+            // 유효한 값이 있을 때만 추가
+            if (!row.empty()) {
+                angle_data.push_back(row);
+            }
         }
+
+        // while (std::getline(file, line)) {
+        //     std::istringstream stream(line);
+        //     std::vector<double> row_data;
+        //     std::string value;
+        //     for (size_t col = 0; col < 15 && std::getline(stream, value, ','); ++col) {
+        //         try {
+        //             row_data.push_back(std::stod(value));
+        //         } catch (const std::invalid_argument &e) {
+        //             RCLCPP_WARN(this->get_logger(), "Invalid data in file. Skipping row.");
+        //         }
+        //     }
+        //     angle_data.push_back(row_data);
+        // }
         file.close();
 
         for (const auto &row : angle_data) {

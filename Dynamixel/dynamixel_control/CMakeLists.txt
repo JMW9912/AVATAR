@@ -36,6 +36,14 @@ ament_target_dependencies(read_write_node
   sensor_msgs
   # moveit_ros_planning_interface
 )
+add_executable(poppy_read_write_node src/poppy_read_write_node.cpp)
+ament_target_dependencies(poppy_read_write_node
+  dynamixel_sdk
+  rclcpp
+  std_msgs
+  sensor_msgs
+  # moveit_ros_planning_interface
+)
 add_executable(joint_state_publisher src/joint_state_publisher.cpp)
 ament_target_dependencies(joint_state_publisher
   rclcpp
@@ -88,6 +96,7 @@ ament_target_dependencies(torque_read_degree_write
 # Install
 install(TARGETS
   read_write_node
+  poppy_read_write_node
   joint_state_publisher
   csv_joint_state_publisher
   h1_csv_joint_state_publisher

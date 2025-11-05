@@ -1,0 +1,20 @@
+[0.006s] Invoking command in '/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control': CMAKE_PREFIX_PATH=/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_sdk:/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control:/opt/ros/humble /usr/bin/cmake --build /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control -- -j24 -l24
+[0.038s] [35m[1mConsolidate compiler generated dependencies of target poppy_read_write_node[0m
+[0.047s] [ 11%] Built target read_write_node
+[0.047s] [ 22%] Built target h1_csv_joint_state_publisher
+[0.047s] [ 44%] Built target joint_state_publisher
+[0.047s] [ 50%] Built target poppy_csv_joint_state_publisher
+[0.047s] [ 55%] Built target torque_compensation_node
+[0.047s] [ 66%] Built target torque_read_degree_write
+[0.048s] [ 77%] Built target rviz_visualization_node
+[0.048s] [ 88%] Built target csv_joint_state_publisher
+[0.050s] [ 94%] [32mBuilding CXX object CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.o[0m
+[1.296s] [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/poppy_read_write_node.cpp:[m[K In member function ‘[01m[Kvoid PoppyController::enableTorque()[m[K’:
+[1.297s] [01m[K/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/poppy_read_write_node.cpp:172:76:[m[K [01;31m[Kerror: [m[K‘[01m[KADDR_PRO_TORQUE_ENABLE[m[K’ was not declared in this scope; did you mean ‘[01m[KADDR_MX28_TORQUE_ENABLE[m[K’?
+[1.297s]   172 |       dxl_comm_result = packetHandler->write1ByteTxRx(portHandler, dxl_id, [01;31m[KADDR_PRO_TORQUE_ENABLE[m[K, 1, &dxl_error);
+[1.297s]       |                                                                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.297s]       |                                                                            [32m[KADDR_MX28_TORQUE_ENABLE[m[K
+[2.619s] gmake[2]: *** [CMakeFiles/poppy_read_write_node.dir/build.make:76: CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.o] Error 1
+[2.619s] gmake[1]: *** [CMakeFiles/Makefile2:179: CMakeFiles/poppy_read_write_node.dir/all] Error 2
+[2.620s] gmake: *** [Makefile:146: all] Error 2
+[2.621s] Invoked command in '/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control' returned '2': CMAKE_PREFIX_PATH=/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_sdk:/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control:/opt/ros/humble /usr/bin/cmake --build /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control -- -j24 -l24
