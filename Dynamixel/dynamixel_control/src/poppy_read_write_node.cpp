@@ -32,7 +32,7 @@
 const std::set<uint8_t> WHOLE_MOTOR = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
 const std::set<uint8_t> MX28 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
 
-#define PROFILE_VEL                     50
+#define PROFILE_VEL                     20
 
 #define CSV_NAME                        "250209_torque_test_2.csv"
 
