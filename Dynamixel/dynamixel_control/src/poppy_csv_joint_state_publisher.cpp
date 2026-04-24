@@ -9,6 +9,10 @@
 #include <chrono>
 #include <poll.h>
 #include <climits>
+#include <algorithm>
+#include <map>
+
+#define CONTROL_FPS 30   // poppy_read_write_node의 CONTROL_FPS와 동일하게 유지
 
 namespace fs = std::filesystem;
 
@@ -131,93 +135,110 @@ private:
         std::string line;
 
         while (std::getline(file, line)) {
+            if (line.empty()) continue;
+
             std::stringstream ss(line);
-            std::string cell;
+            std::string first_cell;
+
+            // 첫 셀이 숫자가 아니면 헤더 or 주석 행으로 판단하고 조용히 스킵
+            if (!std::getline(ss, first_cell, ',')) continue;
+            first_cell.erase(std::remove_if(first_cell.begin(), first_cell.end(), ::isspace), first_cell.end());
+            double first_val;
+            try {
+                first_val = std::stod(first_cell);
+            } catch (...) {
+                RCLCPP_INFO(this->get_logger(), "Header row skipped: %.60s...", line.c_str());
+                continue;
+            }
+
+            // 나머지 셀 파싱
             std::vector<double> row;
-
+            row.push_back(first_val);
+            std::string cell;
             while (std::getline(ss, cell, ',')) {
+                cell.erase(std::remove_if(cell.begin(), cell.end(), ::isspace), cell.end());
+                if (cell.empty()) continue;
                 try {
-                    // 공백 제거
-                    cell.erase(std::remove_if(cell.begin(), cell.end(), ::isspace), cell.end());
-
-                    // 숫자 변환
-                    double value = std::stod(cell);
-                    row.push_back(value);
-                } catch (const std::invalid_argument&) {
-                    // 숫자가 아닌 경우 (예: 헤더)
-                    RCLCPP_WARN(rclcpp::get_logger("csv_loader"), "Skipping non-numeric value: %s", cell.c_str());
-                    continue;
-                } catch (const std::out_of_range&) {
-                    // 너무 큰 값
-                    RCLCPP_WARN(rclcpp::get_logger("csv_loader"), "Skipping out-of-range value: %s", cell.c_str());
-                    continue;
+                    row.push_back(std::stod(cell));
+                } catch (...) {
+                    RCLCPP_WARN(this->get_logger(), "Non-numeric value in data row: '%s'", cell.c_str());
                 }
             }
-
-            // 유효한 값이 있을 때만 추가
-            if (!row.empty()) {
-                angle_data.push_back(row);
-            }
+            angle_data.push_back(row);
         }
-
-        // while (std::getline(file, line)) {
-        //     std::istringstream stream(line);
-        //     std::vector<double> row_data;
-        //     std::string value;
-        //     for (size_t col = 0; col < 15 && std::getline(stream, value, ','); ++col) {
-        //         try {
-        //             row_data.push_back(std::stod(value));
-        //         } catch (const std::invalid_argument &e) {
-        //             RCLCPP_WARN(this->get_logger(), "Invalid data in file. Skipping row.");
-        //         }
-        //     }
-        //     angle_data.push_back(row_data);
-        // }
         file.close();
 
+        RCLCPP_INFO(this->get_logger(), "Loaded %zu frames from: %s", angle_data.size(), file_path.c_str());
+
+        const auto frame_duration = std::chrono::microseconds(1000000 / CONTROL_FPS);
+        int frame_idx = 0;
+
         for (const auto &row : angle_data) {
+            auto frame_start = std::chrono::steady_clock::now();
+
             auto message = sensor_msgs::msg::JointState();
             message.header.stamp = this->get_clock()->now();
-            message.name = generateJointNames(row.size());
-            message.position = degreesToRadians(row);
-
-            RCLCPP_INFO(this->get_logger(), "Publishing joint states:");
-            for (size_t i = 0; i < row.size(); ++i) {
-                RCLCPP_INFO(this->get_logger(), "  Joint %zu: %.2f degrees (%.2f rad)", i + 1, row[i], message.position[i]);
-            }
-
+            // CSV의 조인트 외 나머지(다리 등)는 0으로 채워 초기 자세 유지
+            message.name     = allJointNames();
+            message.position = buildFullPosition(row);
             publisher_->publish(message);
-            std::this_thread::sleep_for(std::chrono::milliseconds(1000/30)); // 100ms 간격으로 퍼블리시 // 30fps 간격으로 퍼블리시
+
+            // 100프레임마다 진행 상황 출력
+            if (frame_idx % 100 == 0) {
+                RCLCPP_INFO(this->get_logger(), "Frame %d / %zu", frame_idx, angle_data.size());
+            }
+            RCLCPP_DEBUG(this->get_logger(), "Frame %d: published %zu joints", frame_idx, row.size());
+            frame_idx++;
+
+            // 발행 처리 시간을 제외한 나머지 sleep (타이밍 보정)
+            auto elapsed = std::chrono::steady_clock::now() - frame_start;
+            if (elapsed < frame_duration)
+                std::this_thread::sleep_for(frame_duration - elapsed);
         }
 
-        RCLCPP_INFO(this->get_logger(), "Finished publishing file: %s", file_path.c_str());
+        RCLCPP_INFO(this->get_logger(), "Finished publishing %d frames from: %s", frame_idx, file_path.c_str());
     }
 
-    std::vector<std::string> generateJointNames(size_t count) {
-        std::vector<std::string> names = {
+    // CSV 컬럼 순서와 동일한 15개 제어 조인트
+    static const std::vector<std::string>& csvJointNames() {
+        static const std::vector<std::string> names = {
             "r_shoulder_y", "r_shoulder_x", "r_arm_z", "r_elbow_y",
             "l_shoulder_y", "l_shoulder_x", "l_arm_z", "l_elbow_y",
-            "head_z", "head_y",
-            "bust_x", "bust_y", "abs_z"//, "abs_x", "abs_y"
-        }; // Total 13
-        
-        if (count > names.size()) {
-            RCLCPP_WARN(rclcpp::get_logger("poppy_csv_joint_state_publisher"), 
-                "CSV column count (%zu) exceeds known joint names (%zu)", count, names.size());
-            // 나머지는 jointX로 채움
-            for (size_t i = names.size(); i < count; ++i)
-                names.push_back("joint" + std::to_string(i+1));
-        }
-    
-        return std::vector<std::string>(names.begin(), names.begin() + count);
+            "head_z", "head_y", "bust_x", "bust_y", "abs_z",
+            "abs_x", "abs_y"   // 모터 14(인덱스 13), 모터 15(인덱스 14)
+        };
+        return names;
     }
 
-    std::vector<double> degreesToRadians(const std::vector<double> &degrees) {
-        std::vector<double> radians;
-        for (double deg : degrees) {
-            radians.push_back(deg * M_PI / 180.0);
-        }
-        return radians;
+    // URDF의 모든 비고정 조인트
+    // ※ 앞 15개(인덱스 0~14)는 반드시 csvJointNames() 순서와 동일해야 함
+    //   → read_write_node가 msg->position[i] 인덱스로 모터 값을 읽기 때문
+    static const std::vector<std::string>& allJointNames() {
+        static const std::vector<std::string> names = {
+            // 인덱스 0~14: read_write_node가 인덱스로 읽는 제어 조인트
+            "r_shoulder_y", "r_shoulder_x", "r_arm_z",   "r_elbow_y",
+            "l_shoulder_y", "l_shoulder_x", "l_arm_z",   "l_elbow_y",
+            "head_z",       "head_y",
+            "bust_x",       "bust_y",       "abs_z",
+            "abs_x",        "abs_y",        // 모터 14, 15
+            // 인덱스 15~24: 비제어 조인트 — 0.0 고정 (시각화용)
+            "r_hip_x",  "r_hip_z",  "r_hip_y",  "r_knee_y", "r_ankle_y",
+            "l_hip_x",  "l_hip_z",  "l_hip_y",  "l_knee_y", "l_ankle_y",
+        };
+        return names;
+    }
+
+    // CSV 행(degree) → 전체 조인트 position 벡터(radian), 미제어 조인트는 0.0
+    std::vector<double> buildFullPosition(const std::vector<double> &csv_row) {
+        const auto &csv_names = csvJointNames();
+        std::map<std::string, double> controlled;
+        for (size_t i = 0; i < csv_names.size() && i < csv_row.size(); ++i)
+            controlled[csv_names[i]] = csv_row[i] * M_PI / 180.0;
+
+        std::vector<double> result;
+        for (const auto &name : allJointNames())
+            result.push_back(controlled.count(name) ? controlled.at(name) : 0.0);
+        return result;
     }
 };
 

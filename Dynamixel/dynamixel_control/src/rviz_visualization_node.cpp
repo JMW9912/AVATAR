@@ -18,10 +18,8 @@ private:
     rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr subscription_;
 
     void jointStateCallback(const sensor_msgs::msg::JointState::SharedPtr msg) {
-        // 수신된 Joint State 데이터를 확인 (디버깅용)
-        RCLCPP_INFO(this->get_logger(), "Received Joint States:");
         for (size_t i = 0; i < msg->name.size(); ++i) {
-            RCLCPP_INFO(this->get_logger(), "  %s: %f", msg->name[i].c_str(), msg->position[i]);
+            RCLCPP_DEBUG(this->get_logger(), "%s: %f", msg->name[i].c_str(), msg->position[i]);
         }
     }
 };
