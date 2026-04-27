@@ -313,6 +313,9 @@ message(STATUS "Execute custom install script")
 # install("TARGETS" "read_write_node" "poppy_read_write_node" "joint_state_publisher" "csv_joint_state_publisher" "h1_csv_joint_state_publisher" "poppy_csv_joint_state_publisher" "rviz_visualization_node" "torque_compensation_node" "torque_read_degree_write" "DESTINATION" "lib/dynamixel_control")
 include("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
+# install(PROGRAMS "scripts/poppy_slider_gui.py" "DESTINATION" "lib/dynamixel_control")
+ament_cmake_symlink_install_programs("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control" PROGRAMS "scripts/poppy_slider_gui.py" "DESTINATION" "lib/dynamixel_control")
+
 # install(DIRECTORY "launch" "DESTINATION" "share/dynamixel_control/")
 ament_cmake_symlink_install_directory("/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control" DIRECTORY "launch" "DESTINATION" "share/dynamixel_control/")
 

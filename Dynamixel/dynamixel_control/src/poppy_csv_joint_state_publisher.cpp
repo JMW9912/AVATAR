@@ -12,7 +12,7 @@
 #include <algorithm>
 #include <map>
 
-#define CONTROL_FPS 30   // poppy_read_write_node의 CONTROL_FPS와 동일하게 유지
+#define CONTROL_FPS 120   // poppy_read_write_node의 CONTROL_FPS와 동일하게 유지
 
 namespace fs = std::filesystem;
 
@@ -204,8 +204,8 @@ private:
         static const std::vector<std::string> names = {
             "r_shoulder_y", "r_shoulder_x", "r_arm_z", "r_elbow_y",
             "l_shoulder_y", "l_shoulder_x", "l_arm_z", "l_elbow_y",
-            "head_z", "head_y", "bust_x", "bust_y", "abs_z",
-            "abs_x", "abs_y"   // 모터 14(인덱스 13), 모터 15(인덱스 14)
+            "head_z", "head_y", "bust_x", "bust_y", 
+            "abs_z", "abs_x", "abs_y"   // 모터 14(인덱스 13), 모터 15(인덱스 14)
         };
         return names;
     }
@@ -219,8 +219,8 @@ private:
             "r_shoulder_y", "r_shoulder_x", "r_arm_z",   "r_elbow_y",
             "l_shoulder_y", "l_shoulder_x", "l_arm_z",   "l_elbow_y",
             "head_z",       "head_y",
-            "bust_x",       "bust_y",       "abs_z",
-            "abs_x",        "abs_y",        // 모터 14, 15
+            "bust_x",       "bust_y",      
+             "abs_z",       "abs_x",        "abs_y",        // 모터 14, 15
             // 인덱스 15~24: 비제어 조인트 — 0.0 고정 (시각화용)
             "r_hip_x",  "r_hip_z",  "r_hip_y",  "r_knee_y", "r_ankle_y",
             "l_hip_x",  "l_hip_z",  "l_hip_y",  "l_knee_y", "l_ankle_y",

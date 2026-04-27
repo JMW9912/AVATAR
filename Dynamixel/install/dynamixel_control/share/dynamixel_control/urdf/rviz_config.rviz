@@ -12,6 +12,8 @@ Panels:
         - /TF1/Frames1
         - /TF1/Tree1
         - /RobotModel1
+        - /RobotModel1/Mass Properties1
+        - /RobotModel1/Links1
       Splitter Ratio: 0.5588235259056091
     Tree Height: 746
   - Class: rviz_common/Selection
@@ -49,9 +51,9 @@ Visualization Manager:
         X: 0
         Y: 0
         Z: 0
-      Plane: XZ
+      Plane: XY
       Plane Cell Count: 10
-      Reference Frame: spine
+      Reference Frame: pelvis
       Value: true
     - Class: rviz_default_plugins/TF
       Enabled: false
@@ -94,6 +96,7 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         bust_motors:
           Alpha: 1
           Show Axes: false
@@ -113,6 +116,7 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         l_forearm:
           Alpha: 1
           Show Axes: false
@@ -122,14 +126,17 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         l_hip_motor:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         l_shin:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         l_shoulder:
           Alpha: 1
           Show Axes: false
@@ -144,6 +151,7 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         l_upper_arm:
           Alpha: 1
           Show Axes: false
@@ -158,10 +166,12 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         r_foot:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         r_forearm:
           Alpha: 1
           Show Axes: false
@@ -171,14 +181,17 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         r_hip_motor:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         r_shin:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         r_shoulder:
           Alpha: 1
           Show Axes: false
@@ -193,6 +206,7 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         r_upper_arm:
           Alpha: 1
           Show Axes: false
@@ -214,7 +228,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 94; 92; 100
-    Fixed Frame: spine
+    Fixed Frame: pelvis
     Frame Rate: 30
   Name: root
   Tools:
@@ -257,25 +271,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 1.1912853717803955
+      Distance: 0.9697264432907104
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.001872978638857603
-        Y: 0.29248857498168945
-        Z: 0.09159780293703079
+        X: -0.025284362956881523
+        Y: -0.029680617153644562
+        Z: 0.09127550572156906
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.5697963237762451
+      Pitch: 0.04479670524597168
       Target Frame: spine
       Value: Orbit (rviz_default_plugins)
-      Yaw: 4.711747646331787
+      Yaw: 4.733564853668213
     Saved: ~
 Window Geometry:
   Displays:
