@@ -12,7 +12,7 @@
 #include <algorithm>
 #include <map>
 
-#define CONTROL_FPS 120   // poppy_read_write_node의 CONTROL_FPS와 동일하게 유지
+#define CONTROL_FPS 30   // poppy_read_write_node의 CONTROL_FPS와 동일하게 유지
 
 namespace fs = std::filesystem;
 
@@ -230,10 +230,13 @@ private:
 
     // CSV 행(degree) → 전체 조인트 position 벡터(radian), 미제어 조인트는 0.0
     std::vector<double> buildFullPosition(const std::vector<double> &csv_row) {
+        static const std::set<std::string> always_zero = {"head_z", "head_y"};
+
         const auto &csv_names = csvJointNames();
         std::map<std::string, double> controlled;
         for (size_t i = 0; i < csv_names.size() && i < csv_row.size(); ++i)
-            controlled[csv_names[i]] = csv_row[i] * M_PI / 180.0;
+            if (always_zero.count(csv_names[i]) == 0)   // ← 0 고정 조인트는 건너뜀
+                controlled[csv_names[i]] = csv_row[i] * M_PI / 180.0;
 
         std::vector<double> result;
         for (const auto &name : allJointNames())
