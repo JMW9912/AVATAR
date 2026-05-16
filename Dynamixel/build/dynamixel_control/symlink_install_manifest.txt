@@ -8,8 +8,10 @@
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/torque_compensation_node
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/torque_read_degree_write
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/poppy_slider_gui.py
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/lib/dynamixel_control/poppy_fk_recorder.py
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/__pycache__/robot_visualization.launch.cpython-310.pyc
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/h1_robot_visualization.launch.py
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/poppy_dual_visualization.launch.py
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/poppy_robot_visualization.launch.py
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/robot_visualization.launch.py
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//launch/robot_visualization.launch.xml
@@ -79,6 +81,12 @@
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/.data/torquecheck2.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/00_Sync.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/0407_1546_gymnast_2_waist_and_second_Waist_poppy_motor_degree.csv
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/0429_2121_13_16_3DoF_pos_bvh_motor_degree.csv
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/0429_2121_13_18_3DoF_pos_bvh_motor_degree.csv
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/0429_2121_13_29_3DoF_pos_bvh_motor_degree.csv
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/0429_2121_Anysong_2_3DoF_pos_smpl_motor_degree.csv
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/0429_2121_WMCA_Dance_3DoF_pos_smpl_motor_degree.csv
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/0429_2121_gymnast_2_3DoF_pos_smpl_motor_degree.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/1104_2222_gymnast_2_poppy_humanoid_motor_degree.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/1104_2230_Semina_collar_poppy_humanoid_motor_degree.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/1104_2230_Semina_shoulder_poppy_humanoid_motor_degree.csv
@@ -164,12 +172,7 @@
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/waist_test/5DoF (2P+3O)/old/0407_1933_13_16_waist_and_second_Waist_poppy_motor_degree.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/waist_test/5DoF (2P+3O)/old/0407_1944_13_18_waist_and_second_Waist_poppy_motor_degree.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/waist_test/5DoF (2P+3O)/old/0407_2014_13_29_waist_and_second_Waist_poppy_motor_degree.csv
-/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/0429_2121_13_16_3DoF_pos_bvh_motor_degree.csv
-/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/0429_2121_13_18_3DoF_pos_bvh_motor_degree.csv
-/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/0429_2121_13_29_3DoF_pos_bvh_motor_degree.csv
-/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/0429_2121_Anysong_2_3DoF_pos_smpl_motor_degree.csv
-/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/0429_2121_WMCA_Dance_3DoF_pos_smpl_motor_degree.csv
-/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/0429_2121_gymnast_2_3DoF_pos_smpl_motor_degree.csv
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/0516_1608_13_29_sm_4_JH_180_clam_slew_bvh_motor_degree.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/1119/0119_2135_gymnast_2_poppy_neck_test_main_motor_degree.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/1119/0120_1021_gymnast_2_poppy_neck_test_edge_degree_0_motor_degree.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/1119/0120_1125_gymnast_2_poppy_neck_test_edge_degree_0_motor_degree.csv
@@ -178,6 +181,15 @@
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/1119/1119_2030_Semina_collar_poppy__robot_point.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/1119/1119_2030_Semina_elbow_poppy__robot_point.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/1119/1119_2030_gymnast_2_poppy_robot_point.csv
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/fk_output/old/FK_Anysong_frame_20260516_210035.csv
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/fk_output/old/FK_YMCA_frame_20260516_210307.csv
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/fk_output/old/fk_13_16_20260516_175758.csv
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/fk_output/old/fk_13_18_20260516_175617.csv
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/fk_output/old/fk_13_29_20260516_175702.csv
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/fk_output/old/fk_13_29_No_JumpHold_20260516_181124.csv
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/fk_output/old/fk_YMCA_20260516_170810.csv
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/fk_output/old/fk_anysong_20260516_170650.csv
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/fk_output/old/fk_gymnastic_20260516_175408.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/AVATAR_URDF_Test3.urdf
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Base.stl
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Head.stl
@@ -201,6 +213,7 @@
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/R_Wrist3.stl
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Waist_Bottom.stl
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/meshes/Waist_Top.stl
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/poppy_dual_rviz_config.rviz
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//urdf/poppy_rviz_config.rviz
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//h1_2_description/README.md
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//h1_2_description/h1_2.png

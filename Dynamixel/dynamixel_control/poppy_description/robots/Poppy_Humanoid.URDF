@@ -773,4 +773,19 @@
 		<axis xyz="-1 0 0"></axis>
 		<limit effort="3.1" lower="-0.0174532925199" upper="2.58308729295" velocity="7.0"></limit>
 	</joint>
+
+	<!-- Virtual wrist frames (mesh 없음, FK/TF 측정용, offset=하완길이 120mm) -->
+	<link name="l_wrist"/>
+	<joint name="l_wrist_fixed" type="fixed">
+		<parent link="l_forearm"/>
+		<child link="l_wrist"/>
+		<origin xyz="0 0.120 0" rpy="0 0 0"/>
+	</joint>
+
+	<link name="r_wrist"/>
+	<joint name="r_wrist_fixed" type="fixed">
+		<parent link="r_forearm"/>
+		<child link="r_wrist"/>
+		<origin xyz="0 0.120 0" rpy="0 0 0"/>
+	</joint>
 </robot>

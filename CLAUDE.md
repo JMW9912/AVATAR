@@ -8,7 +8,12 @@ ROS 2 workspace for **AVATAR** — an 8 DOF humanoid robot controlled via Dynami
 
 ## Build & Run
 
+**빌드 위치 고정: 반드시 `Dynamixel/` 서브디렉토리에서 실행할 것.**
+(top-level에서 빌드하면 사용자가 source하는 `Dynamixel/install/`이 갱신되지 않음)
+
 ```bash
+cd ~/OneDrive/JMW/dynamixel_8DOF/Dynamixel
+
 # Build all packages
 colcon build
 

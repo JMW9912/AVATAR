@@ -12,7 +12,7 @@
 #include <algorithm>
 #include <map>
 
-#define CONTROL_FPS 30   // poppy_read_write_node의 CONTROL_FPS와 동일하게 유지
+#define CONTROL_FPS 120   // poppy_read_write_node의 CONTROL_FPS와 동일하게 유지
 
 namespace fs = std::filesystem;
 

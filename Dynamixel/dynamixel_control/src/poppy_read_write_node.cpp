@@ -43,6 +43,9 @@ const std::set<uint8_t> MX28 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1
 //       200°/s →  33.3 RPM → 145 unit
 #define VELOCITY_LIMIT                  582  // EEPROM(addr 44)에 기록되는 최고속도 (≈800°/s)
 #define MAX_PROFILE_VEL                 VELOCITY_LIMIT  // Profile Velocity 소프트웨어 상한 (VELOCITY_LIMIT와 동일하게 유지)
+// ── 워밍업 설정 ────────────────────────────────────────────────────────────
+#define WARMUP_FRAMES                   (CONTROL_FPS * 2)  // 2초 (60프레임)
+#define WARMUP_START_VEL                50                  // 워밍업 시작 속도 (≈68°/s)
 // ─────────────────────────────────────────────────────────────────────────
 
 #define CSV_NAME                        "250209_torque_test_2.csv"
@@ -135,6 +138,9 @@ public:
     subscription_ = this->create_subscription<sensor_msgs::msg::JointState>(
       "/joint_states", 10, std::bind(&PoppyController::topicCallback, this, std::placeholders::_1));
 
+    // Publish actual (measured) joint positions for dual visualization
+    actual_pub_ = this->create_publisher<sensor_msgs::msg::JointState>("/joint_states_actual", 10);
+
     // Start the timer - Printing current position of dynamixel every 10ms
     timer_ = this->create_wall_timer(std::chrono::milliseconds(10), std::bind(&PoppyController::timerCallback, this));
 
@@ -166,6 +172,7 @@ public:
 
 private:
   rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr subscription_;
+  rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr actual_pub_;
   rclcpp::TimerBase::SharedPtr timer_;
   dynamixel::PortHandler *portHandler;
   dynamixel::PacketHandler *packetHandler;
@@ -180,6 +187,8 @@ private:
   // 응답속도 확인용
   long long total_time_ = 0;  // 총 시간 누적
   int callback_count_ = 0;    // 콜백 호출 횟수
+  // 워밍업
+  int warmup_frame_ = 0;
 
   // uint8_t joint_sequence[8] = {1, 2};
 
@@ -287,7 +296,30 @@ private:
         }
     }
     std::cout << log_stream.str() << std::endl;
-    
+
+    // 실제 측정 각도를 /joint_states_actual 으로 퍼블리시 (dual visualization용)
+    {
+      static const std::vector<std::string> joint_names = {
+        "r_shoulder_y", "r_shoulder_x", "r_arm_z",  "r_elbow_y",
+        "l_shoulder_y", "l_shoulder_x", "l_arm_z",  "l_elbow_y",
+        "head_z",       "head_y",
+        "bust_x",       "bust_y",
+        "abs_z",        "abs_x",        "abs_y",
+        "r_hip_x", "r_hip_z", "r_hip_y", "r_knee_y", "r_ankle_y",
+        "l_hip_x", "l_hip_z", "l_hip_y", "l_knee_y", "l_ankle_y",
+      };
+      auto msg = sensor_msgs::msg::JointState();
+      msg.header.stamp = this->get_clock()->now();
+      msg.name = joint_names;
+      msg.position.resize(joint_names.size(), 0.0);
+      for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++) {
+        int idx = dxl_id - DXL_MIN_ID;
+        // 절대위치(0~4095) → 중심 기준 상대위치 → 라디안
+        msg.position[idx] = Pos2Rad(dxl_id, dxl_present_position[idx] - MX28_MOTOR_POS);
+      }
+      actual_pub_->publish(msg);
+    }
+
     // 응답 시간 체크 및 출력
     auto end_time = std::chrono::high_resolution_clock::now();
 
@@ -346,14 +378,31 @@ private:
         }
     }
 
+    // 워밍업: 처음 WARMUP_FRAMES 프레임 동안 속도 상한을 선형으로 증가
+    int effective_max_vel;
+    if (warmup_frame_ < WARMUP_FRAMES) {
+        effective_max_vel = WARMUP_START_VEL +
+            (MAX_PROFILE_VEL - WARMUP_START_VEL) * warmup_frame_ / WARMUP_FRAMES;
+        warmup_frame_++;
+        if (warmup_frame_ == 1)
+            RCLCPP_INFO(this->get_logger(),
+                "Warmup 시작 — %d 프레임(%.0f초) 동안 속도 %d → %d unit 으로 선형 증가",
+                WARMUP_FRAMES, (double)WARMUP_FRAMES / CONTROL_FPS,
+                WARMUP_START_VEL, MAX_PROFILE_VEL);
+        if (warmup_frame_ == WARMUP_FRAMES)
+            RCLCPP_INFO(this->get_logger(), "Warmup 완료 — 최대 속도 허용 (%d unit)", MAX_PROFILE_VEL);
+    } else {
+        effective_max_vel = MAX_PROFILE_VEL;
+    }
+
     // 프레임당 이동 각도에 비례한 속도 계산 (dxl_present_position은 timerCallback에서 갱신됨)
     const double FRAME_PERIOD = 1.0 / CONTROL_FPS;
     for (int i = 0; i <= (DXL_MAX_ID - DXL_MIN_ID); i++) {
         int dxl_id = i + DXL_MIN_ID;
         int delta_pos = std::abs(param_goal_position[i] - static_cast<int>(dxl_present_position[i]));
         double delta_deg = std::abs(Rad2Deg(Pos2Rad(dxl_id, delta_pos)));
-        // delta_deg / FRAME_PERIOD → °/s → RPM (/6) → DXL unit (/0.229), MAX_PROFILE_VEL로 상한
-        int vel_unit = std::min(MAX_PROFILE_VEL,
+        // delta_deg / FRAME_PERIOD → °/s → RPM (/6) → DXL unit (/0.229), effective_max_vel로 상한
+        int vel_unit = std::min(effective_max_vel,
                         std::max(1, static_cast<int>(delta_deg / FRAME_PERIOD / 6.0 / 0.229)));
         param_goal_velocity_[i] = vel_unit;
     }
