@@ -34,7 +34,7 @@
 const std::set<uint8_t> WHOLE_MOTOR = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 const std::set<uint8_t> MX28 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 
-#define CONTROL_FPS                     30   // CSV 퍼블리셔 발행 주파수 (실제 값으로 변경)
+#define CONTROL_FPS                     60   // CSV 퍼블리셔 발행 주파수와 동일하게 유지
 
 // ── 속도 설정 ─────────────────────────────────────────────────────────────
 // 단위: 0.229 RPM/unit  |  변환: unit = (°/s) / 6 / 0.229
@@ -46,6 +46,11 @@ const std::set<uint8_t> MX28 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1
 // ── 워밍업 설정 ────────────────────────────────────────────────────────────
 #define WARMUP_FRAMES                   (CONTROL_FPS * 2)  // 2초 (60프레임)
 #define WARMUP_START_VEL                50                  // 워밍업 시작 속도 (≈68°/s)
+// ─────────────────────────────────────────────────────────────────────────
+// ── 동작 모드 ──────────────────────────────────────────────────────────────
+// true : 정상 제어 (토크 ON, 모터에 목표각도 전송)
+// false: 시각화 테스트 (토크 OFF, 현재 각도 읽기만 — 손으로 직접 움직이며 확인)
+constexpr bool TORQUE_WRITE_ENABLED = true;
 // ─────────────────────────────────────────────────────────────────────────
 
 #define CSV_NAME                        "250209_torque_test_2.csv"
@@ -63,7 +68,7 @@ std::map<int, std::pair<int, int>> CONST_DEG = {
     {10, { -45,   6}},
     {11, { -40,  40}},
     {12, { -67,  27}},
-    {13, { -90,  90}},
+    {13, { -45,  45}},
     {14, { -40,  40}},  // abs_x (허리 좌우) — 실제 범위에 맞게 조정 필요
     {15, { -40,  40}},  // abs_y (허리 앞뒤) — 실제 범위에 맞게 조정 필요
 };
@@ -80,7 +85,7 @@ public:
     packetHandler = dynamixel::PacketHandler::getPacketHandler(PROTOCOL_VERSION);
     
     param_goal_position.resize(DXL_MAX_ID - DXL_MIN_ID + 1, MX28_MOTOR_POS); // center(0도)로 초기화
-    dxl_present_position.resize(DXL_MAX_ID - DXL_MIN_ID + 1, 0);
+    dxl_present_position.resize(DXL_MAX_ID - DXL_MIN_ID + 1, MX28_MOTOR_POS); // 응답 없는 모터는 중립으로 표시
     param_goal_velocity_.resize(DXL_MAX_ID - DXL_MIN_ID + 1, 0);
     
     // csv 데이터 파일 초기화
@@ -127,12 +132,35 @@ public:
     // }
 
     disableTorque();
-    setVelocityLimit(WHOLE_MOTOR, VELOCITY_LIMIT);  // EEPROM 기록 — 토크 비활성 상태에서만 가능
-    setPositionLimit(WHOLE_MOTOR);
-    enableTorque();
+    if (TORQUE_WRITE_ENABLED) {
+        setVelocityLimit(WHOLE_MOTOR, VELOCITY_LIMIT);  // EEPROM 기록 — 토크 비활성 상태에서만 가능
+        setPositionLimit(WHOLE_MOTOR);
+        enableTorque();
+        RCLCPP_INFO(this->get_logger(), "[모드] 정상 제어 — 토크 ON, 모터 제어 활성화");
+    } else {
+        RCLCPP_WARN(this->get_logger(), "[모드] 시각화 테스트 — 토크 OFF, 현재 각도 읽기만");
+    }
 
     // Profile Velocity(addr 112, 4B) + Goal Position(addr 116, 4B) 연속 주소이므로 한 패킷으로 전송
     groupSyncWrite = new dynamixel::GroupSyncWrite(portHandler, packetHandler, ADDR_MX28_PROFILE_VEL, 8);
+
+    // GroupSyncRead: ping에 응답하는 모터만 추가
+    // 응답 없는 모터가 포함되면 SDK가 해당 모터 응답을 기다리다 타임아웃되면서
+    // 전체 SyncRead 결과가 무효화되어 연결된 모터 데이터도 읽지 못함
+    groupSyncRead = new dynamixel::GroupSyncRead(portHandler, packetHandler, ADDR_MX28_PRESENT_POSITION, 4);
+    for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++) {
+      uint8_t ping_error = 0;
+      int ping_result = packetHandler->ping(portHandler, static_cast<uint8_t>(dxl_id), &ping_error);
+      if (ping_result == COMM_SUCCESS) {
+        if (!groupSyncRead->addParam(static_cast<uint8_t>(dxl_id))) {
+          RCLCPP_ERROR(this->get_logger(), "GroupSyncRead: motor #%d 파라미터 추가 실패", dxl_id);
+        } else {
+          RCLCPP_INFO(this->get_logger(), "Motor #%d 연결 확인 — GroupSyncRead 추가", dxl_id);
+        }
+      } else {
+        RCLCPP_WARN(this->get_logger(), "Motor #%d 응답 없음 — GroupSyncRead 제외", dxl_id);
+      }
+    }
 
     // Subscribe to the states topic
     subscription_ = this->create_subscription<sensor_msgs::msg::JointState>(
@@ -141,8 +169,9 @@ public:
     // Publish actual (measured) joint positions for dual visualization
     actual_pub_ = this->create_publisher<sensor_msgs::msg::JointState>("/joint_states_actual", 10);
 
-    // Start the timer - Printing current position of dynamixel every 10ms
-    timer_ = this->create_wall_timer(std::chrono::milliseconds(10), std::bind(&PoppyController::timerCallback, this));
+    // 터미널 로그 전용 타이머 (10Hz — 사람이 읽기 적합한 속도)
+    // 읽기/CSV저장은 topicCallback 내부에서 120Hz 동기 처리
+    timer_ = this->create_wall_timer(std::chrono::milliseconds(100), std::bind(&PoppyController::timerCallback, this));
 
     RCLCPP_INFO(this->get_logger(), "Dynamixel Controller has been initialized");
   }
@@ -168,6 +197,7 @@ public:
     // Close port
     portHandler->closePort();
     delete groupSyncWrite;
+    delete groupSyncRead;
   }
 
 private:
@@ -177,6 +207,7 @@ private:
   dynamixel::PortHandler *portHandler;
   dynamixel::PacketHandler *packetHandler;
   dynamixel::GroupSyncWrite *groupSyncWrite;
+  dynamixel::GroupSyncRead  *groupSyncRead;
   uint8_t dxl_error = 0;
   std::ofstream data_file_; // csv 파일 저장
   std::vector<int32_t> dxl_present_position;
@@ -189,6 +220,8 @@ private:
   int callback_count_ = 0;    // 콜백 호출 횟수
   // 워밍업
   int warmup_frame_ = 0;
+  // GroupSyncRead 경고 중복 억제 (모터 당 최초 1회만 출력)
+  std::set<int> sync_read_warned_;
 
   // uint8_t joint_sequence[8] = {1, 2};
 
@@ -269,18 +302,58 @@ private:
     }
   }
 
+  // 10Hz — 현재 위치 읽기 + actual 발행 + 터미널 로그
+  // /joint_states 수신 여부와 무관하게 항상 실행됨
   void timerCallback() {
-    std::ostringstream log_stream; // 로그를 버퍼에 저장할 스트림
-    auto start_time = std::chrono::high_resolution_clock::now(); // 응답 시간 체크
-    for(int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++) {
-        int idx = dxl_id - DXL_MIN_ID;
-        dxl_comm_result = packetHandler->read4ByteTxRx(portHandler, dxl_id, ADDR_MX28_PRESENT_POSITION, reinterpret_cast<uint32_t*>(&dxl_present_position[idx]), &dxl_error);
-        if (dxl_comm_result != COMM_SUCCESS) {
-            packetHandler->getTxRxResult(dxl_comm_result);
-        } else if (dxl_error != 0) {
-            packetHandler->getRxPacketError(dxl_error);
+    // ① GroupSyncRead: 현재 모터 위치 읽기
+    dxl_comm_result = groupSyncRead->txRxPacket();
+    if (dxl_comm_result != COMM_SUCCESS) {
+      RCLCPP_DEBUG(this->get_logger(), "GroupSyncRead txRxPacket: %s",
+                   packetHandler->getTxRxResult(dxl_comm_result));
+    }
+    for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++) {
+      int idx = dxl_id - DXL_MIN_ID;
+      if (groupSyncRead->isAvailable(dxl_id, ADDR_MX28_PRESENT_POSITION, 4)) {
+        dxl_present_position[idx] = static_cast<int32_t>(
+          groupSyncRead->getData(dxl_id, ADDR_MX28_PRESENT_POSITION, 4));
+        sync_read_warned_.erase(dxl_id);
+      } else {
+        if (sync_read_warned_.find(dxl_id) == sync_read_warned_.end()) {
+          RCLCPP_WARN(this->get_logger(),
+                      "GroupSyncRead: motor #%d 데이터 없음 (이후 동일 경고 억제)", dxl_id);
+          sync_read_warned_.insert(dxl_id);
         }
+      }
+    }
 
+    // ② /joint_states_actual 발행 — dual visualization 실제(불투명) 모델
+    {
+      static const std::vector<std::string> actual_joint_names = {
+        "r_shoulder_y", "r_shoulder_x", "r_arm_z",   "r_elbow_y",
+        "l_shoulder_y", "l_shoulder_x", "l_arm_z",   "l_elbow_y",
+        "head_z",       "head_y",
+        "bust_x",       "bust_y",
+        "abs_z",        "abs_x",        "abs_y",
+        "r_hip_x",  "r_hip_z",  "r_hip_y",  "r_knee_y", "r_ankle_y",
+        "l_hip_x",  "l_hip_z",  "l_hip_y",  "l_knee_y", "l_ankle_y",
+      };
+      auto actual_msg = sensor_msgs::msg::JointState();
+      actual_msg.header.stamp = this->get_clock()->now();
+      actual_msg.name = actual_joint_names;
+      actual_msg.position.reserve(25);
+      for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++) {
+        int idx = dxl_id - DXL_MIN_ID;
+        actual_msg.position.push_back(static_cast<double>(
+          Pos2Rad(dxl_id, dxl_present_position[idx] - MX28_MOTOR_POS)));
+      }
+      for (int i = 0; i < 10; i++) actual_msg.position.push_back(0.0);
+      actual_pub_->publish(actual_msg);
+    }
+
+    // ③ 터미널 로그
+    std::ostringstream log_stream;
+    for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++) {
+        int idx = dxl_id - DXL_MIN_ID;
         double cur_deg = Rad2Deg(Pos2Rad(dxl_id, dxl_present_position[idx]));
         double tgt_deg = Rad2Deg(Pos2Rad(dxl_id, param_goal_position[idx]));
         double vel_deg_s = param_goal_velocity_[idx] * 0.229 * 6.0;
@@ -296,70 +369,16 @@ private:
         }
     }
     std::cout << log_stream.str() << std::endl;
+  }
 
-    // 실제 측정 각도를 /joint_states_actual 으로 퍼블리시 (dual visualization용)
-    {
-      static const std::vector<std::string> joint_names = {
-        "r_shoulder_y", "r_shoulder_x", "r_arm_z",  "r_elbow_y",
-        "l_shoulder_y", "l_shoulder_x", "l_arm_z",  "l_elbow_y",
-        "head_z",       "head_y",
-        "bust_x",       "bust_y",
-        "abs_z",        "abs_x",        "abs_y",
-        "r_hip_x", "r_hip_z", "r_hip_y", "r_knee_y", "r_ankle_y",
-        "l_hip_x", "l_hip_z", "l_hip_y", "l_knee_y", "l_ankle_y",
-      };
-      auto msg = sensor_msgs::msg::JointState();
-      msg.header.stamp = this->get_clock()->now();
-      msg.name = joint_names;
-      msg.position.resize(joint_names.size(), 0.0);
-      for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++) {
-        int idx = dxl_id - DXL_MIN_ID;
-        // 절대위치(0~4095) → 중심 기준 상대위치 → 라디안
-        msg.position[idx] = Pos2Rad(dxl_id, dxl_present_position[idx] - MX28_MOTOR_POS);
-      }
-      actual_pub_->publish(msg);
-    }
-
-    // 응답 시간 체크 및 출력
-    auto end_time = std::chrono::high_resolution_clock::now();
-
-    // 걸린 시간 계산 (마이크로초 단위)
-    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time).count();
-
-    // 시간 누적 및 평균 계산
-    total_time_ += duration;
-    callback_count_++;
-    double average_time = total_time_ / static_cast<double>(callback_count_);
-
-    // 디버깅 출력
-    // RCLCPP_INFO(this->get_logger(), "Timer execution time: %ld microseconds, Average time: %.2f microseconds", duration, average_time);
-
-    // csv 데이터 저장
-    if (data_file_.is_open()) {
-      auto now = this->get_clock()->now(); // 현재 시간
-      data_file_ << now.seconds() << ","
-                 << average_time << ",";
-
-      for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++)
-        data_file_ << Rad2Deg(Pos2Rad(dxl_id, param_goal_position[dxl_id - DXL_MIN_ID])) << ",";
-      for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++)
-        data_file_ << Rad2Deg(Pos2Rad(dxl_id, dxl_present_position[dxl_id - DXL_MIN_ID])) << ",";
-      for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++)
-        data_file_ << param_goal_velocity_[dxl_id - DXL_MIN_ID] << ",";
-      data_file_ << "\n";
-    }
-    }
-
+  // 120Hz — compute → write 제어 루프 (읽기는 timerCallback에서 처리)
   void topicCallback(const sensor_msgs::msg::JointState::SharedPtr msg) {
-    // 응답 시간 체크
-    // auto start_time = std::chrono::high_resolution_clock::now();
-    // 디버깅 로그
     RCLCPP_DEBUG(this->get_logger(), "Received /joint_states message");
-    // 수신된 메시지의 각도를 출력
     for (size_t i = 0; i < msg->position.size(); ++i) {
         RCLCPP_DEBUG(this->get_logger(), "Joint %zu: %f rad", i + 1, msg->position[i]);
     }
 
+    // ② 목표 위치 파싱
     // 조인트의 최대 개수에 맞게 배열 크기를 동적으로 설정
     int num_joints = DXL_MAX_ID - DXL_MIN_ID + 1;
     std::vector<float> raw_goal_position(num_joints, 0.0); // 크기를 동적으로 설정
@@ -378,7 +397,7 @@ private:
         }
     }
 
-    // 워밍업: 처음 WARMUP_FRAMES 프레임 동안 속도 상한을 선형으로 증가
+    // ③ 워밍업 + 속도 계산: 처음 WARMUP_FRAMES 프레임 동안 속도 상한을 선형으로 증가
     int effective_max_vel;
     if (warmup_frame_ < WARMUP_FRAMES) {
         effective_max_vel = WARMUP_START_VEL +
@@ -407,26 +426,37 @@ private:
         param_goal_velocity_[i] = vel_unit;
     }
 
-    // Profile Velocity(4B) + Goal Position(4B) 를 한 패킷으로 SyncWrite
-    for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++) {
-      int idx = dxl_id - DXL_MIN_ID;
-      uint8_t data[8];
-      *reinterpret_cast<int32_t*>(data)     = param_goal_velocity_[idx];
-      *reinterpret_cast<int32_t*>(data + 4) = param_goal_position[idx];
-      dxl_addparam_result = groupSyncWrite->addParam(dxl_id, data);
-      RCLCPP_DEBUG(this->get_logger(), "Add parameter complete %d.", dxl_id);
-      if (!dxl_addparam_result) {
-        RCLCPP_ERROR(this->get_logger(), "Failed to add Dynamixel#%d to the Syncwrite parameter storage", dxl_id);
-        return;
+    // ④ GroupSyncWrite: Profile Velocity(4B) + Goal Position(4B) 한 패킷 전송 (~1.5ms)
+    if (TORQUE_WRITE_ENABLED) {
+      for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++) {
+        int idx = dxl_id - DXL_MIN_ID;
+        uint8_t data[8];
+        *reinterpret_cast<int32_t*>(data)     = param_goal_velocity_[idx];
+        *reinterpret_cast<int32_t*>(data + 4) = param_goal_position[idx];
+        dxl_addparam_result = groupSyncWrite->addParam(dxl_id, data);
+        RCLCPP_DEBUG(this->get_logger(), "Add parameter complete %d.", dxl_id);
+        if (!dxl_addparam_result) {
+          RCLCPP_ERROR(this->get_logger(), "Failed to add Dynamixel#%d to the Syncwrite parameter storage", dxl_id);
+          return;
+        }
       }
+      dxl_comm_result = groupSyncWrite->txPacket();
+      if (dxl_comm_result != COMM_SUCCESS) packetHandler->getTxRxResult(dxl_comm_result);
+      groupSyncWrite->clearParam();
     }
 
-    // Syncwrite goal position
-    dxl_comm_result = groupSyncWrite->txPacket();
-    if (dxl_comm_result != COMM_SUCCESS) packetHandler->getTxRxResult(dxl_comm_result);
-
-    // Clear syncwrite parameter storage
-    groupSyncWrite->clearParam();
+    // ⑤ CSV 저장 (dxl_present_position은 timerCallback에서 갱신된 최신값)
+    if (data_file_.is_open()) {
+      auto now = this->get_clock()->now();
+      data_file_ << now.seconds() << ",";
+      for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++)
+        data_file_ << Rad2Deg(Pos2Rad(dxl_id, param_goal_position[dxl_id - DXL_MIN_ID])) << ",";
+      for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++)
+        data_file_ << Rad2Deg(Pos2Rad(dxl_id, dxl_present_position[dxl_id - DXL_MIN_ID])) << ",";
+      for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++)
+        data_file_ << param_goal_velocity_[dxl_id - DXL_MIN_ID] << ",";
+      data_file_ << "\n";
+    }
   }
 
   int Clipping(uint8_t dxl_id, int goal_position) {

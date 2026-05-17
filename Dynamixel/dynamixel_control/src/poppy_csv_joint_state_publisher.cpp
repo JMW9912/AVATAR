@@ -12,7 +12,8 @@
 #include <algorithm>
 #include <map>
 
-#define CONTROL_FPS 120   // poppy_read_write_node의 CONTROL_FPS와 동일하게 유지
+#define CONTROL_FPS 60    // 절반 속도 재생 (영상 2배속 재생 시 120Hz 정상 속도)
+                          // 실제 제어 시 read_write_node의 CONTROL_FPS도 동일하게 맞출 것
 
 namespace fs = std::filesystem;
 
@@ -230,13 +231,24 @@ private:
 
     // CSV 행(degree) → 전체 조인트 position 벡터(radian), 미제어 조인트는 0.0
     std::vector<double> buildFullPosition(const std::vector<double> &csv_row) {
-        static const std::set<std::string> always_zero = {"head_z", "head_y"};
+        static const std::set<std::string> always_zero = {"head_z", "head_y", "abs_x", "abs_y"};
 
         const auto &csv_names = csvJointNames();
         std::map<std::string, double> controlled;
         for (size_t i = 0; i < csv_names.size() && i < csv_row.size(); ++i)
-            if (always_zero.count(csv_names[i]) == 0)   // ← 0 고정 조인트는 건너뜀
+            if (always_zero.count(csv_names[i]) == 0)
                 controlled[csv_names[i]] = csv_row[i] * M_PI / 180.0;
+
+        // abs_z (모터 13) 안전 클램핑: ±30도
+        if (controlled.count("abs_z")) {
+            const double limit = 30.0 * M_PI / 180.0;
+            double &v = controlled["abs_z"];
+            if (v > limit || v < -limit) {
+                RCLCPP_WARN_ONCE(this->get_logger(),
+                    "abs_z 값이 ±45도 초과 — 클램핑 적용 (이후 동일 경고 억제)");
+                v = std::max(-limit, std::min(limit, v));
+            }
+        }
 
         std::vector<double> result;
         for (const auto &name : allJointNames())

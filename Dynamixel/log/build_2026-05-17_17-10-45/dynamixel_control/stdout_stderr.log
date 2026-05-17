@@ -1,0 +1,18 @@
+Consolidate compiler generated dependencies of target poppy_read_write_node
+[ 22%] Built target h1_csv_joint_state_publisher
+[ 22%] Built target csv_joint_state_publisher
+[ 33%] Built target read_write_node
+[ 44%] Built target joint_state_publisher
+[ 55%] Built target torque_compensation_node
+[ 66%] Built target poppy_csv_joint_state_publisher
+[ 77%] Built target rviz_visualization_node
+[ 88%] Built target torque_read_degree_write
+[ 94%] Building CXX object CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.o
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/poppy_read_write_node.cpp: In member function ‘void PoppyController::timerCallback()’:
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/poppy_read_write_node.cpp:343:86: error: ‘start_time’ was not declared in this scope; did you mean ‘strptime’?
+  343 |     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time).count();
+      |                                                                                      ^~~~~~~~~~
+      |                                                                                      strptime
+gmake[2]: *** [CMakeFiles/poppy_read_write_node.dir/build.make:76: CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:179: CMakeFiles/poppy_read_write_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -87,6 +87,8 @@
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/0429_2121_Anysong_2_3DoF_pos_smpl_motor_degree.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/0429_2121_WMCA_Dance_3DoF_pos_smpl_motor_degree.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/0429_2121_gymnast_2_3DoF_pos_smpl_motor_degree.csv
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/0516_1608_13_16_sm_4_JH_180_clam_slew_bvh_motor_degree.csv
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/0516_1752_gymnast_2_sm_4_400:JH70_smpl_motor_degree.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/1104_2222_gymnast_2_poppy_humanoid_motor_degree.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/1104_2230_Semina_collar_poppy_humanoid_motor_degree.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/1104_2230_Semina_shoulder_poppy_humanoid_motor_degree.csv
@@ -172,7 +174,7 @@
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/waist_test/5DoF (2P+3O)/old/0407_1933_13_16_waist_and_second_Waist_poppy_motor_degree.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/waist_test/5DoF (2P+3O)/old/0407_1944_13_18_waist_and_second_Waist_poppy_motor_degree.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/.data/waist_test/5DoF (2P+3O)/old/0407_2014_13_29_waist_and_second_Waist_poppy_motor_degree.csv
-/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/0516_1608_13_29_sm_4_JH_180_clam_slew_bvh_motor_degree.csv
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/0517_1822_gymnast_2_sm_4_1600:JH70_120fps_smpl_motor_degree.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/1119/0119_2135_gymnast_2_poppy_neck_test_main_motor_degree.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/1119/0120_1021_gymnast_2_poppy_neck_test_edge_degree_0_motor_degree.csv
 /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/install/dynamixel_control/share/dynamixel_control//data/csv/poppy/1119/0120_1125_gymnast_2_poppy_neck_test_edge_degree_0_motor_degree.csv
