@@ -6,7 +6,7 @@ from pathlib import Path
 
 def generate_launch_description():
     pkg = get_package_share_directory('dynamixel_control')
-    urdf_file_path  = os.path.join(pkg, 'poppy_description/robots', 'Poppy_Humanoid.URDF')
+    urdf_file_path  = os.path.join(pkg, 'urdf', 'poppy_description', 'robots', 'Poppy_Humanoid.URDF')
     rviz_config_path = os.path.join(pkg, 'urdf', 'rviz_config.rviz')
 
     robot_description = Path(urdf_file_path).read_text()

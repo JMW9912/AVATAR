@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/csv_joint_state_publisher.dir/src/csv_joint_state_publisher.cpp.o"
-  "CMakeFiles/csv_joint_state_publisher.dir/src/csv_joint_state_publisher.cpp.o.d"
+  "CMakeFiles/csv_joint_state_publisher.dir/src/control_node/csv_joint_state_publisher.cpp.o"
+  "CMakeFiles/csv_joint_state_publisher.dir/src/control_node/csv_joint_state_publisher.cpp.o.d"
   "csv_joint_state_publisher"
   "csv_joint_state_publisher.pdb"
 )

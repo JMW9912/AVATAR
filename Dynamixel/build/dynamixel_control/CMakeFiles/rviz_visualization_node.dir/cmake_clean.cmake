@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.o"
-  "CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.o.d"
+  "CMakeFiles/rviz_visualization_node.dir/src/visual_node/rviz_visualization_node.cpp.o"
+  "CMakeFiles/rviz_visualization_node.dir/src/visual_node/rviz_visualization_node.cpp.o.d"
   "rviz_visualization_node"
   "rviz_visualization_node.pdb"
 )

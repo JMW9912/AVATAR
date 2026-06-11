@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/poppy_csv_joint_state_publisher.dir/src/poppy_csv_joint_state_publisher.cpp.o"
-  "CMakeFiles/poppy_csv_joint_state_publisher.dir/src/poppy_csv_joint_state_publisher.cpp.o.d"
+  "CMakeFiles/poppy_csv_joint_state_publisher.dir/src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.cpp.o"
+  "CMakeFiles/poppy_csv_joint_state_publisher.dir/src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.cpp.o.d"
   "poppy_csv_joint_state_publisher"
   "poppy_csv_joint_state_publisher.pdb"
 )

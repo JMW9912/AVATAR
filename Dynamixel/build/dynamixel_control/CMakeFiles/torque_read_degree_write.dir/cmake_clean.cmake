@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.o"
-  "CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.o.d"
+  "CMakeFiles/torque_read_degree_write.dir/src/control_node/torque_read_degree_write.cpp.o"
+  "CMakeFiles/torque_read_degree_write.dir/src/control_node/torque_read_degree_write.cpp.o.d"
   "torque_read_degree_write"
   "torque_read_degree_write.pdb"
 )

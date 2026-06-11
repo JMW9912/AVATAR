@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o"
-  "CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o.d"
+  "CMakeFiles/read_write_node.dir/src/control_node/read_write_node.cpp.o"
+  "CMakeFiles/read_write_node.dir/src/control_node/read_write_node.cpp.o.d"
   "read_write_node"
   "read_write_node.pdb"
 )

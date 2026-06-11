@@ -28,69 +28,54 @@ include_directories(include
 )
 
 # Build
-add_executable(read_write_node src/read_write_node.cpp)
+# ── control_node ──────────────────────────────────────────────────────────
+add_executable(read_write_node src/control_node/read_write_node.cpp)
 ament_target_dependencies(read_write_node
-  dynamixel_sdk
-  rclcpp
-  std_msgs
-  sensor_msgs
-  # moveit_ros_planning_interface
+  dynamixel_sdk rclcpp std_msgs sensor_msgs
 )
-add_executable(poppy_read_write_node src/poppy_read_write_node.cpp)
-ament_target_dependencies(poppy_read_write_node
-  dynamixel_sdk
-  rclcpp
-  std_msgs
-  sensor_msgs
-  # moveit_ros_planning_interface
-)
-add_executable(joint_state_publisher src/joint_state_publisher.cpp)
+add_executable(joint_state_publisher src/control_node/joint_state_publisher.cpp)
 ament_target_dependencies(joint_state_publisher
-  rclcpp
-  sensor_msgs
+  rclcpp sensor_msgs
 )
-add_executable(csv_joint_state_publisher src/csv_joint_state_publisher.cpp)
+add_executable(csv_joint_state_publisher src/control_node/csv_joint_state_publisher.cpp)
 ament_target_dependencies(csv_joint_state_publisher
-  rclcpp
-  sensor_msgs
-  std_msgs
+  rclcpp sensor_msgs std_msgs
 )
-add_executable(h1_csv_joint_state_publisher src/h1_csv_joint_state_publisher.cpp)
+add_executable(h1_csv_joint_state_publisher src/control_node/h1_csv_joint_state_publisher.cpp)
 ament_target_dependencies(h1_csv_joint_state_publisher
-  rclcpp
-  sensor_msgs
-  std_msgs
+  rclcpp sensor_msgs std_msgs
 )
-add_executable(poppy_csv_joint_state_publisher src/poppy_csv_joint_state_publisher.cpp)
-ament_target_dependencies(poppy_csv_joint_state_publisher
-  rclcpp
-  sensor_msgs
-  std_msgs
-)
-# RViz 시각화 노드 추가
-add_executable(rviz_visualization_node src/rviz_visualization_node.cpp)
-ament_target_dependencies(rviz_visualization_node
-  rclcpp
-  sensor_msgs
-  geometry_msgs
-  std_srvs
-  urdf
-  rviz_visual_tools
-  tf2_eigen
-)
-add_executable(torque_compensation_node src/torque_compensation_node.cpp)
-ament_target_dependencies(torque_compensation_node
-  dynamixel_sdk
-  rclcpp
-  std_msgs
-  sensor_msgs
-)
-add_executable(torque_read_degree_write src/torque_read_degree_write.cpp)
+add_executable(torque_read_degree_write src/control_node/torque_read_degree_write.cpp)
 ament_target_dependencies(torque_read_degree_write
-  dynamixel_sdk
-  rclcpp
-  std_msgs
-  sensor_msgs
+  dynamixel_sdk rclcpp std_msgs sensor_msgs
+)
+# ── Poppy_robot ───────────────────────────────────────────────────────────
+add_executable(poppy_read_write_node src/control_node/Poppy_robot/poppy_read_write_node.cpp)
+ament_target_dependencies(poppy_read_write_node
+  dynamixel_sdk rclcpp std_msgs sensor_msgs
+)
+add_executable(poppy_csv_joint_state_publisher src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.cpp)
+ament_target_dependencies(poppy_csv_joint_state_publisher
+  rclcpp sensor_msgs std_msgs
+)
+# ── Avatar_robot ──────────────────────────────────────────────────────────
+add_executable(avatar_read_write_node src/control_node/Avatar_robot/avatar_read_write_node.cpp)
+ament_target_dependencies(avatar_read_write_node
+  dynamixel_sdk rclcpp std_msgs sensor_msgs
+)
+add_executable(avatar_csv_joint_state_publisher src/control_node/Avatar_robot/avatar_csv_joint_state_publisher.cpp)
+ament_target_dependencies(avatar_csv_joint_state_publisher
+  rclcpp sensor_msgs std_msgs
+)
+# ── torque_control_node ───────────────────────────────────────────────────
+add_executable(torque_compensation_node src/torque_control_node/torque_compensation_node.cpp)
+ament_target_dependencies(torque_compensation_node
+  dynamixel_sdk rclcpp std_msgs sensor_msgs
+)
+# ── visual_node ───────────────────────────────────────────────────────────
+add_executable(rviz_visualization_node src/visual_node/rviz_visualization_node.cpp)
+ament_target_dependencies(rviz_visualization_node
+  rclcpp sensor_msgs geometry_msgs std_srvs urdf rviz_visual_tools tf2_eigen
 )
 
 # Install
@@ -105,6 +90,8 @@ install(TARGETS
   rviz_visualization_node
   torque_compensation_node
   torque_read_degree_write
+  avatar_read_write_node
+  avatar_csv_joint_state_publisher
   DESTINATION lib/${PROJECT_NAME}
 )
 
@@ -129,13 +116,8 @@ install(DIRECTORY urdf
   DESTINATION share/${PROJECT_NAME}/
 )
 
-install(DIRECTORY h1_2_description
-  DESTINATION share/${PROJECT_NAME}/
-)
-
-install(DIRECTORY poppy_description
-  DESTINATION share/${PROJECT_NAME}/
-)
+# h1_2_description, poppy_description, avatar_description 은 urdf/ 하위로 이동됨
+# install(DIRECTORY urdf ...) 가 이미 하위 폴더 전체를 커버함
 
 # Test
 if(BUILD_TESTING)

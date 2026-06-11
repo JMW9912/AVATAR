@@ -1,0 +1,8 @@
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/avatar_read_write_node.cpp: In constructor ‘AvatarController::AvatarController()’:
+/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/avatar_read_write_node.cpp:88:13: error: ‘id’ was not declared in this scope
+   88 |         if (id < DXL_MAX_ID) hdr << ",";
+      |             ^~
+gmake[2]: *** [CMakeFiles/avatar_read_write_node.dir/build.make:76: CMakeFiles/avatar_read_write_node.dir/src/avatar_read_write_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:389: CMakeFiles/avatar_read_write_node.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2
