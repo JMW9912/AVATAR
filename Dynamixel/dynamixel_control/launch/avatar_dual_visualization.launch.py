@@ -24,7 +24,7 @@ from pathlib import Path
 
 def generate_launch_description():
     pkg = get_package_share_directory("dynamixel_control")
-    urdf_path = os.path.join(pkg, "urdf", "avatar_description", "AVATAR_URDF_Test3 .urdf")
+    urdf_path = os.path.join(pkg, "urdf", "avatar_description", "AVATAR_URDF.urdf")
     rviz_config_path = os.path.join(pkg, "urdf", "avatar_dual_rviz_config.rviz")
     robot_description = Path(urdf_path).read_text()
 

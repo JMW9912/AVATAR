@@ -238,6 +238,12 @@ CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_
   /usr/include/c++/11/bits/quoted_string.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
+  /usr/include/c++/11/filesystem \
+  /usr/include/c++/11/bits/fs_fwd.h \
+  /usr/include/c++/11/bits/fs_path.h \
+  /usr/include/c++/11/codecvt \
+  /usr/include/c++/11/bits/fs_dir.h \
+  /usr/include/c++/11/bits/fs_ops.h \
   /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp \
   /usr/include/c++/11/csignal \
   /usr/include/signal.h \
@@ -432,7 +438,6 @@ CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__builder.hpp \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp \
   /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp \
-  /usr/include/c++/11/codecvt \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__type_support.hpp \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
   /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_typesupport_cpp/message_type_support.hpp \
@@ -790,8 +795,6 @@ CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_
 
 /opt/ros/humble/include/rclcpp/rclcpp/create_subscription.hpp:
 
-/opt/ros/humble/include/rclcpp/rclcpp/create_service.hpp:
-
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_parameters_interface_traits.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/create_client.hpp:
@@ -827,8 +830,6 @@ CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_logging_interface.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_clock_interface.hpp:
-
-/opt/ros/humble/include/rclcpp/rclcpp/generic_subscription.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/subscription_factory.hpp:
 
@@ -902,11 +903,15 @@ CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_
 
 /usr/include/c++/11/tr1/poly_laguerre.tcc:
 
-/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__type_support.hpp:
+/opt/ros/humble/include/rclcpp/rclcpp/typesupport_helpers.hpp:
 
-/usr/include/x86_64-linux-gnu/sys/ucontext.h:
+/usr/include/c++/11/tr1/poly_hermite.tcc:
 
-/usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
+/usr/include/c++/11/tr1/modified_bessel_func.tcc:
+
+/usr/include/c++/11/tr1/legendre_function.tcc:
+
+/usr/include/c++/11/tr1/hypergeometric.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
 
@@ -931,6 +936,24 @@ CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_
 /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/topic_statistics_state.hpp:
+
+/usr/include/c++/11/bits/fs_ops.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/create_service.hpp:
+
+/usr/include/c++/11/bits/fs_fwd.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+
+/usr/include/c++/11/bits/stl_bvector.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/get_node_topics_interface.hpp:
+
+/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__builder.hpp:
+
+/usr/include/c++/11/filesystem:
 
 /usr/include/c++/11/sstream:
 
@@ -1014,8 +1037,6 @@ CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_
 
 /opt/ros/humble/include/rcpputils/rcpputils/filesystem_helper.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/sigaction.h:
-
 /usr/include/c++/11/bits/basic_string.tcc:
 
 /opt/ros/humble/include/rcutils/rcutils/logging_macros.h:
@@ -1029,6 +1050,10 @@ CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/context.hpp:
+
+/opt/ros/humble/include/rclcpp/rclcpp/generic_subscription.hpp:
+
+/usr/include/c++/11/bits/fs_dir.h:
 
 /usr/include/c++/11/cerrno:
 
@@ -1110,18 +1135,6 @@ CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h:
 
-/usr/include/c++/11/tr1/legendre_function.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-
-/usr/include/c++/11/bits/stl_bvector.h:
-
-/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/get_node_topics_interface.hpp:
-
-/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__builder.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
 /usr/include/time.h:
@@ -1140,6 +1153,8 @@ CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
 
+/usr/include/c++/11/bits/fs_path.h:
+
 /usr/include/c++/11/bits/refwrap.h:
 
 /usr/include/c++/11/typeinfo:
@@ -1153,6 +1168,10 @@ CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_
 /usr/include/c++/11/unordered_set:
 
 /usr/include/c++/11/bits/cxxabi_init_exception.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/wchar.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
@@ -1205,6 +1224,10 @@ CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:
+
+/usr/include/c++/11/bits/stl_set.h:
 
 /usr/include/c++/11/bits/node_handle.h:
 
@@ -1410,10 +1433,6 @@ CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
-/usr/include/wchar.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
 /usr/include/c++/11/cstdint:
 
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_timers_interface.hpp:
@@ -1546,10 +1565,6 @@ CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_
 
 /usr/include/c++/11/bits/invoke.h:
 
-/opt/ros/humble/include/rmw/rmw/qos_string_conversions.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigcontext.h:
-
 /usr/include/c++/11/ext/new_allocator.h:
 
 /usr/include/c++/11/bits/char_traits.h:
@@ -1614,6 +1629,18 @@ CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_
 
 /usr/include/c++/11/bits/stringfwd.h:
 
+/usr/include/x86_64-linux-gnu/bits/sigaction.h:
+
+/opt/ros/humble/include/rmw/rmw/qos_string_conversions.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigcontext.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__type_support.hpp:
+
+/usr/include/x86_64-linux-gnu/sys/ucontext.h:
+
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
 /usr/include/x86_64-linux-gnu/bits/confname.h:
@@ -1643,10 +1670,6 @@ CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_
 /usr/include/c++/11/bits/std_mutex.h:
 
 /usr/include/c++/11/atomic:
-
-/usr/include/c++/11/bits/stl_set.h:
-
-/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:
 
 /usr/include/c++/11/bits/hashtable.h:
 
@@ -1753,6 +1776,10 @@ CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_
 /usr/include/c++/11/variant:
 
 /opt/ros/humble/include/rcutils/rcutils/types/hash_map.h:
+
+/usr/include/c++/11/tr1/exp_integral.tcc:
+
+/opt/ros/humble/include/rcl/rcl/error_handling.h:
 
 /opt/ros/humble/include/rcutils/rcutils/types/string_array.h:
 
@@ -1904,9 +1931,9 @@ CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_
 
 /opt/ros/humble/include/rclcpp/rclcpp/client.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/sigstksz.h:
-
 /usr/include/c++/11/condition_variable:
+
+/usr/include/x86_64-linux-gnu/bits/sigstksz.h:
 
 /usr/include/c++/11/optional:
 
@@ -1921,8 +1948,6 @@ CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_
 /usr/include/c++/11/tr1/riemann_zeta.tcc:
 
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/time.hpp:
-
-/usr/include/c++/11/tr1/hypergeometric.tcc:
 
 /opt/ros/humble/include/rclcpp/rclcpp/function_traits.hpp:
 
@@ -2097,13 +2122,3 @@ CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_
 /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
 
 /usr/include/c++/11/tr1/ell_integral.tcc:
-
-/opt/ros/humble/include/rcl/rcl/error_handling.h:
-
-/usr/include/c++/11/tr1/exp_integral.tcc:
-
-/usr/include/c++/11/tr1/modified_bessel_func.tcc:
-
-/opt/ros/humble/include/rclcpp/rclcpp/typesupport_helpers.hpp:
-
-/usr/include/c++/11/tr1/poly_hermite.tcc:

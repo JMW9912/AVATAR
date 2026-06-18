@@ -7,6 +7,8 @@
 #include <map>
 #include <utility>
 #include <iomanip>
+#include <ctime>
+#include <filesystem>
 #include "rclcpp/rclcpp.hpp"
 #include "dynamixel_sdk/dynamixel_sdk.h"
 #include "sensor_msgs/msg/joint_state.hpp"
@@ -83,8 +85,16 @@ public:
     dxl_present_position.resize(N, 0);
     param_goal_velocity_.resize(N, 0);
 
-    data_file_.open("avatar_motor_data.csv", std::ios::out | std::ios::trunc);
+    // 로그 폴더 생성(없으면) + 파일명에 날짜·시간 접두사(YYMMDD_HHMM) 추가
+    std::filesystem::create_directories("log");
+    std::time_t now_t = std::time(nullptr);
+    char ts[16];
+    std::strftime(ts, sizeof(ts), "%y%m%d_%H%M", std::localtime(&now_t));
+    std::string log_path = std::string("log/") + ts + "_avatar_motor_data.csv";
+
+    data_file_.open(log_path, std::ios::out | std::ios::trunc);
     if (data_file_.is_open()) {
+      RCLCPP_INFO(get_logger(), "로그 파일 생성: %s", log_path.c_str());
       std::ostringstream hdr;
       hdr << "Timestamp,";
       for (int id = DXL_MIN_ID; id <= DXL_MAX_ID; ++id) hdr << "Motor" << id << "_Desired(deg),";
@@ -223,6 +233,7 @@ private:
     }
   }
 
+  ///////////////////////////////////////////[Control loop]////////////////////////////////////////////////////
   // 10Hz — SyncRead + /joint_states_actual 발행 + 터미널 로그
   void timerCallback() {
     dxl_comm_result = groupSyncRead->txRxPacket();

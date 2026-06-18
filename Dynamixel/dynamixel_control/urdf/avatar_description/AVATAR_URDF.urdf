@@ -26,7 +26,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/Base.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/Base.stl" />
       </geometry>
       <material
         name="">
@@ -40,7 +40,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/Base.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/Base.stl" />
       </geometry>
     </collision>
   </link>
@@ -66,7 +66,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/Waist_Bottom.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/Waist_Bottom.stl" />
       </geometry>
       <material
         name="">
@@ -80,7 +80,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/Waist_Bottom.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/Waist_Bottom.stl" />
       </geometry>
     </collision>
   </link>
@@ -97,8 +97,8 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="-0.523599"
+      upper="0.523599"
       effort="0"
       velocity="0" />
   </joint>
@@ -124,7 +124,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/Waist_Top.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/Waist_Top.stl" />
       </geometry>
       <material
         name="">
@@ -138,7 +138,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/Waist_Top.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/Waist_Top.stl" />
       </geometry>
     </collision>
   </link>
@@ -155,8 +155,8 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="-0.523599"
+      upper="0.523599"
       effort="0"
       velocity="0" />
   </joint>
@@ -182,7 +182,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/Neck1.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/Neck1.stl" />
       </geometry>
       <material
         name="">
@@ -196,7 +196,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/Neck1.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/Neck1.stl" />
       </geometry>
     </collision>
   </link>
@@ -213,8 +213,8 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="-1.570796"
+      upper="1.570796"
       effort="0"
       velocity="0" />
   </joint>
@@ -240,7 +240,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/Neck2.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/Neck2.stl" />
       </geometry>
       <material
         name="">
@@ -254,7 +254,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/Neck2.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/Neck2.stl" />
       </geometry>
     </collision>
   </link>
@@ -271,8 +271,8 @@
     <axis
       xyz="0 -1 0" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="-1.570796"
+      upper="1.570796"
       effort="0"
       velocity="0" />
   </joint>
@@ -298,7 +298,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/Head.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/Head.stl" />
       </geometry>
       <material
         name="">
@@ -312,7 +312,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/Head.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/Head.stl" />
       </geometry>
     </collision>
   </link>
@@ -329,8 +329,8 @@
     <axis
       xyz="1 0 0" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="-1.570796"
+      upper="1.570796"
       effort="0"
       velocity="0" />
   </joint>
@@ -356,7 +356,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/R_Shoulder1.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/R_Shoulder1.stl" />
       </geometry>
       <material
         name="">
@@ -370,7 +370,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/R_Shoulder1.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/R_Shoulder1.stl" />
       </geometry>
     </collision>
   </link>
@@ -387,8 +387,8 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="-0.523599"
+      upper="1.047198"
       effort="0"
       velocity="0" />
   </joint>
@@ -414,7 +414,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/R_Shoulder2.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/R_Shoulder2.stl" />
       </geometry>
       <material
         name="">
@@ -428,7 +428,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/R_Shoulder2.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/R_Shoulder2.stl" />
       </geometry>
     </collision>
   </link>
@@ -445,8 +445,8 @@
     <axis
       xyz="0 -1 0" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="-0.785398"
+      upper="2.792527"
       effort="0"
       velocity="0" />
   </joint>
@@ -472,7 +472,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/R_Shoulder3.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/R_Shoulder3.stl" />
       </geometry>
       <material
         name="">
@@ -486,7 +486,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/R_Shoulder3.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/R_Shoulder3.stl" />
       </geometry>
     </collision>
   </link>
@@ -503,8 +503,8 @@
     <axis
       xyz="-1 0 0" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="0.000000"
+      upper="2.792527"
       effort="0"
       velocity="0" />
   </joint>
@@ -530,7 +530,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/R_Upperarm.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/R_Upperarm.stl" />
       </geometry>
       <material
         name="">
@@ -544,7 +544,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/R_Upperarm.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/R_Upperarm.stl" />
       </geometry>
     </collision>
   </link>
@@ -561,8 +561,8 @@
     <axis
       xyz="0 0 -1" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="-1.570796"
+      upper="1.570796"
       effort="0"
       velocity="0" />
   </joint>
@@ -588,7 +588,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/R_Forearm.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/R_Forearm.stl" />
       </geometry>
       <material
         name="">
@@ -602,7 +602,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/R_Forearm.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/R_Forearm.stl" />
       </geometry>
     </collision>
   </link>
@@ -619,8 +619,8 @@
     <axis
       xyz="0 -1 0" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="0.000000"
+      upper="2.094395"
       effort="0"
       velocity="0" />
   </joint>
@@ -646,7 +646,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/R_Wrist1.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/R_Wrist1.stl" />
       </geometry>
       <material
         name="">
@@ -660,7 +660,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/R_Wrist1.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/R_Wrist1.stl" />
       </geometry>
     </collision>
   </link>
@@ -677,8 +677,8 @@
     <axis
       xyz="0 0 -1" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="-1.570796"
+      upper="1.570796"
       effort="0"
       velocity="0" />
   </joint>
@@ -704,7 +704,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/R_Wrist2.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/R_Wrist2.stl" />
       </geometry>
       <material
         name="">
@@ -718,7 +718,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/R_Wrist2.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/R_Wrist2.stl" />
       </geometry>
     </collision>
   </link>
@@ -735,8 +735,8 @@
     <axis
       xyz="0 -1 0" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="-1.047198"
+      upper="1.047198"
       effort="0"
       velocity="0" />
   </joint>
@@ -762,7 +762,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/R_Wrist3.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/R_Wrist3.stl" />
       </geometry>
       <material
         name="">
@@ -776,7 +776,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/R_Wrist3.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/R_Wrist3.stl" />
       </geometry>
     </collision>
   </link>
@@ -793,8 +793,8 @@
     <axis
       xyz="-1 0 0" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="-1.570796"
+      upper="1.047198"
       effort="0"
       velocity="0" />
   </joint>
@@ -820,7 +820,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/L_Shoulder1.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/L_Shoulder1.stl" />
       </geometry>
       <material
         name="">
@@ -834,7 +834,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/L_Shoulder1.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/L_Shoulder1.stl" />
       </geometry>
     </collision>
   </link>
@@ -851,8 +851,8 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="-1.047198"
+      upper="0.523599"
       effort="0"
       velocity="0" />
   </joint>
@@ -878,7 +878,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/L_Shoulder2.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/L_Shoulder2.stl" />
       </geometry>
       <material
         name="">
@@ -892,7 +892,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/L_Shoulder2.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/L_Shoulder2.stl" />
       </geometry>
     </collision>
   </link>
@@ -909,8 +909,8 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="-2.792527"
+      upper="0.785398"
       effort="0"
       velocity="0" />
   </joint>
@@ -936,7 +936,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/L_Shoulder3.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/L_Shoulder3.stl" />
       </geometry>
       <material
         name="">
@@ -950,7 +950,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/L_Shoulder3.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/L_Shoulder3.stl" />
       </geometry>
     </collision>
   </link>
@@ -967,8 +967,8 @@
     <axis
       xyz="-1 0 0" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="-2.792527"
+      upper="0.000000"
       effort="0"
       velocity="0" />
   </joint>
@@ -994,7 +994,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/L_Upperarm.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/L_Upperarm.stl" />
       </geometry>
       <material
         name="">
@@ -1008,7 +1008,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/L_Upperarm.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/L_Upperarm.stl" />
       </geometry>
     </collision>
   </link>
@@ -1025,8 +1025,8 @@
     <axis
       xyz="0 0 -1" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="-1.570796"
+      upper="1.570796"
       effort="0"
       velocity="0" />
   </joint>
@@ -1052,7 +1052,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/L_Forearm.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/L_Forearm.stl" />
       </geometry>
       <material
         name="">
@@ -1066,7 +1066,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/L_Forearm.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/L_Forearm.stl" />
       </geometry>
     </collision>
   </link>
@@ -1083,8 +1083,8 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="-2.094395"
+      upper="0.000000"
       effort="0"
       velocity="0" />
   </joint>
@@ -1110,7 +1110,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/L_Wrist1.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/L_Wrist1.stl" />
       </geometry>
       <material
         name="">
@@ -1124,7 +1124,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/L_Wrist1.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/L_Wrist1.stl" />
       </geometry>
     </collision>
   </link>
@@ -1141,8 +1141,8 @@
     <axis
       xyz="0 0 -1" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="-1.570796"
+      upper="1.570796"
       effort="0"
       velocity="0" />
   </joint>
@@ -1168,7 +1168,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/L_Wrist2.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/L_Wrist2.stl" />
       </geometry>
       <material
         name="">
@@ -1182,7 +1182,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/L_Wrist2.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/L_Wrist2.stl" />
       </geometry>
     </collision>
   </link>
@@ -1199,8 +1199,8 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="-1.047198"
+      upper="1.047198"
       effort="0"
       velocity="0" />
   </joint>
@@ -1226,7 +1226,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/L_Wrist3.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/L_Wrist3.stl" />
       </geometry>
       <material
         name="">
@@ -1240,7 +1240,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/L_Wrist3.stl" />
+          filename="package://dynamixel_control/urdf/avatar_description/meshes/L_Wrist3.stl" />
       </geometry>
     </collision>
   </link>
@@ -1257,8 +1257,8 @@
     <axis
       xyz="1 0 0" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="-1.570796"
+      upper="1.570796"
       effort="0"
       velocity="0" />
   </joint>

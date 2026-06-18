@@ -12,7 +12,7 @@
 #include <algorithm>
 
 // avatar_read_write_node 의 CONTROL_FPS 와 반드시 동일하게 유지
-#define CONTROL_FPS 120
+#define CONTROL_FPS 30
 
 namespace fs = std::filesystem;
 
@@ -89,7 +89,6 @@ private:
             RCLCPP_INFO(this->get_logger(), "[%zu] %s", i + 1, file_list_[i].c_str());
         RCLCPP_INFO(this->get_logger(), "Enter the file index to process (default: 1, timeout 10s):");
 
-        size_t selected_index = 0;
         auto start_time = std::chrono::steady_clock::now();
         while (true) {
             if (std::chrono::steady_clock::now() - start_time > std::chrono::seconds(10)) {
@@ -98,8 +97,15 @@ private:
             }
             int ret = poll(&fd, 1, 100);
             if (ret > 0) {
-                std::cin >> selected_index;
-                return selected_index;
+                std::string input_line;
+                if (!std::getline(std::cin, input_line))
+                    return 1;  // EOF → 기본 파일 [1]
+                try {
+                    return static_cast<size_t>(std::stoul(input_line));
+                } catch (...) {
+                    RCLCPP_WARN(this->get_logger(), "숫자가 아닌 입력. 파일 [1] 사용.");
+                    return 1;
+                }
             }
             std::this_thread::sleep_for(std::chrono::milliseconds(100));
         }
@@ -153,12 +159,17 @@ private:
         const auto frame_duration = std::chrono::microseconds(1000000 / CONTROL_FPS);
         int frame_idx = 0;
 
-        for (const auto &row : angle_data) {
-            auto frame_start = std::chrono::steady_clock::now();
+        // 관절 이름은 매 프레임 동일 — 메시지를 1회만 구성하고 재사용
+        sensor_msgs::msg::JointState message;
+        message.name = jointNames();
 
-            auto message = sensor_msgs::msg::JointState();
+        // 절대 시각 기준 페이싱 — 프레임별 오차 누적(드리프트) 방지
+        auto next_frame = std::chrono::steady_clock::now();
+
+        for (const auto &row : angle_data) {
+            if (!rclcpp::ok()) break;  // 재생 도중 Ctrl+C 즉시 반응
+
             message.header.stamp = this->get_clock()->now();
-            message.name     = jointNames();
             message.position = buildPosition(row);
             publisher_->publish(message);
 
@@ -166,9 +177,8 @@ private:
                 RCLCPP_INFO(this->get_logger(), "Frame %d / %zu", frame_idx, angle_data.size());
             frame_idx++;
 
-            auto elapsed = std::chrono::steady_clock::now() - frame_start;
-            if (elapsed < frame_duration)
-                std::this_thread::sleep_for(frame_duration - elapsed);
+            next_frame += frame_duration;
+            std::this_thread::sleep_until(next_frame);
         }
 
         RCLCPP_INFO(this->get_logger(), "Finished publishing %d frames from: %s",

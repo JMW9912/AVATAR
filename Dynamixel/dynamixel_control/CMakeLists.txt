@@ -95,10 +95,11 @@ install(TARGETS
   DESTINATION lib/${PROJECT_NAME}
 )
 
-# Python 스크립트 설치 (ros2 run dynamixel_control poppy_slider_gui.py 로 실행 가능)
+# Python 스크립트 설치 (ros2 run dynamixel_control <script>.py 로 실행 가능)
 install(PROGRAMS
   scripts/poppy_slider_gui.py
   scripts/poppy_fk_recorder.py
+  scripts/avatar_slider_gui.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
