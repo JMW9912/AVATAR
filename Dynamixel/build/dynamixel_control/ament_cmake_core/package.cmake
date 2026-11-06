@@ -5,7 +5,7 @@ set(dynamixel_control_BUILD_DEPENDS "moveit_ros_planning_interface" "rclcpp" "dy
 set(dynamixel_control_BUILDTOOL_DEPENDS "ament_cmake")
 set(dynamixel_control_BUILD_EXPORT_DEPENDS "moveit_ros_planning_interface" "rclcpp" "dynamixel_sdk")
 set(dynamixel_control_BUILDTOOL_EXPORT_DEPENDS )
-set(dynamixel_control_EXEC_DEPENDS "moveit_ros_planning_interface" "rclcpp" "dynamixel_sdk")
+set(dynamixel_control_EXEC_DEPENDS "rclpy" "moveit_ros_planning_interface" "rclcpp" "dynamixel_sdk")
 set(dynamixel_control_TEST_DEPENDS "ament_lint_auto" "ament_lint_common")
 set(dynamixel_control_GROUP_DEPENDS )
 set(dynamixel_control_MEMBER_OF_GROUPS )

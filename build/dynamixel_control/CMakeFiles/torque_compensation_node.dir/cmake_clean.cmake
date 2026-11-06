@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.o"
-  "CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.o.d"
+  "CMakeFiles/torque_compensation_node.dir/src/torque_control_node/torque_compensation_node.cpp.o"
+  "CMakeFiles/torque_compensation_node.dir/src/torque_control_node/torque_compensation_node.cpp.o.d"
   "torque_compensation_node"
   "torque_compensation_node.pdb"
 )

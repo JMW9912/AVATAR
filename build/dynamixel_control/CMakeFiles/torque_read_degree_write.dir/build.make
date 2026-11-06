@@ -69,60 +69,60 @@ include CMakeFiles/torque_read_degree_write.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/torque_read_degree_write.dir/flags.make
 
-CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.o: CMakeFiles/torque_read_degree_write.dir/flags.make
-CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.o: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp
-CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.o: CMakeFiles/torque_read_degree_write.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/minwoong/OneDrive/JMW/dynamixel_8DOF/build/dynamixel_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.o -MF CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.o.d -o CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.o -c /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp
+CMakeFiles/torque_read_degree_write.dir/src/control_node/torque_read_degree_write.cpp.o: CMakeFiles/torque_read_degree_write.dir/flags.make
+CMakeFiles/torque_read_degree_write.dir/src/control_node/torque_read_degree_write.cpp.o: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/control_node/torque_read_degree_write.cpp
+CMakeFiles/torque_read_degree_write.dir/src/control_node/torque_read_degree_write.cpp.o: CMakeFiles/torque_read_degree_write.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/minwoong/OneDrive/JMW/dynamixel_8DOF/build/dynamixel_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/torque_read_degree_write.dir/src/control_node/torque_read_degree_write.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/torque_read_degree_write.dir/src/control_node/torque_read_degree_write.cpp.o -MF CMakeFiles/torque_read_degree_write.dir/src/control_node/torque_read_degree_write.cpp.o.d -o CMakeFiles/torque_read_degree_write.dir/src/control_node/torque_read_degree_write.cpp.o -c /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/control_node/torque_read_degree_write.cpp
 
-CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp > CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.i
+CMakeFiles/torque_read_degree_write.dir/src/control_node/torque_read_degree_write.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/torque_read_degree_write.dir/src/control_node/torque_read_degree_write.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/control_node/torque_read_degree_write.cpp > CMakeFiles/torque_read_degree_write.dir/src/control_node/torque_read_degree_write.cpp.i
 
-CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_read_degree_write.cpp -o CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.s
+CMakeFiles/torque_read_degree_write.dir/src/control_node/torque_read_degree_write.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/torque_read_degree_write.dir/src/control_node/torque_read_degree_write.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/control_node/torque_read_degree_write.cpp -o CMakeFiles/torque_read_degree_write.dir/src/control_node/torque_read_degree_write.cpp.s
 
 # Object files for target torque_read_degree_write
 torque_read_degree_write_OBJECTS = \
-"CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.o"
+"CMakeFiles/torque_read_degree_write.dir/src/control_node/torque_read_degree_write.cpp.o"
 
 # External object files for target torque_read_degree_write
 torque_read_degree_write_EXTERNAL_OBJECTS =
 
-torque_read_degree_write: CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.o
+torque_read_degree_write: CMakeFiles/torque_read_degree_write.dir/src/control_node/torque_read_degree_write.cpp.o
 torque_read_degree_write: CMakeFiles/torque_read_degree_write.dir/build.make
+torque_read_degree_write: /opt/ros/humble/lib/libdynamixel_sdk.so
 torque_read_degree_write: /opt/ros/humble/lib/librclcpp.so
 torque_read_degree_write: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so
 torque_read_degree_write: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
 torque_read_degree_write: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
 torque_read_degree_write: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
 torque_read_degree_write: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so
-torque_read_degree_write: /opt/ros/humble/lib/libdynamixel_sdk.so
 torque_read_degree_write: /opt/ros/humble/lib/liblibstatistics_collector.so
 torque_read_degree_write: /opt/ros/humble/lib/librcl.so
 torque_read_degree_write: /opt/ros/humble/lib/librmw_implementation.so
 torque_read_degree_write: /opt/ros/humble/lib/libament_index_cpp.so
 torque_read_degree_write: /opt/ros/humble/lib/librcl_logging_spdlog.so
 torque_read_degree_write: /opt/ros/humble/lib/librcl_logging_interface.so
-torque_read_degree_write: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_c.so
-torque_read_degree_write: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so
-torque_read_degree_write: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_cpp.so
-torque_read_degree_write: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.so
-torque_read_degree_write: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_cpp.so
-torque_read_degree_write: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_py.so
-torque_read_degree_write: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_c.so
-torque_read_degree_write: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_c.so
 torque_read_degree_write: /opt/ros/humble/lib/librcl_yaml_param_parser.so
 torque_read_degree_write: /opt/ros/humble/lib/libyaml.so
 torque_read_degree_write: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_c.so
+torque_read_degree_write: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_c.so
 torque_read_degree_write: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_cpp.so
+torque_read_degree_write: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_cpp.so
 torque_read_degree_write: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_introspection_c.so
+torque_read_degree_write: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so
 torque_read_degree_write: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_introspection_cpp.so
+torque_read_degree_write: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.so
 torque_read_degree_write: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_cpp.so
+torque_read_degree_write: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_cpp.so
 torque_read_degree_write: /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_py.so
+torque_read_degree_write: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_py.so
 torque_read_degree_write: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_c.so
+torque_read_degree_write: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_c.so
 torque_read_degree_write: /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_c.so
+torque_read_degree_write: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_c.so
 torque_read_degree_write: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_c.so
 torque_read_degree_write: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_cpp.so
 torque_read_degree_write: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_introspection_c.so
@@ -140,7 +140,7 @@ torque_read_degree_write: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesuppo
 torque_read_degree_write: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
 torque_read_degree_write: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
 torque_read_degree_write: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
-torque_read_degree_write: /opt/ros/humble/lib/libfastcdr.so.1.0.24
+torque_read_degree_write: /opt/ros/humble/lib/libfastcdr.so.1.0.29
 torque_read_degree_write: /opt/ros/humble/lib/librmw.so
 torque_read_degree_write: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
 torque_read_degree_write: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so

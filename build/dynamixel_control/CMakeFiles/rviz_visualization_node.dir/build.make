@@ -69,28 +69,28 @@ include CMakeFiles/rviz_visualization_node.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/rviz_visualization_node.dir/flags.make
 
-CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.o: CMakeFiles/rviz_visualization_node.dir/flags.make
-CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.o: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/rviz_visualization_node.cpp
-CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.o: CMakeFiles/rviz_visualization_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/minwoong/OneDrive/JMW/dynamixel_8DOF/build/dynamixel_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.o -MF CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.o.d -o CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.o -c /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/rviz_visualization_node.cpp
+CMakeFiles/rviz_visualization_node.dir/src/visual_node/rviz_visualization_node.cpp.o: CMakeFiles/rviz_visualization_node.dir/flags.make
+CMakeFiles/rviz_visualization_node.dir/src/visual_node/rviz_visualization_node.cpp.o: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/visual_node/rviz_visualization_node.cpp
+CMakeFiles/rviz_visualization_node.dir/src/visual_node/rviz_visualization_node.cpp.o: CMakeFiles/rviz_visualization_node.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/minwoong/OneDrive/JMW/dynamixel_8DOF/build/dynamixel_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/rviz_visualization_node.dir/src/visual_node/rviz_visualization_node.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rviz_visualization_node.dir/src/visual_node/rviz_visualization_node.cpp.o -MF CMakeFiles/rviz_visualization_node.dir/src/visual_node/rviz_visualization_node.cpp.o.d -o CMakeFiles/rviz_visualization_node.dir/src/visual_node/rviz_visualization_node.cpp.o -c /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/visual_node/rviz_visualization_node.cpp
 
-CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/rviz_visualization_node.cpp > CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.i
+CMakeFiles/rviz_visualization_node.dir/src/visual_node/rviz_visualization_node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rviz_visualization_node.dir/src/visual_node/rviz_visualization_node.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/visual_node/rviz_visualization_node.cpp > CMakeFiles/rviz_visualization_node.dir/src/visual_node/rviz_visualization_node.cpp.i
 
-CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/rviz_visualization_node.cpp -o CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.s
+CMakeFiles/rviz_visualization_node.dir/src/visual_node/rviz_visualization_node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rviz_visualization_node.dir/src/visual_node/rviz_visualization_node.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/visual_node/rviz_visualization_node.cpp -o CMakeFiles/rviz_visualization_node.dir/src/visual_node/rviz_visualization_node.cpp.s
 
 # Object files for target rviz_visualization_node
 rviz_visualization_node_OBJECTS = \
-"CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.o"
+"CMakeFiles/rviz_visualization_node.dir/src/visual_node/rviz_visualization_node.cpp.o"
 
 # External object files for target rviz_visualization_node
 rviz_visualization_node_EXTERNAL_OBJECTS =
 
-rviz_visualization_node: CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.o
+rviz_visualization_node: CMakeFiles/rviz_visualization_node.dir/src/visual_node/rviz_visualization_node.cpp.o
 rviz_visualization_node: CMakeFiles/rviz_visualization_node.dir/build.make
 rviz_visualization_node: /opt/ros/humble/lib/libstd_srvs__rosidl_typesupport_fastrtps_c.so
 rviz_visualization_node: /opt/ros/humble/lib/libstd_srvs__rosidl_typesupport_introspection_c.so
@@ -117,19 +117,6 @@ rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libassimp.so.5.2.0
 rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libdraco.so.4.0.0
 rviz_visualization_node: /usr/lib/x86_64-linux-gnu/librt.a
 rviz_visualization_node: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
-rviz_visualization_node: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so
-rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libfreetype.so
-rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libz.so
-rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libOpenGL.so
-rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libGLX.so
-rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libGLU.so
-rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libSM.so
-rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libICE.so
-rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libX11.so
-rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libXext.so
-rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libXt.so
-rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libXrandr.so
-rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libXaw.so
 rviz_visualization_node: /opt/ros/humble/lib/libresource_retriever.so
 rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libcurl.so
 rviz_visualization_node: /opt/ros/humble/lib/libstatic_transform_broadcaster_node.so
@@ -151,21 +138,25 @@ rviz_visualization_node: /opt/ros/humble/lib/libnav_msgs__rosidl_typesupport_cpp
 rviz_visualization_node: /opt/ros/humble/lib/libnav_msgs__rosidl_generator_py.so
 rviz_visualization_node: /opt/ros/humble/lib/libnav_msgs__rosidl_typesupport_c.so
 rviz_visualization_node: /opt/ros/humble/lib/libnav_msgs__rosidl_generator_c.so
+rviz_visualization_node: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so
+rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libfreetype.so
+rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libz.so
+rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libOpenGL.so
+rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libGLX.so
+rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libGLU.so
+rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libSM.so
+rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libICE.so
+rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libX11.so
+rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libXext.so
+rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libXt.so
+rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libXrandr.so
+rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libXaw.so
 rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.3
 rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.3
 rviz_visualization_node: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.3
 rviz_visualization_node: /opt/ros/humble/lib/librviz_visual_tools.so
 rviz_visualization_node: /opt/ros/humble/lib/librviz_visual_tools_remote_control.so
-rviz_visualization_node: /opt/ros/humble/lib/libcomponent_manager.so
 rviz_visualization_node: /opt/ros/humble/lib/libclass_loader.so
-rviz_visualization_node: /opt/ros/humble/lib/libcomposition_interfaces__rosidl_typesupport_fastrtps_c.so
-rviz_visualization_node: /opt/ros/humble/lib/libcomposition_interfaces__rosidl_typesupport_introspection_c.so
-rviz_visualization_node: /opt/ros/humble/lib/libcomposition_interfaces__rosidl_typesupport_fastrtps_cpp.so
-rviz_visualization_node: /opt/ros/humble/lib/libcomposition_interfaces__rosidl_typesupport_introspection_cpp.so
-rviz_visualization_node: /opt/ros/humble/lib/libcomposition_interfaces__rosidl_typesupport_cpp.so
-rviz_visualization_node: /opt/ros/humble/lib/libcomposition_interfaces__rosidl_generator_py.so
-rviz_visualization_node: /opt/ros/humble/lib/libcomposition_interfaces__rosidl_typesupport_c.so
-rviz_visualization_node: /opt/ros/humble/lib/libcomposition_interfaces__rosidl_generator_c.so
 rviz_visualization_node: /opt/ros/humble/lib/libtf2_ros.so
 rviz_visualization_node: /opt/ros/humble/lib/libmessage_filters.so
 rviz_visualization_node: /opt/ros/humble/lib/librclcpp_action.so
@@ -219,24 +210,24 @@ rviz_visualization_node: /opt/ros/humble/lib/librmw_implementation.so
 rviz_visualization_node: /opt/ros/humble/lib/libament_index_cpp.so
 rviz_visualization_node: /opt/ros/humble/lib/librcl_logging_spdlog.so
 rviz_visualization_node: /opt/ros/humble/lib/librcl_logging_interface.so
-rviz_visualization_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_c.so
-rviz_visualization_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so
-rviz_visualization_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_cpp.so
-rviz_visualization_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.so
-rviz_visualization_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_cpp.so
-rviz_visualization_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_py.so
-rviz_visualization_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_c.so
-rviz_visualization_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_c.so
 rviz_visualization_node: /opt/ros/humble/lib/librcl_yaml_param_parser.so
 rviz_visualization_node: /opt/ros/humble/lib/libyaml.so
 rviz_visualization_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_c.so
+rviz_visualization_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_c.so
 rviz_visualization_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_cpp.so
+rviz_visualization_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_cpp.so
 rviz_visualization_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_introspection_c.so
+rviz_visualization_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so
 rviz_visualization_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_introspection_cpp.so
+rviz_visualization_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.so
 rviz_visualization_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_cpp.so
+rviz_visualization_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_cpp.so
 rviz_visualization_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_py.so
+rviz_visualization_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_py.so
 rviz_visualization_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_c.so
+rviz_visualization_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_c.so
 rviz_visualization_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_c.so
+rviz_visualization_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_c.so
 rviz_visualization_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_c.so
 rviz_visualization_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_cpp.so
 rviz_visualization_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_introspection_c.so
@@ -284,7 +275,7 @@ rviz_visualization_node: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so
 rviz_visualization_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
 rviz_visualization_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
 rviz_visualization_node: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
-rviz_visualization_node: /opt/ros/humble/lib/libfastcdr.so.1.0.24
+rviz_visualization_node: /opt/ros/humble/lib/libfastcdr.so.1.0.29
 rviz_visualization_node: /opt/ros/humble/lib/librmw.so
 rviz_visualization_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
 rviz_visualization_node: /opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so

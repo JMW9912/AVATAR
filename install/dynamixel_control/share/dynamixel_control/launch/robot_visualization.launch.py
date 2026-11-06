@@ -6,7 +6,7 @@ import os
 def generate_launch_description():
     package_share_directory = get_package_share_directory('dynamixel_control')
     # URDF 및 RViz 설정 파일 경로
-    urdf_file_path = os.path.join(package_share_directory, 'urdf', 'AVATAR_URDF_Test3.urdf')
+    urdf_file_path = os.path.join(package_share_directory, 'urdf', 'avatar_description', 'AVATAR_URDF.urdf')
     rviz_config_path = os.path.join(package_share_directory, 'urdf', 'rviz_config.rviz')
 
     return LaunchDescription([

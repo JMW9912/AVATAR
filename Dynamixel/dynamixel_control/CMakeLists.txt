@@ -100,7 +100,14 @@ install(PROGRAMS
   scripts/poppy_slider_gui.py
   scripts/poppy_fk_recorder.py
   scripts/avatar_slider_gui.py
+  src/control_node/Poppy_robot/poppy_ros_relay_claude.py
   DESTINATION lib/${PROJECT_NAME}
+)
+
+# poppy_ros_relay_claude.py 가 sys.path 에 추가하는 공용 모듈 폴더
+# (자기 파일 위치 기준 ./Robot_Retargeting 를 보므로 스크립트와 같은 곳에 설치해야 함)
+install(DIRECTORY src/control_node/Poppy_robot/Robot_Retargeting
+  DESTINATION lib/${PROJECT_NAME}/
 )
 
 # Install 런치 파일

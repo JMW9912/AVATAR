@@ -69,60 +69,60 @@ include CMakeFiles/poppy_read_write_node.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/poppy_read_write_node.dir/flags.make
 
-CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.o: CMakeFiles/poppy_read_write_node.dir/flags.make
-CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.o: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/poppy_read_write_node.cpp
-CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.o: CMakeFiles/poppy_read_write_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/minwoong/OneDrive/JMW/dynamixel_8DOF/build/dynamixel_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.o -MF CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.o.d -o CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.o -c /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/poppy_read_write_node.cpp
+CMakeFiles/poppy_read_write_node.dir/src/control_node/Poppy_robot/poppy_read_write_node.cpp.o: CMakeFiles/poppy_read_write_node.dir/flags.make
+CMakeFiles/poppy_read_write_node.dir/src/control_node/Poppy_robot/poppy_read_write_node.cpp.o: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/control_node/Poppy_robot/poppy_read_write_node.cpp
+CMakeFiles/poppy_read_write_node.dir/src/control_node/Poppy_robot/poppy_read_write_node.cpp.o: CMakeFiles/poppy_read_write_node.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/minwoong/OneDrive/JMW/dynamixel_8DOF/build/dynamixel_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/poppy_read_write_node.dir/src/control_node/Poppy_robot/poppy_read_write_node.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/poppy_read_write_node.dir/src/control_node/Poppy_robot/poppy_read_write_node.cpp.o -MF CMakeFiles/poppy_read_write_node.dir/src/control_node/Poppy_robot/poppy_read_write_node.cpp.o.d -o CMakeFiles/poppy_read_write_node.dir/src/control_node/Poppy_robot/poppy_read_write_node.cpp.o -c /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/control_node/Poppy_robot/poppy_read_write_node.cpp
 
-CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/poppy_read_write_node.cpp > CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.i
+CMakeFiles/poppy_read_write_node.dir/src/control_node/Poppy_robot/poppy_read_write_node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/poppy_read_write_node.dir/src/control_node/Poppy_robot/poppy_read_write_node.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/control_node/Poppy_robot/poppy_read_write_node.cpp > CMakeFiles/poppy_read_write_node.dir/src/control_node/Poppy_robot/poppy_read_write_node.cpp.i
 
-CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/poppy_read_write_node.cpp -o CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.s
+CMakeFiles/poppy_read_write_node.dir/src/control_node/Poppy_robot/poppy_read_write_node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/poppy_read_write_node.dir/src/control_node/Poppy_robot/poppy_read_write_node.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/control_node/Poppy_robot/poppy_read_write_node.cpp -o CMakeFiles/poppy_read_write_node.dir/src/control_node/Poppy_robot/poppy_read_write_node.cpp.s
 
 # Object files for target poppy_read_write_node
 poppy_read_write_node_OBJECTS = \
-"CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.o"
+"CMakeFiles/poppy_read_write_node.dir/src/control_node/Poppy_robot/poppy_read_write_node.cpp.o"
 
 # External object files for target poppy_read_write_node
 poppy_read_write_node_EXTERNAL_OBJECTS =
 
-poppy_read_write_node: CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.o
+poppy_read_write_node: CMakeFiles/poppy_read_write_node.dir/src/control_node/Poppy_robot/poppy_read_write_node.cpp.o
 poppy_read_write_node: CMakeFiles/poppy_read_write_node.dir/build.make
+poppy_read_write_node: /opt/ros/humble/lib/libdynamixel_sdk.so
 poppy_read_write_node: /opt/ros/humble/lib/librclcpp.so
 poppy_read_write_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so
 poppy_read_write_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
 poppy_read_write_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
 poppy_read_write_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
 poppy_read_write_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so
-poppy_read_write_node: /opt/ros/humble/lib/libdynamixel_sdk.so
 poppy_read_write_node: /opt/ros/humble/lib/liblibstatistics_collector.so
 poppy_read_write_node: /opt/ros/humble/lib/librcl.so
 poppy_read_write_node: /opt/ros/humble/lib/librmw_implementation.so
 poppy_read_write_node: /opt/ros/humble/lib/libament_index_cpp.so
 poppy_read_write_node: /opt/ros/humble/lib/librcl_logging_spdlog.so
 poppy_read_write_node: /opt/ros/humble/lib/librcl_logging_interface.so
-poppy_read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_c.so
-poppy_read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so
-poppy_read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_cpp.so
-poppy_read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.so
-poppy_read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_cpp.so
-poppy_read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_py.so
-poppy_read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_c.so
-poppy_read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_c.so
 poppy_read_write_node: /opt/ros/humble/lib/librcl_yaml_param_parser.so
 poppy_read_write_node: /opt/ros/humble/lib/libyaml.so
 poppy_read_write_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_c.so
+poppy_read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_c.so
 poppy_read_write_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_cpp.so
+poppy_read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_cpp.so
 poppy_read_write_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_introspection_c.so
+poppy_read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so
 poppy_read_write_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_introspection_cpp.so
+poppy_read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.so
 poppy_read_write_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_cpp.so
+poppy_read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_cpp.so
 poppy_read_write_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_py.so
+poppy_read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_py.so
 poppy_read_write_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_c.so
+poppy_read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_c.so
 poppy_read_write_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_c.so
+poppy_read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_c.so
 poppy_read_write_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_c.so
 poppy_read_write_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_cpp.so
 poppy_read_write_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_introspection_c.so
@@ -140,7 +140,7 @@ poppy_read_write_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_
 poppy_read_write_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
 poppy_read_write_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
 poppy_read_write_node: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
-poppy_read_write_node: /opt/ros/humble/lib/libfastcdr.so.1.0.24
+poppy_read_write_node: /opt/ros/humble/lib/libfastcdr.so.1.0.29
 poppy_read_write_node: /opt/ros/humble/lib/librmw.so
 poppy_read_write_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
 poppy_read_write_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so

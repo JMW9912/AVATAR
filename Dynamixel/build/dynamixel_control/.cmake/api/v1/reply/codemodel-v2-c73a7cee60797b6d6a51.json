@@ -1,0 +1,169 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-8786d96e649f1eab1d4c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "dynamixel_control",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "avatar_csv_joint_state_publisher::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-avatar_csv_joint_state_publisher-12e3b8486b1818b6d602.json",
+					"name" : "avatar_csv_joint_state_publisher",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "avatar_read_write_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-avatar_read_write_node-e055607c47dc077ab684.json",
+					"name" : "avatar_read_write_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "csv_joint_state_publisher::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-csv_joint_state_publisher-4ec67e6eeb563afe3151.json",
+					"name" : "csv_joint_state_publisher",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dynamixel_control_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dynamixel_control_uninstall-bf4b1e45f2502d4c06fc.json",
+					"name" : "dynamixel_control_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "h1_csv_joint_state_publisher::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-h1_csv_joint_state_publisher-f0ae1aa26fd1761c992a.json",
+					"name" : "h1_csv_joint_state_publisher",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "joint_state_publisher::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-joint_state_publisher-70cae391c727f4ea8135.json",
+					"name" : "joint_state_publisher",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "poppy_csv_joint_state_publisher::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-poppy_csv_joint_state_publisher-15f4feae582ab564742c.json",
+					"name" : "poppy_csv_joint_state_publisher",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "poppy_read_write_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-poppy_read_write_node-09b9b8cbb9695dd6be23.json",
+					"name" : "poppy_read_write_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "read_write_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-read_write_node-161f1756897acd827070.json",
+					"name" : "read_write_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rviz_visualization_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rviz_visualization_node-98b7c979e71913d64ce2.json",
+					"name" : "rviz_visualization_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "torque_compensation_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-torque_compensation_node-e382f860f19d582baad8.json",
+					"name" : "torque_compensation_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "torque_read_degree_write::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-torque_read_degree_write-336f84fd8fcb13a6746c.json",
+					"name" : "torque_read_degree_write",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-6dc7be4befb57d58d56a.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/build/dynamixel_control",
+		"source" : "/home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

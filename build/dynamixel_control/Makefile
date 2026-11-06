@@ -211,19 +211,6 @@ read_write_node/fast:
 .PHONY : read_write_node/fast
 
 #=============================================================================
-# Target rules for targets named poppy_read_write_node
-
-# Build rule for target.
-poppy_read_write_node: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 poppy_read_write_node
-.PHONY : poppy_read_write_node
-
-# fast build rule for target.
-poppy_read_write_node/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_read_write_node.dir/build.make CMakeFiles/poppy_read_write_node.dir/build
-.PHONY : poppy_read_write_node/fast
-
-#=============================================================================
 # Target rules for targets named joint_state_publisher
 
 # Build rule for target.
@@ -263,6 +250,32 @@ h1_csv_joint_state_publisher/fast:
 .PHONY : h1_csv_joint_state_publisher/fast
 
 #=============================================================================
+# Target rules for targets named torque_read_degree_write
+
+# Build rule for target.
+torque_read_degree_write: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 torque_read_degree_write
+.PHONY : torque_read_degree_write
+
+# fast build rule for target.
+torque_read_degree_write/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_read_degree_write.dir/build.make CMakeFiles/torque_read_degree_write.dir/build
+.PHONY : torque_read_degree_write/fast
+
+#=============================================================================
+# Target rules for targets named poppy_read_write_node
+
+# Build rule for target.
+poppy_read_write_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 poppy_read_write_node
+.PHONY : poppy_read_write_node
+
+# fast build rule for target.
+poppy_read_write_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_read_write_node.dir/build.make CMakeFiles/poppy_read_write_node.dir/build
+.PHONY : poppy_read_write_node/fast
+
+#=============================================================================
 # Target rules for targets named poppy_csv_joint_state_publisher
 
 # Build rule for target.
@@ -276,17 +289,30 @@ poppy_csv_joint_state_publisher/fast:
 .PHONY : poppy_csv_joint_state_publisher/fast
 
 #=============================================================================
-# Target rules for targets named rviz_visualization_node
+# Target rules for targets named avatar_read_write_node
 
 # Build rule for target.
-rviz_visualization_node: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rviz_visualization_node
-.PHONY : rviz_visualization_node
+avatar_read_write_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 avatar_read_write_node
+.PHONY : avatar_read_write_node
 
 # fast build rule for target.
-rviz_visualization_node/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rviz_visualization_node.dir/build.make CMakeFiles/rviz_visualization_node.dir/build
-.PHONY : rviz_visualization_node/fast
+avatar_read_write_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avatar_read_write_node.dir/build.make CMakeFiles/avatar_read_write_node.dir/build
+.PHONY : avatar_read_write_node/fast
+
+#=============================================================================
+# Target rules for targets named avatar_csv_joint_state_publisher
+
+# Build rule for target.
+avatar_csv_joint_state_publisher: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 avatar_csv_joint_state_publisher
+.PHONY : avatar_csv_joint_state_publisher
+
+# fast build rule for target.
+avatar_csv_joint_state_publisher/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avatar_csv_joint_state_publisher.dir/build.make CMakeFiles/avatar_csv_joint_state_publisher.dir/build
+.PHONY : avatar_csv_joint_state_publisher/fast
 
 #=============================================================================
 # Target rules for targets named torque_compensation_node
@@ -302,233 +328,281 @@ torque_compensation_node/fast:
 .PHONY : torque_compensation_node/fast
 
 #=============================================================================
-# Target rules for targets named torque_read_degree_write
+# Target rules for targets named rviz_visualization_node
 
 # Build rule for target.
-torque_read_degree_write: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 torque_read_degree_write
-.PHONY : torque_read_degree_write
+rviz_visualization_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rviz_visualization_node
+.PHONY : rviz_visualization_node
 
 # fast build rule for target.
-torque_read_degree_write/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_read_degree_write.dir/build.make CMakeFiles/torque_read_degree_write.dir/build
-.PHONY : torque_read_degree_write/fast
+rviz_visualization_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rviz_visualization_node.dir/build.make CMakeFiles/rviz_visualization_node.dir/build
+.PHONY : rviz_visualization_node/fast
 
-src/csv_joint_state_publisher.o: src/csv_joint_state_publisher.cpp.o
-.PHONY : src/csv_joint_state_publisher.o
-
-# target to build an object file
-src/csv_joint_state_publisher.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/csv_joint_state_publisher.dir/build.make CMakeFiles/csv_joint_state_publisher.dir/src/csv_joint_state_publisher.cpp.o
-.PHONY : src/csv_joint_state_publisher.cpp.o
-
-src/csv_joint_state_publisher.i: src/csv_joint_state_publisher.cpp.i
-.PHONY : src/csv_joint_state_publisher.i
-
-# target to preprocess a source file
-src/csv_joint_state_publisher.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/csv_joint_state_publisher.dir/build.make CMakeFiles/csv_joint_state_publisher.dir/src/csv_joint_state_publisher.cpp.i
-.PHONY : src/csv_joint_state_publisher.cpp.i
-
-src/csv_joint_state_publisher.s: src/csv_joint_state_publisher.cpp.s
-.PHONY : src/csv_joint_state_publisher.s
-
-# target to generate assembly for a file
-src/csv_joint_state_publisher.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/csv_joint_state_publisher.dir/build.make CMakeFiles/csv_joint_state_publisher.dir/src/csv_joint_state_publisher.cpp.s
-.PHONY : src/csv_joint_state_publisher.cpp.s
-
-src/h1_csv_joint_state_publisher.o: src/h1_csv_joint_state_publisher.cpp.o
-.PHONY : src/h1_csv_joint_state_publisher.o
+src/control_node/Avatar_robot/avatar_csv_joint_state_publisher.o: src/control_node/Avatar_robot/avatar_csv_joint_state_publisher.cpp.o
+.PHONY : src/control_node/Avatar_robot/avatar_csv_joint_state_publisher.o
 
 # target to build an object file
-src/h1_csv_joint_state_publisher.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/h1_csv_joint_state_publisher.dir/build.make CMakeFiles/h1_csv_joint_state_publisher.dir/src/h1_csv_joint_state_publisher.cpp.o
-.PHONY : src/h1_csv_joint_state_publisher.cpp.o
+src/control_node/Avatar_robot/avatar_csv_joint_state_publisher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avatar_csv_joint_state_publisher.dir/build.make CMakeFiles/avatar_csv_joint_state_publisher.dir/src/control_node/Avatar_robot/avatar_csv_joint_state_publisher.cpp.o
+.PHONY : src/control_node/Avatar_robot/avatar_csv_joint_state_publisher.cpp.o
 
-src/h1_csv_joint_state_publisher.i: src/h1_csv_joint_state_publisher.cpp.i
-.PHONY : src/h1_csv_joint_state_publisher.i
+src/control_node/Avatar_robot/avatar_csv_joint_state_publisher.i: src/control_node/Avatar_robot/avatar_csv_joint_state_publisher.cpp.i
+.PHONY : src/control_node/Avatar_robot/avatar_csv_joint_state_publisher.i
 
 # target to preprocess a source file
-src/h1_csv_joint_state_publisher.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/h1_csv_joint_state_publisher.dir/build.make CMakeFiles/h1_csv_joint_state_publisher.dir/src/h1_csv_joint_state_publisher.cpp.i
-.PHONY : src/h1_csv_joint_state_publisher.cpp.i
+src/control_node/Avatar_robot/avatar_csv_joint_state_publisher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avatar_csv_joint_state_publisher.dir/build.make CMakeFiles/avatar_csv_joint_state_publisher.dir/src/control_node/Avatar_robot/avatar_csv_joint_state_publisher.cpp.i
+.PHONY : src/control_node/Avatar_robot/avatar_csv_joint_state_publisher.cpp.i
 
-src/h1_csv_joint_state_publisher.s: src/h1_csv_joint_state_publisher.cpp.s
-.PHONY : src/h1_csv_joint_state_publisher.s
+src/control_node/Avatar_robot/avatar_csv_joint_state_publisher.s: src/control_node/Avatar_robot/avatar_csv_joint_state_publisher.cpp.s
+.PHONY : src/control_node/Avatar_robot/avatar_csv_joint_state_publisher.s
 
 # target to generate assembly for a file
-src/h1_csv_joint_state_publisher.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/h1_csv_joint_state_publisher.dir/build.make CMakeFiles/h1_csv_joint_state_publisher.dir/src/h1_csv_joint_state_publisher.cpp.s
-.PHONY : src/h1_csv_joint_state_publisher.cpp.s
+src/control_node/Avatar_robot/avatar_csv_joint_state_publisher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avatar_csv_joint_state_publisher.dir/build.make CMakeFiles/avatar_csv_joint_state_publisher.dir/src/control_node/Avatar_robot/avatar_csv_joint_state_publisher.cpp.s
+.PHONY : src/control_node/Avatar_robot/avatar_csv_joint_state_publisher.cpp.s
 
-src/joint_state_publisher.o: src/joint_state_publisher.cpp.o
-.PHONY : src/joint_state_publisher.o
+src/control_node/Avatar_robot/avatar_read_write_node.o: src/control_node/Avatar_robot/avatar_read_write_node.cpp.o
+.PHONY : src/control_node/Avatar_robot/avatar_read_write_node.o
 
 # target to build an object file
-src/joint_state_publisher.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/joint_state_publisher.dir/build.make CMakeFiles/joint_state_publisher.dir/src/joint_state_publisher.cpp.o
-.PHONY : src/joint_state_publisher.cpp.o
+src/control_node/Avatar_robot/avatar_read_write_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avatar_read_write_node.dir/build.make CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_write_node.cpp.o
+.PHONY : src/control_node/Avatar_robot/avatar_read_write_node.cpp.o
 
-src/joint_state_publisher.i: src/joint_state_publisher.cpp.i
-.PHONY : src/joint_state_publisher.i
+src/control_node/Avatar_robot/avatar_read_write_node.i: src/control_node/Avatar_robot/avatar_read_write_node.cpp.i
+.PHONY : src/control_node/Avatar_robot/avatar_read_write_node.i
 
 # target to preprocess a source file
-src/joint_state_publisher.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/joint_state_publisher.dir/build.make CMakeFiles/joint_state_publisher.dir/src/joint_state_publisher.cpp.i
-.PHONY : src/joint_state_publisher.cpp.i
+src/control_node/Avatar_robot/avatar_read_write_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avatar_read_write_node.dir/build.make CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_write_node.cpp.i
+.PHONY : src/control_node/Avatar_robot/avatar_read_write_node.cpp.i
 
-src/joint_state_publisher.s: src/joint_state_publisher.cpp.s
-.PHONY : src/joint_state_publisher.s
+src/control_node/Avatar_robot/avatar_read_write_node.s: src/control_node/Avatar_robot/avatar_read_write_node.cpp.s
+.PHONY : src/control_node/Avatar_robot/avatar_read_write_node.s
 
 # target to generate assembly for a file
-src/joint_state_publisher.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/joint_state_publisher.dir/build.make CMakeFiles/joint_state_publisher.dir/src/joint_state_publisher.cpp.s
-.PHONY : src/joint_state_publisher.cpp.s
+src/control_node/Avatar_robot/avatar_read_write_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avatar_read_write_node.dir/build.make CMakeFiles/avatar_read_write_node.dir/src/control_node/Avatar_robot/avatar_read_write_node.cpp.s
+.PHONY : src/control_node/Avatar_robot/avatar_read_write_node.cpp.s
 
-src/poppy_csv_joint_state_publisher.o: src/poppy_csv_joint_state_publisher.cpp.o
-.PHONY : src/poppy_csv_joint_state_publisher.o
+src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.o: src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.cpp.o
+.PHONY : src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.o
 
 # target to build an object file
-src/poppy_csv_joint_state_publisher.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_csv_joint_state_publisher.dir/build.make CMakeFiles/poppy_csv_joint_state_publisher.dir/src/poppy_csv_joint_state_publisher.cpp.o
-.PHONY : src/poppy_csv_joint_state_publisher.cpp.o
+src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_csv_joint_state_publisher.dir/build.make CMakeFiles/poppy_csv_joint_state_publisher.dir/src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.cpp.o
+.PHONY : src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.cpp.o
 
-src/poppy_csv_joint_state_publisher.i: src/poppy_csv_joint_state_publisher.cpp.i
-.PHONY : src/poppy_csv_joint_state_publisher.i
+src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.i: src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.cpp.i
+.PHONY : src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.i
 
 # target to preprocess a source file
-src/poppy_csv_joint_state_publisher.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_csv_joint_state_publisher.dir/build.make CMakeFiles/poppy_csv_joint_state_publisher.dir/src/poppy_csv_joint_state_publisher.cpp.i
-.PHONY : src/poppy_csv_joint_state_publisher.cpp.i
+src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_csv_joint_state_publisher.dir/build.make CMakeFiles/poppy_csv_joint_state_publisher.dir/src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.cpp.i
+.PHONY : src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.cpp.i
 
-src/poppy_csv_joint_state_publisher.s: src/poppy_csv_joint_state_publisher.cpp.s
-.PHONY : src/poppy_csv_joint_state_publisher.s
+src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.s: src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.cpp.s
+.PHONY : src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.s
 
 # target to generate assembly for a file
-src/poppy_csv_joint_state_publisher.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_csv_joint_state_publisher.dir/build.make CMakeFiles/poppy_csv_joint_state_publisher.dir/src/poppy_csv_joint_state_publisher.cpp.s
-.PHONY : src/poppy_csv_joint_state_publisher.cpp.s
+src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_csv_joint_state_publisher.dir/build.make CMakeFiles/poppy_csv_joint_state_publisher.dir/src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.cpp.s
+.PHONY : src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.cpp.s
 
-src/poppy_read_write_node.o: src/poppy_read_write_node.cpp.o
-.PHONY : src/poppy_read_write_node.o
+src/control_node/Poppy_robot/poppy_read_write_node.o: src/control_node/Poppy_robot/poppy_read_write_node.cpp.o
+.PHONY : src/control_node/Poppy_robot/poppy_read_write_node.o
 
 # target to build an object file
-src/poppy_read_write_node.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_read_write_node.dir/build.make CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.o
-.PHONY : src/poppy_read_write_node.cpp.o
+src/control_node/Poppy_robot/poppy_read_write_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_read_write_node.dir/build.make CMakeFiles/poppy_read_write_node.dir/src/control_node/Poppy_robot/poppy_read_write_node.cpp.o
+.PHONY : src/control_node/Poppy_robot/poppy_read_write_node.cpp.o
 
-src/poppy_read_write_node.i: src/poppy_read_write_node.cpp.i
-.PHONY : src/poppy_read_write_node.i
+src/control_node/Poppy_robot/poppy_read_write_node.i: src/control_node/Poppy_robot/poppy_read_write_node.cpp.i
+.PHONY : src/control_node/Poppy_robot/poppy_read_write_node.i
 
 # target to preprocess a source file
-src/poppy_read_write_node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_read_write_node.dir/build.make CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.i
-.PHONY : src/poppy_read_write_node.cpp.i
+src/control_node/Poppy_robot/poppy_read_write_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_read_write_node.dir/build.make CMakeFiles/poppy_read_write_node.dir/src/control_node/Poppy_robot/poppy_read_write_node.cpp.i
+.PHONY : src/control_node/Poppy_robot/poppy_read_write_node.cpp.i
 
-src/poppy_read_write_node.s: src/poppy_read_write_node.cpp.s
-.PHONY : src/poppy_read_write_node.s
+src/control_node/Poppy_robot/poppy_read_write_node.s: src/control_node/Poppy_robot/poppy_read_write_node.cpp.s
+.PHONY : src/control_node/Poppy_robot/poppy_read_write_node.s
 
 # target to generate assembly for a file
-src/poppy_read_write_node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_read_write_node.dir/build.make CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.s
-.PHONY : src/poppy_read_write_node.cpp.s
+src/control_node/Poppy_robot/poppy_read_write_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poppy_read_write_node.dir/build.make CMakeFiles/poppy_read_write_node.dir/src/control_node/Poppy_robot/poppy_read_write_node.cpp.s
+.PHONY : src/control_node/Poppy_robot/poppy_read_write_node.cpp.s
 
-src/read_write_node.o: src/read_write_node.cpp.o
-.PHONY : src/read_write_node.o
+src/control_node/csv_joint_state_publisher.o: src/control_node/csv_joint_state_publisher.cpp.o
+.PHONY : src/control_node/csv_joint_state_publisher.o
 
 # target to build an object file
-src/read_write_node.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_write_node.dir/build.make CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o
-.PHONY : src/read_write_node.cpp.o
+src/control_node/csv_joint_state_publisher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/csv_joint_state_publisher.dir/build.make CMakeFiles/csv_joint_state_publisher.dir/src/control_node/csv_joint_state_publisher.cpp.o
+.PHONY : src/control_node/csv_joint_state_publisher.cpp.o
 
-src/read_write_node.i: src/read_write_node.cpp.i
-.PHONY : src/read_write_node.i
+src/control_node/csv_joint_state_publisher.i: src/control_node/csv_joint_state_publisher.cpp.i
+.PHONY : src/control_node/csv_joint_state_publisher.i
 
 # target to preprocess a source file
-src/read_write_node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_write_node.dir/build.make CMakeFiles/read_write_node.dir/src/read_write_node.cpp.i
-.PHONY : src/read_write_node.cpp.i
+src/control_node/csv_joint_state_publisher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/csv_joint_state_publisher.dir/build.make CMakeFiles/csv_joint_state_publisher.dir/src/control_node/csv_joint_state_publisher.cpp.i
+.PHONY : src/control_node/csv_joint_state_publisher.cpp.i
 
-src/read_write_node.s: src/read_write_node.cpp.s
-.PHONY : src/read_write_node.s
+src/control_node/csv_joint_state_publisher.s: src/control_node/csv_joint_state_publisher.cpp.s
+.PHONY : src/control_node/csv_joint_state_publisher.s
 
 # target to generate assembly for a file
-src/read_write_node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_write_node.dir/build.make CMakeFiles/read_write_node.dir/src/read_write_node.cpp.s
-.PHONY : src/read_write_node.cpp.s
+src/control_node/csv_joint_state_publisher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/csv_joint_state_publisher.dir/build.make CMakeFiles/csv_joint_state_publisher.dir/src/control_node/csv_joint_state_publisher.cpp.s
+.PHONY : src/control_node/csv_joint_state_publisher.cpp.s
 
-src/rviz_visualization_node.o: src/rviz_visualization_node.cpp.o
-.PHONY : src/rviz_visualization_node.o
+src/control_node/h1_csv_joint_state_publisher.o: src/control_node/h1_csv_joint_state_publisher.cpp.o
+.PHONY : src/control_node/h1_csv_joint_state_publisher.o
 
 # target to build an object file
-src/rviz_visualization_node.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rviz_visualization_node.dir/build.make CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.o
-.PHONY : src/rviz_visualization_node.cpp.o
+src/control_node/h1_csv_joint_state_publisher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/h1_csv_joint_state_publisher.dir/build.make CMakeFiles/h1_csv_joint_state_publisher.dir/src/control_node/h1_csv_joint_state_publisher.cpp.o
+.PHONY : src/control_node/h1_csv_joint_state_publisher.cpp.o
 
-src/rviz_visualization_node.i: src/rviz_visualization_node.cpp.i
-.PHONY : src/rviz_visualization_node.i
+src/control_node/h1_csv_joint_state_publisher.i: src/control_node/h1_csv_joint_state_publisher.cpp.i
+.PHONY : src/control_node/h1_csv_joint_state_publisher.i
 
 # target to preprocess a source file
-src/rviz_visualization_node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rviz_visualization_node.dir/build.make CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.i
-.PHONY : src/rviz_visualization_node.cpp.i
+src/control_node/h1_csv_joint_state_publisher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/h1_csv_joint_state_publisher.dir/build.make CMakeFiles/h1_csv_joint_state_publisher.dir/src/control_node/h1_csv_joint_state_publisher.cpp.i
+.PHONY : src/control_node/h1_csv_joint_state_publisher.cpp.i
 
-src/rviz_visualization_node.s: src/rviz_visualization_node.cpp.s
-.PHONY : src/rviz_visualization_node.s
+src/control_node/h1_csv_joint_state_publisher.s: src/control_node/h1_csv_joint_state_publisher.cpp.s
+.PHONY : src/control_node/h1_csv_joint_state_publisher.s
 
 # target to generate assembly for a file
-src/rviz_visualization_node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rviz_visualization_node.dir/build.make CMakeFiles/rviz_visualization_node.dir/src/rviz_visualization_node.cpp.s
-.PHONY : src/rviz_visualization_node.cpp.s
+src/control_node/h1_csv_joint_state_publisher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/h1_csv_joint_state_publisher.dir/build.make CMakeFiles/h1_csv_joint_state_publisher.dir/src/control_node/h1_csv_joint_state_publisher.cpp.s
+.PHONY : src/control_node/h1_csv_joint_state_publisher.cpp.s
 
-src/torque_compensation_node.o: src/torque_compensation_node.cpp.o
-.PHONY : src/torque_compensation_node.o
+src/control_node/joint_state_publisher.o: src/control_node/joint_state_publisher.cpp.o
+.PHONY : src/control_node/joint_state_publisher.o
 
 # target to build an object file
-src/torque_compensation_node.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_compensation_node.dir/build.make CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.o
-.PHONY : src/torque_compensation_node.cpp.o
+src/control_node/joint_state_publisher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joint_state_publisher.dir/build.make CMakeFiles/joint_state_publisher.dir/src/control_node/joint_state_publisher.cpp.o
+.PHONY : src/control_node/joint_state_publisher.cpp.o
 
-src/torque_compensation_node.i: src/torque_compensation_node.cpp.i
-.PHONY : src/torque_compensation_node.i
+src/control_node/joint_state_publisher.i: src/control_node/joint_state_publisher.cpp.i
+.PHONY : src/control_node/joint_state_publisher.i
 
 # target to preprocess a source file
-src/torque_compensation_node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_compensation_node.dir/build.make CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.i
-.PHONY : src/torque_compensation_node.cpp.i
+src/control_node/joint_state_publisher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joint_state_publisher.dir/build.make CMakeFiles/joint_state_publisher.dir/src/control_node/joint_state_publisher.cpp.i
+.PHONY : src/control_node/joint_state_publisher.cpp.i
 
-src/torque_compensation_node.s: src/torque_compensation_node.cpp.s
-.PHONY : src/torque_compensation_node.s
+src/control_node/joint_state_publisher.s: src/control_node/joint_state_publisher.cpp.s
+.PHONY : src/control_node/joint_state_publisher.s
 
 # target to generate assembly for a file
-src/torque_compensation_node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_compensation_node.dir/build.make CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.s
-.PHONY : src/torque_compensation_node.cpp.s
+src/control_node/joint_state_publisher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joint_state_publisher.dir/build.make CMakeFiles/joint_state_publisher.dir/src/control_node/joint_state_publisher.cpp.s
+.PHONY : src/control_node/joint_state_publisher.cpp.s
 
-src/torque_read_degree_write.o: src/torque_read_degree_write.cpp.o
-.PHONY : src/torque_read_degree_write.o
+src/control_node/read_write_node.o: src/control_node/read_write_node.cpp.o
+.PHONY : src/control_node/read_write_node.o
 
 # target to build an object file
-src/torque_read_degree_write.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_read_degree_write.dir/build.make CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.o
-.PHONY : src/torque_read_degree_write.cpp.o
+src/control_node/read_write_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_write_node.dir/build.make CMakeFiles/read_write_node.dir/src/control_node/read_write_node.cpp.o
+.PHONY : src/control_node/read_write_node.cpp.o
 
-src/torque_read_degree_write.i: src/torque_read_degree_write.cpp.i
-.PHONY : src/torque_read_degree_write.i
+src/control_node/read_write_node.i: src/control_node/read_write_node.cpp.i
+.PHONY : src/control_node/read_write_node.i
 
 # target to preprocess a source file
-src/torque_read_degree_write.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_read_degree_write.dir/build.make CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.i
-.PHONY : src/torque_read_degree_write.cpp.i
+src/control_node/read_write_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_write_node.dir/build.make CMakeFiles/read_write_node.dir/src/control_node/read_write_node.cpp.i
+.PHONY : src/control_node/read_write_node.cpp.i
 
-src/torque_read_degree_write.s: src/torque_read_degree_write.cpp.s
-.PHONY : src/torque_read_degree_write.s
+src/control_node/read_write_node.s: src/control_node/read_write_node.cpp.s
+.PHONY : src/control_node/read_write_node.s
 
 # target to generate assembly for a file
-src/torque_read_degree_write.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_read_degree_write.dir/build.make CMakeFiles/torque_read_degree_write.dir/src/torque_read_degree_write.cpp.s
-.PHONY : src/torque_read_degree_write.cpp.s
+src/control_node/read_write_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_write_node.dir/build.make CMakeFiles/read_write_node.dir/src/control_node/read_write_node.cpp.s
+.PHONY : src/control_node/read_write_node.cpp.s
+
+src/control_node/torque_read_degree_write.o: src/control_node/torque_read_degree_write.cpp.o
+.PHONY : src/control_node/torque_read_degree_write.o
+
+# target to build an object file
+src/control_node/torque_read_degree_write.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_read_degree_write.dir/build.make CMakeFiles/torque_read_degree_write.dir/src/control_node/torque_read_degree_write.cpp.o
+.PHONY : src/control_node/torque_read_degree_write.cpp.o
+
+src/control_node/torque_read_degree_write.i: src/control_node/torque_read_degree_write.cpp.i
+.PHONY : src/control_node/torque_read_degree_write.i
+
+# target to preprocess a source file
+src/control_node/torque_read_degree_write.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_read_degree_write.dir/build.make CMakeFiles/torque_read_degree_write.dir/src/control_node/torque_read_degree_write.cpp.i
+.PHONY : src/control_node/torque_read_degree_write.cpp.i
+
+src/control_node/torque_read_degree_write.s: src/control_node/torque_read_degree_write.cpp.s
+.PHONY : src/control_node/torque_read_degree_write.s
+
+# target to generate assembly for a file
+src/control_node/torque_read_degree_write.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_read_degree_write.dir/build.make CMakeFiles/torque_read_degree_write.dir/src/control_node/torque_read_degree_write.cpp.s
+.PHONY : src/control_node/torque_read_degree_write.cpp.s
+
+src/torque_control_node/torque_compensation_node.o: src/torque_control_node/torque_compensation_node.cpp.o
+.PHONY : src/torque_control_node/torque_compensation_node.o
+
+# target to build an object file
+src/torque_control_node/torque_compensation_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_compensation_node.dir/build.make CMakeFiles/torque_compensation_node.dir/src/torque_control_node/torque_compensation_node.cpp.o
+.PHONY : src/torque_control_node/torque_compensation_node.cpp.o
+
+src/torque_control_node/torque_compensation_node.i: src/torque_control_node/torque_compensation_node.cpp.i
+.PHONY : src/torque_control_node/torque_compensation_node.i
+
+# target to preprocess a source file
+src/torque_control_node/torque_compensation_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_compensation_node.dir/build.make CMakeFiles/torque_compensation_node.dir/src/torque_control_node/torque_compensation_node.cpp.i
+.PHONY : src/torque_control_node/torque_compensation_node.cpp.i
+
+src/torque_control_node/torque_compensation_node.s: src/torque_control_node/torque_compensation_node.cpp.s
+.PHONY : src/torque_control_node/torque_compensation_node.s
+
+# target to generate assembly for a file
+src/torque_control_node/torque_compensation_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/torque_compensation_node.dir/build.make CMakeFiles/torque_compensation_node.dir/src/torque_control_node/torque_compensation_node.cpp.s
+.PHONY : src/torque_control_node/torque_compensation_node.cpp.s
+
+src/visual_node/rviz_visualization_node.o: src/visual_node/rviz_visualization_node.cpp.o
+.PHONY : src/visual_node/rviz_visualization_node.o
+
+# target to build an object file
+src/visual_node/rviz_visualization_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rviz_visualization_node.dir/build.make CMakeFiles/rviz_visualization_node.dir/src/visual_node/rviz_visualization_node.cpp.o
+.PHONY : src/visual_node/rviz_visualization_node.cpp.o
+
+src/visual_node/rviz_visualization_node.i: src/visual_node/rviz_visualization_node.cpp.i
+.PHONY : src/visual_node/rviz_visualization_node.i
+
+# target to preprocess a source file
+src/visual_node/rviz_visualization_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rviz_visualization_node.dir/build.make CMakeFiles/rviz_visualization_node.dir/src/visual_node/rviz_visualization_node.cpp.i
+.PHONY : src/visual_node/rviz_visualization_node.cpp.i
+
+src/visual_node/rviz_visualization_node.s: src/visual_node/rviz_visualization_node.cpp.s
+.PHONY : src/visual_node/rviz_visualization_node.s
+
+# target to generate assembly for a file
+src/visual_node/rviz_visualization_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rviz_visualization_node.dir/build.make CMakeFiles/rviz_visualization_node.dir/src/visual_node/rviz_visualization_node.cpp.s
+.PHONY : src/visual_node/rviz_visualization_node.cpp.s
 
 # Help Target
 help:
@@ -545,6 +619,8 @@ help:
 	@echo "... test"
 	@echo "... dynamixel_control_uninstall"
 	@echo "... uninstall"
+	@echo "... avatar_csv_joint_state_publisher"
+	@echo "... avatar_read_write_node"
 	@echo "... csv_joint_state_publisher"
 	@echo "... h1_csv_joint_state_publisher"
 	@echo "... joint_state_publisher"
@@ -554,33 +630,39 @@ help:
 	@echo "... rviz_visualization_node"
 	@echo "... torque_compensation_node"
 	@echo "... torque_read_degree_write"
-	@echo "... src/csv_joint_state_publisher.o"
-	@echo "... src/csv_joint_state_publisher.i"
-	@echo "... src/csv_joint_state_publisher.s"
-	@echo "... src/h1_csv_joint_state_publisher.o"
-	@echo "... src/h1_csv_joint_state_publisher.i"
-	@echo "... src/h1_csv_joint_state_publisher.s"
-	@echo "... src/joint_state_publisher.o"
-	@echo "... src/joint_state_publisher.i"
-	@echo "... src/joint_state_publisher.s"
-	@echo "... src/poppy_csv_joint_state_publisher.o"
-	@echo "... src/poppy_csv_joint_state_publisher.i"
-	@echo "... src/poppy_csv_joint_state_publisher.s"
-	@echo "... src/poppy_read_write_node.o"
-	@echo "... src/poppy_read_write_node.i"
-	@echo "... src/poppy_read_write_node.s"
-	@echo "... src/read_write_node.o"
-	@echo "... src/read_write_node.i"
-	@echo "... src/read_write_node.s"
-	@echo "... src/rviz_visualization_node.o"
-	@echo "... src/rviz_visualization_node.i"
-	@echo "... src/rviz_visualization_node.s"
-	@echo "... src/torque_compensation_node.o"
-	@echo "... src/torque_compensation_node.i"
-	@echo "... src/torque_compensation_node.s"
-	@echo "... src/torque_read_degree_write.o"
-	@echo "... src/torque_read_degree_write.i"
-	@echo "... src/torque_read_degree_write.s"
+	@echo "... src/control_node/Avatar_robot/avatar_csv_joint_state_publisher.o"
+	@echo "... src/control_node/Avatar_robot/avatar_csv_joint_state_publisher.i"
+	@echo "... src/control_node/Avatar_robot/avatar_csv_joint_state_publisher.s"
+	@echo "... src/control_node/Avatar_robot/avatar_read_write_node.o"
+	@echo "... src/control_node/Avatar_robot/avatar_read_write_node.i"
+	@echo "... src/control_node/Avatar_robot/avatar_read_write_node.s"
+	@echo "... src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.o"
+	@echo "... src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.i"
+	@echo "... src/control_node/Poppy_robot/poppy_csv_joint_state_publisher.s"
+	@echo "... src/control_node/Poppy_robot/poppy_read_write_node.o"
+	@echo "... src/control_node/Poppy_robot/poppy_read_write_node.i"
+	@echo "... src/control_node/Poppy_robot/poppy_read_write_node.s"
+	@echo "... src/control_node/csv_joint_state_publisher.o"
+	@echo "... src/control_node/csv_joint_state_publisher.i"
+	@echo "... src/control_node/csv_joint_state_publisher.s"
+	@echo "... src/control_node/h1_csv_joint_state_publisher.o"
+	@echo "... src/control_node/h1_csv_joint_state_publisher.i"
+	@echo "... src/control_node/h1_csv_joint_state_publisher.s"
+	@echo "... src/control_node/joint_state_publisher.o"
+	@echo "... src/control_node/joint_state_publisher.i"
+	@echo "... src/control_node/joint_state_publisher.s"
+	@echo "... src/control_node/read_write_node.o"
+	@echo "... src/control_node/read_write_node.i"
+	@echo "... src/control_node/read_write_node.s"
+	@echo "... src/control_node/torque_read_degree_write.o"
+	@echo "... src/control_node/torque_read_degree_write.i"
+	@echo "... src/control_node/torque_read_degree_write.s"
+	@echo "... src/torque_control_node/torque_compensation_node.o"
+	@echo "... src/torque_control_node/torque_compensation_node.i"
+	@echo "... src/torque_control_node/torque_compensation_node.s"
+	@echo "... src/visual_node/rviz_visualization_node.o"
+	@echo "... src/visual_node/rviz_visualization_node.i"
+	@echo "... src/visual_node/rviz_visualization_node.s"
 .PHONY : help
 
 

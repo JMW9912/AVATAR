@@ -69,60 +69,60 @@ include CMakeFiles/torque_compensation_node.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/torque_compensation_node.dir/flags.make
 
-CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.o: CMakeFiles/torque_compensation_node.dir/flags.make
-CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.o: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_compensation_node.cpp
-CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.o: CMakeFiles/torque_compensation_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/minwoong/OneDrive/JMW/dynamixel_8DOF/build/dynamixel_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.o -MF CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.o.d -o CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.o -c /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_compensation_node.cpp
+CMakeFiles/torque_compensation_node.dir/src/torque_control_node/torque_compensation_node.cpp.o: CMakeFiles/torque_compensation_node.dir/flags.make
+CMakeFiles/torque_compensation_node.dir/src/torque_control_node/torque_compensation_node.cpp.o: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_control_node/torque_compensation_node.cpp
+CMakeFiles/torque_compensation_node.dir/src/torque_control_node/torque_compensation_node.cpp.o: CMakeFiles/torque_compensation_node.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/minwoong/OneDrive/JMW/dynamixel_8DOF/build/dynamixel_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/torque_compensation_node.dir/src/torque_control_node/torque_compensation_node.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/torque_compensation_node.dir/src/torque_control_node/torque_compensation_node.cpp.o -MF CMakeFiles/torque_compensation_node.dir/src/torque_control_node/torque_compensation_node.cpp.o.d -o CMakeFiles/torque_compensation_node.dir/src/torque_control_node/torque_compensation_node.cpp.o -c /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_control_node/torque_compensation_node.cpp
 
-CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_compensation_node.cpp > CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.i
+CMakeFiles/torque_compensation_node.dir/src/torque_control_node/torque_compensation_node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/torque_compensation_node.dir/src/torque_control_node/torque_compensation_node.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_control_node/torque_compensation_node.cpp > CMakeFiles/torque_compensation_node.dir/src/torque_control_node/torque_compensation_node.cpp.i
 
-CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_compensation_node.cpp -o CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.s
+CMakeFiles/torque_compensation_node.dir/src/torque_control_node/torque_compensation_node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/torque_compensation_node.dir/src/torque_control_node/torque_compensation_node.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/torque_control_node/torque_compensation_node.cpp -o CMakeFiles/torque_compensation_node.dir/src/torque_control_node/torque_compensation_node.cpp.s
 
 # Object files for target torque_compensation_node
 torque_compensation_node_OBJECTS = \
-"CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.o"
+"CMakeFiles/torque_compensation_node.dir/src/torque_control_node/torque_compensation_node.cpp.o"
 
 # External object files for target torque_compensation_node
 torque_compensation_node_EXTERNAL_OBJECTS =
 
-torque_compensation_node: CMakeFiles/torque_compensation_node.dir/src/torque_compensation_node.cpp.o
+torque_compensation_node: CMakeFiles/torque_compensation_node.dir/src/torque_control_node/torque_compensation_node.cpp.o
 torque_compensation_node: CMakeFiles/torque_compensation_node.dir/build.make
+torque_compensation_node: /opt/ros/humble/lib/libdynamixel_sdk.so
 torque_compensation_node: /opt/ros/humble/lib/librclcpp.so
 torque_compensation_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so
 torque_compensation_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
 torque_compensation_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
 torque_compensation_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
 torque_compensation_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so
-torque_compensation_node: /opt/ros/humble/lib/libdynamixel_sdk.so
 torque_compensation_node: /opt/ros/humble/lib/liblibstatistics_collector.so
 torque_compensation_node: /opt/ros/humble/lib/librcl.so
 torque_compensation_node: /opt/ros/humble/lib/librmw_implementation.so
 torque_compensation_node: /opt/ros/humble/lib/libament_index_cpp.so
 torque_compensation_node: /opt/ros/humble/lib/librcl_logging_spdlog.so
 torque_compensation_node: /opt/ros/humble/lib/librcl_logging_interface.so
-torque_compensation_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_c.so
-torque_compensation_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so
-torque_compensation_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_cpp.so
-torque_compensation_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.so
-torque_compensation_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_cpp.so
-torque_compensation_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_py.so
-torque_compensation_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_c.so
-torque_compensation_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_c.so
 torque_compensation_node: /opt/ros/humble/lib/librcl_yaml_param_parser.so
 torque_compensation_node: /opt/ros/humble/lib/libyaml.so
 torque_compensation_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_c.so
+torque_compensation_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_c.so
 torque_compensation_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_cpp.so
+torque_compensation_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_cpp.so
 torque_compensation_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_introspection_c.so
+torque_compensation_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so
 torque_compensation_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_introspection_cpp.so
+torque_compensation_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.so
 torque_compensation_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_cpp.so
+torque_compensation_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_cpp.so
 torque_compensation_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_py.so
+torque_compensation_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_py.so
 torque_compensation_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_c.so
+torque_compensation_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_c.so
 torque_compensation_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_c.so
+torque_compensation_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_c.so
 torque_compensation_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_c.so
 torque_compensation_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_cpp.so
 torque_compensation_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_introspection_c.so
@@ -140,7 +140,7 @@ torque_compensation_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesuppo
 torque_compensation_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
 torque_compensation_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
 torque_compensation_node: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
-torque_compensation_node: /opt/ros/humble/lib/libfastcdr.so.1.0.24
+torque_compensation_node: /opt/ros/humble/lib/libfastcdr.so.1.0.29
 torque_compensation_node: /opt/ros/humble/lib/librmw.so
 torque_compensation_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
 torque_compensation_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so

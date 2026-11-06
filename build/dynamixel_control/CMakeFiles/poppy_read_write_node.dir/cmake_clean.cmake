@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.o"
-  "CMakeFiles/poppy_read_write_node.dir/src/poppy_read_write_node.cpp.o.d"
+  "CMakeFiles/poppy_read_write_node.dir/src/control_node/Poppy_robot/poppy_read_write_node.cpp.o"
+  "CMakeFiles/poppy_read_write_node.dir/src/control_node/Poppy_robot/poppy_read_write_node.cpp.o.d"
   "poppy_read_write_node"
   "poppy_read_write_node.pdb"
 )

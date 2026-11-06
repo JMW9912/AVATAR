@@ -1,1 +1,1 @@
-moveit_ros_planning_interface;rclcpp;dynamixel_sdk;ament_lint_auto;ament_lint_common
+moveit_ros_planning_interface;rclcpp;dynamixel_sdk;rclpy;ament_lint_auto;ament_lint_common

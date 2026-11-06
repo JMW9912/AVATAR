@@ -69,60 +69,60 @@ include CMakeFiles/read_write_node.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/read_write_node.dir/flags.make
 
-CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: CMakeFiles/read_write_node.dir/flags.make
-CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/read_write_node.cpp
-CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: CMakeFiles/read_write_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/minwoong/OneDrive/JMW/dynamixel_8DOF/build/dynamixel_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o -MF CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o.d -o CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o -c /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/read_write_node.cpp
+CMakeFiles/read_write_node.dir/src/control_node/read_write_node.cpp.o: CMakeFiles/read_write_node.dir/flags.make
+CMakeFiles/read_write_node.dir/src/control_node/read_write_node.cpp.o: /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/control_node/read_write_node.cpp
+CMakeFiles/read_write_node.dir/src/control_node/read_write_node.cpp.o: CMakeFiles/read_write_node.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/minwoong/OneDrive/JMW/dynamixel_8DOF/build/dynamixel_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/read_write_node.dir/src/control_node/read_write_node.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/read_write_node.dir/src/control_node/read_write_node.cpp.o -MF CMakeFiles/read_write_node.dir/src/control_node/read_write_node.cpp.o.d -o CMakeFiles/read_write_node.dir/src/control_node/read_write_node.cpp.o -c /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/control_node/read_write_node.cpp
 
-CMakeFiles/read_write_node.dir/src/read_write_node.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/read_write_node.dir/src/read_write_node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/read_write_node.cpp > CMakeFiles/read_write_node.dir/src/read_write_node.cpp.i
+CMakeFiles/read_write_node.dir/src/control_node/read_write_node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/read_write_node.dir/src/control_node/read_write_node.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/control_node/read_write_node.cpp > CMakeFiles/read_write_node.dir/src/control_node/read_write_node.cpp.i
 
-CMakeFiles/read_write_node.dir/src/read_write_node.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/read_write_node.dir/src/read_write_node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/read_write_node.cpp -o CMakeFiles/read_write_node.dir/src/read_write_node.cpp.s
+CMakeFiles/read_write_node.dir/src/control_node/read_write_node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/read_write_node.dir/src/control_node/read_write_node.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/minwoong/OneDrive/JMW/dynamixel_8DOF/Dynamixel/dynamixel_control/src/control_node/read_write_node.cpp -o CMakeFiles/read_write_node.dir/src/control_node/read_write_node.cpp.s
 
 # Object files for target read_write_node
 read_write_node_OBJECTS = \
-"CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o"
+"CMakeFiles/read_write_node.dir/src/control_node/read_write_node.cpp.o"
 
 # External object files for target read_write_node
 read_write_node_EXTERNAL_OBJECTS =
 
-read_write_node: CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o
+read_write_node: CMakeFiles/read_write_node.dir/src/control_node/read_write_node.cpp.o
 read_write_node: CMakeFiles/read_write_node.dir/build.make
+read_write_node: /opt/ros/humble/lib/libdynamixel_sdk.so
 read_write_node: /opt/ros/humble/lib/librclcpp.so
 read_write_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so
 read_write_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
 read_write_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
 read_write_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
 read_write_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so
-read_write_node: /opt/ros/humble/lib/libdynamixel_sdk.so
 read_write_node: /opt/ros/humble/lib/liblibstatistics_collector.so
 read_write_node: /opt/ros/humble/lib/librcl.so
 read_write_node: /opt/ros/humble/lib/librmw_implementation.so
 read_write_node: /opt/ros/humble/lib/libament_index_cpp.so
 read_write_node: /opt/ros/humble/lib/librcl_logging_spdlog.so
 read_write_node: /opt/ros/humble/lib/librcl_logging_interface.so
-read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_c.so
-read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so
-read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_cpp.so
-read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.so
-read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_cpp.so
-read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_py.so
-read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_c.so
-read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_c.so
 read_write_node: /opt/ros/humble/lib/librcl_yaml_param_parser.so
 read_write_node: /opt/ros/humble/lib/libyaml.so
 read_write_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_c.so
+read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_c.so
 read_write_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_cpp.so
+read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_cpp.so
 read_write_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_introspection_c.so
+read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so
 read_write_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_introspection_cpp.so
+read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.so
 read_write_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_cpp.so
+read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_cpp.so
 read_write_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_py.so
+read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_py.so
 read_write_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_c.so
+read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_c.so
 read_write_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_c.so
+read_write_node: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_c.so
 read_write_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_c.so
 read_write_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_cpp.so
 read_write_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_introspection_c.so
@@ -140,7 +140,7 @@ read_write_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrt
 read_write_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
 read_write_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
 read_write_node: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
-read_write_node: /opt/ros/humble/lib/libfastcdr.so.1.0.24
+read_write_node: /opt/ros/humble/lib/libfastcdr.so.1.0.29
 read_write_node: /opt/ros/humble/lib/librmw.so
 read_write_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
 read_write_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
