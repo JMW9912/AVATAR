@@ -1,5 +1,20 @@
+// poppy_read_write_node — Poppy humanoid (MX-28 × 15) /joint_states → GroupSyncWrite 노드
+//
+// 실행:
+//   ros2 run dynamixel_control poppy_read_write_node
+//   ros2 run dynamixel_control poppy_read_write_node --ros-args -p control_fps:=30.0 -p read_hz:=60.0
+//
+// ROS 파라미터 (2026-11-26, Fig.5 teleop 로깅):
+//   control_fps (double, 기본 60.0, > 0) — /joint_states 발행 주기(송신자 fps)와 같게 맞출 것.
+//       속도 계산 dt(FRAME_PERIOD = 1/control_fps)와 워밍업 프레임 수(round(2*control_fps) = 2 초)가 따른다.
+//       실제 수신 간격은 측정만(EMA, steady clock) — 1/control_fps 에서 ±20 % 벗어나면 throttle 경고(~2 s).
+//       측정값은 속도 계산에 쓰지 않는다.
+//   read_hz (double, 기본 10.0, > 0) — timerCallback 주기: 현재 위치 GroupSyncRead + /joint_states_actual 발행.
+//       터미널 로그(③)는 read_hz 와 무관하게 약 1 초에 한 번.
 #include <set>
 #include <chrono>
+#include <algorithm>
+#include <cmath>
 #include <cstdlib>
 #include <memory>
 #include <fstream> // Csv 파일 저장
@@ -34,7 +49,13 @@
 const std::set<uint8_t> WHOLE_MOTOR = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 const std::set<uint8_t> MX28 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 
-#define CONTROL_FPS                     60   // CSV 퍼블리셔 발행 주파수와 동일하게 유지
+// 송신 주기(구 CONTROL_FPS 매크로)는 ROS 파라미터 control_fps 로 이동 — 기본값만 여기 둔다
+#define DEFAULT_CONTROL_FPS             60.0 // 송신자(/joint_states 퍼블리셔) 발행 주파수와 동일하게 유지
+#define DEFAULT_READ_HZ                 10.0 // 현재 위치 읽기 + /joint_states_actual 발행 주기
+#define LOG_PERIOD_SEC                  1.0  // 터미널 로그(③) 간격 (read_hz 와 무관)
+#define INTERVAL_EMA_ALPHA              0.1  // 수신 간격 EMA 가중치
+#define INTERVAL_WARN_RATIO             0.2  // 1/control_fps 대비 허용 편차 (±20 %)
+#define INTERVAL_GAP_RESET_SEC          0.5  // 이보다 긴 수신 공백은 스트림 재시작으로 보고 EMA 초기화
 
 // ── 속도 설정 ─────────────────────────────────────────────────────────────
 // 단위: 0.229 RPM/unit  |  변환: unit = (°/s) / 6 / 0.229
@@ -44,7 +65,7 @@ const std::set<uint8_t> MX28 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1
 #define VELOCITY_LIMIT                  582  // EEPROM(addr 44)에 기록되는 최고속도 (≈800°/s)
 #define MAX_PROFILE_VEL                 VELOCITY_LIMIT  // Profile Velocity 소프트웨어 상한 (VELOCITY_LIMIT와 동일하게 유지)
 // ── 워밍업 설정 ────────────────────────────────────────────────────────────
-#define WARMUP_FRAMES                   (CONTROL_FPS * 2)  // 2초 (60프레임)
+// 워밍업 프레임 수 = round(2 * control_fps) (2초) — 생성자에서 warmup_frames_ 로 계산
 #define WARMUP_START_VEL                50                  // 워밍업 시작 속도 (≈68°/s)
 // ─────────────────────────────────────────────────────────────────────────
 // ── 동작 모드 ──────────────────────────────────────────────────────────────
@@ -81,6 +102,20 @@ class PoppyController : public rclcpp::Node {
 public:
   PoppyController()
     : Node("poppy_degree_write") {
+    // ── ROS 파라미터 (포트 열기 전에 읽는다) ─────────────────────────────────
+    control_fps_ = sanitizeRate("control_fps",
+        this->declare_parameter<double>("control_fps", DEFAULT_CONTROL_FPS), DEFAULT_CONTROL_FPS);
+    read_hz_ = sanitizeRate("read_hz",
+        this->declare_parameter<double>("read_hz", DEFAULT_READ_HZ), DEFAULT_READ_HZ);
+    frame_period_ = 1.0 / control_fps_;
+    warmup_frames_ = std::max(1, static_cast<int>(std::lround(2.0 * control_fps_)));
+    log_every_ticks_ = std::max(1, static_cast<int>(std::lround(read_hz_ * LOG_PERIOD_SEC)));
+    RCLCPP_INFO(this->get_logger(),
+        "[파라미터] control_fps=%.3f (FRAME_PERIOD=%.6f s, WARMUP_FRAMES=%d), "
+        "read_hz=%.3f (timer %.3f ms, 터미널 로그 %d tick 마다 ≈ %.2f s)",
+        control_fps_, frame_period_, warmup_frames_,
+        read_hz_, 1000.0 / read_hz_, log_every_ticks_, log_every_ticks_ / read_hz_);
+
     portHandler = dynamixel::PortHandler::getPortHandler(DEVICENAME);
     packetHandler = dynamixel::PacketHandler::getPacketHandler(PROTOCOL_VERSION);
     
@@ -169,9 +204,11 @@ public:
     // Publish actual (measured) joint positions for dual visualization
     actual_pub_ = this->create_publisher<sensor_msgs::msg::JointState>("/joint_states_actual", 10);
 
-    // 터미널 로그 전용 타이머 (10Hz — 사람이 읽기 적합한 속도)
-    // 읽기/CSV저장은 topicCallback 내부에서 120Hz 동기 처리
-    timer_ = this->create_wall_timer(std::chrono::milliseconds(100), std::bind(&PoppyController::timerCallback, this));
+    // 읽기 타이머 (read_hz, 기본 10Hz = 100 ms): 현재 위치 읽기 + actual 발행 + (약 1 초마다) 터미널 로그
+    // 쓰기/CSV저장은 topicCallback 내부에서 /joint_states 수신마다 처리
+    timer_ = this->create_wall_timer(
+        std::chrono::nanoseconds(static_cast<int64_t>(std::llround(1e9 / read_hz_))),
+        std::bind(&PoppyController::timerCallback, this));
 
     RCLCPP_INFO(this->get_logger(), "Dynamixel Controller has been initialized");
   }
@@ -220,10 +257,60 @@ private:
   int callback_count_ = 0;    // 콜백 호출 횟수
   // 워밍업
   int warmup_frame_ = 0;
+  // ROS 파라미터에서 유도되는 값
+  double control_fps_ = DEFAULT_CONTROL_FPS;
+  double read_hz_ = DEFAULT_READ_HZ;
+  double frame_period_ = 1.0 / DEFAULT_CONTROL_FPS;
+  int warmup_frames_ = 120;
+  int log_every_ticks_ = 10;
+  long long timer_tick_ = 0;
+  // /joint_states 수신 간격 측정 (측정 전용 — 속도 계산에 쓰지 않음)
+  rclcpp::Clock steady_clock_{RCL_STEADY_TIME};
+  bool have_last_rx_ = false;
+  rclcpp::Time last_rx_time_{0, 0, RCL_STEADY_TIME};
+  double rx_interval_ema_ = 0.0;
+  bool rx_ema_valid_ = false;
   // GroupSyncRead 경고 중복 억제 (모터 당 최초 1회만 출력)
   std::set<int> sync_read_warned_;
 
   // uint8_t joint_sequence[8] = {1, 2};
+
+  // 주기 파라미터 검증: 유한한 양수가 아니면 에러 로그 후 기본값으로 대체
+  double sanitizeRate(const char *name, double value, double fallback) {
+    if (!std::isfinite(value) || value <= 0.0) {
+      RCLCPP_ERROR(this->get_logger(),
+                   "파라미터 %s=%f 는 유효하지 않음 (> 0 이어야 함) — 기본값 %.1f 사용",
+                   name, value, fallback);
+      return fallback;
+    }
+    return value;
+  }
+
+  // /joint_states 수신 간격 측정 (steady clock EMA) — 설정 주기 ±20 % 밖이면 throttle 경고
+  void measureRxInterval() {
+    const rclcpp::Time now = steady_clock_.now();
+    if (have_last_rx_) {
+      const double dt = (now - last_rx_time_).seconds();
+      if (dt > INTERVAL_GAP_RESET_SEC) {
+        rx_ema_valid_ = false;  // 송신 정지 후 재시작 — 공백은 간격 통계에서 제외
+      } else if (!rx_ema_valid_) {
+        rx_interval_ema_ = dt;
+        rx_ema_valid_ = true;
+      } else {
+        rx_interval_ema_ = (1.0 - INTERVAL_EMA_ALPHA) * rx_interval_ema_ + INTERVAL_EMA_ALPHA * dt;
+      }
+      if (rx_ema_valid_ &&
+          std::abs(rx_interval_ema_ - frame_period_) > INTERVAL_WARN_RATIO * frame_period_) {
+        RCLCPP_WARN_THROTTLE(this->get_logger(), steady_clock_, 2000,
+            "/joint_states 수신 간격 EMA %.2f ms (≈ %.1f Hz) 가 설정 1/control_fps = %.2f ms (%.1f Hz) 와 "
+            "±%.0f %% 이상 다름 — 송신 fps 와 control_fps 를 맞출 것",
+            rx_interval_ema_ * 1e3, 1.0 / rx_interval_ema_, frame_period_ * 1e3, control_fps_,
+            INTERVAL_WARN_RATIO * 100.0);
+      }
+    }
+    last_rx_time_ = now;
+    have_last_rx_ = true;
+  }
 
   void enableTorque() {
     for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++) {
@@ -302,7 +389,7 @@ private:
     }
   }
 
-  // 10Hz — 현재 위치 읽기 + actual 발행 + 터미널 로그
+  // read_hz (기본 10Hz) — 현재 위치 읽기 + actual 발행 + 터미널 로그(약 1 초마다)
   // /joint_states 수신 여부와 무관하게 항상 실행됨
   void timerCallback() {
     // ① GroupSyncRead: 현재 모터 위치 읽기
@@ -350,7 +437,10 @@ private:
       actual_pub_->publish(actual_msg);
     }
 
-    // ③ 터미널 로그
+    // ③ 터미널 로그 — read_hz 와 무관하게 약 LOG_PERIOD_SEC 마다 (첫 tick 포함)
+    const bool print_log = (timer_tick_ % log_every_ticks_) == 0;
+    ++timer_tick_;
+    if (!print_log) return;
     std::ostringstream log_stream;
     for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++) {
         int idx = dxl_id - DXL_MIN_ID;
@@ -371,8 +461,9 @@ private:
     std::cout << log_stream.str() << std::endl;
   }
 
-  // 120Hz — compute → write 제어 루프 (읽기는 timerCallback에서 처리)
+  // /joint_states 수신마다 (송신 주기 = control_fps) — compute → write 제어 루프 (읽기는 timerCallback에서 처리)
   void topicCallback(const sensor_msgs::msg::JointState::SharedPtr msg) {
+    measureRxInterval();  // 측정 전용
     RCLCPP_DEBUG(this->get_logger(), "Received /joint_states message");
     for (size_t i = 0; i < msg->position.size(); ++i) {
         RCLCPP_DEBUG(this->get_logger(), "Joint %zu: %f rad", i + 1, msg->position[i]);
@@ -399,23 +490,24 @@ private:
 
     // ③ 워밍업 + 속도 계산: 처음 WARMUP_FRAMES 프레임 동안 속도 상한을 선형으로 증가
     int effective_max_vel;
-    if (warmup_frame_ < WARMUP_FRAMES) {
+    if (warmup_frame_ < warmup_frames_) {
         effective_max_vel = WARMUP_START_VEL +
-            (MAX_PROFILE_VEL - WARMUP_START_VEL) * warmup_frame_ / WARMUP_FRAMES;
+            (MAX_PROFILE_VEL - WARMUP_START_VEL) * warmup_frame_ / warmup_frames_;
         warmup_frame_++;
         if (warmup_frame_ == 1)
             RCLCPP_INFO(this->get_logger(),
                 "Warmup 시작 — %d 프레임(%.0f초) 동안 속도 %d → %d unit 으로 선형 증가",
-                WARMUP_FRAMES, (double)WARMUP_FRAMES / CONTROL_FPS,
+                warmup_frames_, (double)warmup_frames_ / control_fps_,
                 WARMUP_START_VEL, MAX_PROFILE_VEL);
-        if (warmup_frame_ == WARMUP_FRAMES)
+        if (warmup_frame_ == warmup_frames_)
             RCLCPP_INFO(this->get_logger(), "Warmup 완료 — 최대 속도 허용 (%d unit)", MAX_PROFILE_VEL);
     } else {
         effective_max_vel = MAX_PROFILE_VEL;
     }
 
     // 프레임당 이동 각도에 비례한 속도 계산 (dxl_present_position은 timerCallback에서 갱신됨)
-    const double FRAME_PERIOD = 1.0 / CONTROL_FPS;
+    // dt 는 설정값 1/control_fps (측정한 수신 간격은 쓰지 않음)
+    const double FRAME_PERIOD = frame_period_;
     for (int i = 0; i <= (DXL_MAX_ID - DXL_MIN_ID); i++) {
         int dxl_id = i + DXL_MIN_ID;
         int delta_pos = std::abs(param_goal_position[i] - static_cast<int>(dxl_present_position[i]));
