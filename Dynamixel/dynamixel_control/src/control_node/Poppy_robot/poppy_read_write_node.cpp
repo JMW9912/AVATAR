@@ -21,6 +21,8 @@
 #include <map>
 #include <utility> // for std::pair
 #include <iomanip>
+#include <limits>
+#include <string>
 #include "rclcpp/rclcpp.hpp"
 #include "dynamixel_sdk/dynamixel_sdk.h"
 #include "sensor_msgs/msg/joint_state.hpp"
@@ -122,6 +124,7 @@ public:
     param_goal_position.resize(DXL_MAX_ID - DXL_MIN_ID + 1, MX28_MOTOR_POS); // center(0도)로 초기화
     dxl_present_position.resize(DXL_MAX_ID - DXL_MIN_ID + 1, MX28_MOTOR_POS); // 응답 없는 모터는 중립으로 표시
     param_goal_velocity_.resize(DXL_MAX_ID - DXL_MIN_ID + 1, 0);
+    has_read_.assign(DXL_MAX_ID - DXL_MIN_ID + 1, false); // 첫 성공 읽기 전에는 /joint_states_actual 에 NaN
     
     // csv 데이터 파일 초기화
     data_file_.open("motor_data.csv", std::ios::out | std::ios::trunc);
@@ -183,6 +186,7 @@ public:
     // 응답 없는 모터가 포함되면 SDK가 해당 모터 응답을 기다리다 타임아웃되면서
     // 전체 SyncRead 결과가 무효화되어 연결된 모터 데이터도 읽지 못함
     groupSyncRead = new dynamixel::GroupSyncRead(portHandler, packetHandler, ADDR_MX28_PRESENT_POSITION, 4);
+    std::string excluded_ids;
     for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++) {
       uint8_t ping_error = 0;
       int ping_result = packetHandler->ping(portHandler, static_cast<uint8_t>(dxl_id), &ping_error);
@@ -194,7 +198,12 @@ public:
         }
       } else {
         RCLCPP_WARN(this->get_logger(), "Motor #%d 응답 없음 — GroupSyncRead 제외", dxl_id);
+        excluded_ids += (excluded_ids.empty() ? "" : ", ") + std::to_string(dxl_id);
       }
+    }
+    if (!excluded_ids.empty()) {
+      RCLCPP_WARN(this->get_logger(),
+                  "GroupSyncRead 제외 모터: [%s] — /joint_states_actual 에 NaN 으로 표시", excluded_ids.c_str());
     }
 
     // Subscribe to the states topic
@@ -250,6 +259,7 @@ private:
   std::vector<int32_t> dxl_present_position;
   std::vector<int> param_goal_position;
   std::vector<int> param_goal_velocity_;
+  std::vector<bool> has_read_;  // 모터별 GroupSyncRead 성공 이력 (false → actual 에 NaN)
   bool dxl_addparam_result = false;
   int dxl_comm_result = COMM_TX_FAIL;
   // 응답속도 확인용
@@ -403,6 +413,7 @@ private:
       if (groupSyncRead->isAvailable(dxl_id, ADDR_MX28_PRESENT_POSITION, 4)) {
         dxl_present_position[idx] = static_cast<int32_t>(
           groupSyncRead->getData(dxl_id, ADDR_MX28_PRESENT_POSITION, 4));
+        has_read_[idx] = true;
         sync_read_warned_.erase(dxl_id);
       } else {
         if (sync_read_warned_.find(dxl_id) == sync_read_warned_.end()) {
@@ -430,8 +441,10 @@ private:
       actual_msg.position.reserve(25);
       for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++) {
         int idx = dxl_id - DXL_MIN_ID;
-        actual_msg.position.push_back(static_cast<double>(
-          Pos2Rad(dxl_id, dxl_present_position[idx] - MX28_MOTOR_POS)));
+        // 한 번도 읽지 못한 모터는 중립(0°) 대신 NaN — 수신 측이 가짜 0 을 시작점으로 쓰지 않게
+        actual_msg.position.push_back(has_read_[idx]
+          ? static_cast<double>(Pos2Rad(dxl_id, dxl_present_position[idx] - MX28_MOTOR_POS))
+          : std::numeric_limits<double>::quiet_NaN());
       }
       for (int i = 0; i < 10; i++) actual_msg.position.push_back(0.0);
       actual_pub_->publish(actual_msg);
