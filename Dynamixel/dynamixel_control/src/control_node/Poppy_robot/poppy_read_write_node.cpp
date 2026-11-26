@@ -14,6 +14,15 @@
 //   torque_enable (bool, 기본 true) — false 면 시각화 테스트 모드: EEPROM 기록·토크 ON·목표 쓰기를 모두 하지 않고
 //       현재 위치 읽기 + /joint_states_actual 발행만 한다(손으로 움직이며 RViz 확인, 클립 시뮬레이션).
 //       예: ros2 run dynamixel_control poppy_read_write_node --ros-args -p torque_enable:=false -p read_hz:=30.0
+//   profile_mode (string, 기본 "velocity") — 모터 프로파일(Drive Mode addr 10 bit 2, EEPROM; torque_enable:=true 일 때만 기록).
+//       "velocity": 기존 방식 — Profile Velocity = |목표 − 측정 현재 위치| / (1/control_fps) (속도 단위), 가감속 0.
+//       "time"    : 시간 기반 프로파일(MX-28 2.0 펌웨어 V42+) — Profile Velocity = 1000/control_fps ms(목표까지 걸리는 시간),
+//                   Profile Acceleration = profile_accel_ratio × 그 시간(ms, 모터가 50 % 로 상한). 모터가 자기 현재 위치·속도에서
+//                   그 시간 안에 목표에 닿는 궤적을 만든다(측정값 되먹임 없음, 이동 중 새 목표는 현재 속도에서 이어짐).
+//                   안전 상한: 시간 = max(주기, |목표 − 현재| / v_cap) — v_cap 은 워밍업 68 → 800 °/s 후 800 °/s(큰 점프만 늘어남).
+//       종료(소멸자) 때 토크를 끈 뒤 time 이었으면 Drive Mode bit 2 를 0 으로 되돌린다(다른 프로그램의 속도 의미 보호).
+//   profile_accel_ratio (double, 기본 0.3, 0–0.5) — time 모드의 가속 시간 / 프로파일 시간.
+//       예: ros2 run dynamixel_control poppy_read_write_node --ros-args -p control_fps:=40.0 -p read_hz:=30.0 -p profile_mode:=time
 #include <set>
 #include <chrono>
 #include <algorithm>
@@ -39,6 +48,9 @@
 #define ADDR_MX28_MAX_POSITION          48
 #define ADDR_MX28_MIN_POSITION          52
 #define ADDR_MX28_PROFILE_VEL           112
+#define ADDR_MX28_PROFILE_ACC           108
+#define ADDR_MX28_DRIVE_MODE            10   // bit0 reverse, bit2 time-based profile (EEPROM)
+#define DRIVE_MODE_TIME_BIT             0x04
 
 // Default setting
 #define BAUDRATE                        1000000
@@ -72,6 +84,8 @@ const std::set<uint8_t> MX28 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1
 // ── 워밍업 설정 ────────────────────────────────────────────────────────────
 // 워밍업 프레임 수 = round(2 * control_fps) (2초) — 생성자에서 warmup_frames_ 로 계산
 #define WARMUP_START_VEL                50                  // 워밍업 시작 속도 (≈68°/s)
+#define DEG_S_PER_VEL_UNIT              (0.229 * 6.0)       // 1 unit = 0.229 rpm = 1.374 °/s
+#define MAX_PROFILE_TIME_MS             32737               // time 모드 Profile Velocity 상한(ms)
 // ─────────────────────────────────────────────────────────────────────────
 // ── 동작 모드 ──────────────────────────────────────────────────────────────
 // ROS 파라미터 torque_enable 의 기본값.
@@ -114,15 +128,32 @@ public:
     read_hz_ = sanitizeRate("read_hz",
         this->declare_parameter<double>("read_hz", DEFAULT_READ_HZ), DEFAULT_READ_HZ);
     torque_enable_ = this->declare_parameter<bool>("torque_enable", DEFAULT_TORQUE_ENABLE);
+    {
+      const std::string mode = this->declare_parameter<std::string>("profile_mode", "velocity");
+      if (mode == "time") {
+        time_profile_ = true;
+      } else if (mode != "velocity") {
+        RCLCPP_ERROR(this->get_logger(), "파라미터 profile_mode='%s' 는 velocity|time 이 아님 — velocity 사용", mode.c_str());
+      }
+      double r = this->declare_parameter<double>("profile_accel_ratio", 0.3);
+      if (!std::isfinite(r) || r < 0.0 || r > 0.5) {
+        RCLCPP_ERROR(this->get_logger(), "파라미터 profile_accel_ratio=%f 는 0–0.5 밖 — 0.3 사용", r);
+        r = 0.3;
+      }
+      profile_accel_ratio_ = r;
+    }
     frame_period_ = 1.0 / control_fps_;
+    period_ms_ = std::max(1, static_cast<int>(std::lround(1000.0 / control_fps_)));
+    accel_ms_ = static_cast<int>(std::lround(profile_accel_ratio_ * period_ms_));
     warmup_frames_ = std::max(1, static_cast<int>(std::lround(2.0 * control_fps_)));
     log_every_ticks_ = std::max(1, static_cast<int>(std::lround(read_hz_ * LOG_PERIOD_SEC)));
     RCLCPP_INFO(this->get_logger(),
         "[파라미터] control_fps=%.3f (FRAME_PERIOD=%.6f s, WARMUP_FRAMES=%d), "
-        "read_hz=%.3f (timer %.3f ms, 터미널 로그 %d tick 마다 ≈ %.2f s), torque_enable=%s",
+        "read_hz=%.3f (timer %.3f ms, 터미널 로그 %d tick 마다 ≈ %.2f s), torque_enable=%s, "
+        "profile_mode=%s (time: 프로파일 %d ms·가속 %d ms)",
         control_fps_, frame_period_, warmup_frames_,
         read_hz_, 1000.0 / read_hz_, log_every_ticks_, log_every_ticks_ / read_hz_,
-        torque_enable_ ? "true" : "false");
+        torque_enable_ ? "true" : "false", time_profile_ ? "time" : "velocity", period_ms_, accel_ms_);
 
     portHandler = dynamixel::PortHandler::getPortHandler(DEVICENAME);
     packetHandler = dynamixel::PacketHandler::getPacketHandler(PROTOCOL_VERSION);
@@ -144,7 +175,7 @@ public:
       for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; ++dxl_id)
           header_stream << "Motor " << dxl_id << " Present Position,";
       for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; ++dxl_id)
-          header_stream << "Motor " << dxl_id << " Target Velocity(unit),";
+          header_stream << "Motor " << dxl_id << (time_profile_ ? " Profile Time(ms)," : " Target Velocity(unit),");
       header_stream << "\n";
       // 헤더를 파일에 기록
       data_file_ << header_stream.str();
@@ -179,6 +210,7 @@ public:
     if (torque_enable_) {
         setVelocityLimit(WHOLE_MOTOR, VELOCITY_LIMIT);  // EEPROM 기록 — 토크 비활성 상태에서만 가능
         setPositionLimit(WHOLE_MOTOR);
+        setProfileMode(WHOLE_MOTOR, time_profile_);         // Drive Mode bit 2 (EEPROM) + Profile Acceleration
         enableTorque();
         RCLCPP_INFO(this->get_logger(), "[모드] 정상 제어 — 토크 ON, 모터 제어 활성화");
     } else {
@@ -239,6 +271,9 @@ public:
     //   }
     // } 
     disableTorque();
+    if (torque_enable_ && time_profile_) {
+      setProfileMode(WHOLE_MOTOR, false);                   // 다른 프로그램이 속도 의미로 쓰도록 되돌림
+    }
 
     // csv 데이터 파일 닫기
     if (data_file_.is_open()) {
@@ -277,6 +312,10 @@ private:
   double control_fps_ = DEFAULT_CONTROL_FPS;
   double read_hz_ = DEFAULT_READ_HZ;
   bool torque_enable_ = DEFAULT_TORQUE_ENABLE;
+  bool time_profile_ = false;           // profile_mode == "time"
+  double profile_accel_ratio_ = 0.3;
+  int period_ms_ = 17;                  // round(1000 / control_fps)
+  int accel_ms_ = 5;                    // round(profile_accel_ratio * period_ms)
   double frame_period_ = 1.0 / DEFAULT_CONTROL_FPS;
   int warmup_frames_ = 120;
   int log_every_ticks_ = 10;
@@ -358,6 +397,35 @@ private:
         RCLCPP_ERROR(this->get_logger(), "Failed to set goal velocity for motor #%d", dxl_id);
       } else {
         RCLCPP_INFO(this->get_logger(), "Dynamixel#%d velocity has been set %d", dxl_id, value);
+      }
+    }
+  }
+
+  // Drive Mode bit 2(time-based profile) 설정 — 토크 OFF 상태에서만(EEPROM). 다른 bit(bit0 reverse 등)는 읽은 값 유지.
+  // Profile Acceleration(RAM): time 이면 accel_ms_(ms), velocity 면 0(무한 가속 = 기존 동작).
+  void setProfileMode(const std::set<uint8_t> &motors, bool time_based) {
+    for (auto dxl_id : motors) {
+      uint8_t mode = 0;
+      dxl_comm_result = packetHandler->read1ByteTxRx(portHandler, dxl_id, ADDR_MX28_DRIVE_MODE, &mode, &dxl_error);
+      if (dxl_comm_result != COMM_SUCCESS || dxl_error != 0) {
+        RCLCPP_ERROR(this->get_logger(), "Motor #%d Drive Mode 읽기 실패 — 프로파일 설정 건너뜀", dxl_id);
+        continue;
+      }
+      const uint8_t want = time_based ? (mode | DRIVE_MODE_TIME_BIT) : (mode & ~DRIVE_MODE_TIME_BIT);
+      if (want != mode) {
+        dxl_comm_result = packetHandler->write1ByteTxRx(portHandler, dxl_id, ADDR_MX28_DRIVE_MODE, want, &dxl_error);
+        if (dxl_comm_result != COMM_SUCCESS || dxl_error != 0) {
+          RCLCPP_ERROR(this->get_logger(), "Motor #%d Drive Mode %d → %d 쓰기 실패", dxl_id, mode, want);
+          continue;
+        }
+      }
+      const int acc = time_based ? accel_ms_ : 0;
+      dxl_comm_result = packetHandler->write4ByteTxRx(portHandler, dxl_id, ADDR_MX28_PROFILE_ACC, acc, &dxl_error);
+      if (dxl_comm_result != COMM_SUCCESS || dxl_error != 0) {
+        RCLCPP_ERROR(this->get_logger(), "Motor #%d Profile Acceleration 쓰기 실패", dxl_id);
+      } else {
+        RCLCPP_INFO(this->get_logger(), "Motor #%d Drive Mode %d → %d (%s profile), Profile Acceleration %d%s",
+                    dxl_id, mode, want, time_based ? "time" : "velocity", acc, time_based ? " ms" : "");
       }
     }
   }
@@ -466,12 +534,15 @@ private:
         int idx = dxl_id - DXL_MIN_ID;
         double cur_deg = Rad2Deg(Pos2Rad(dxl_id, dxl_present_position[idx]));
         double tgt_deg = Rad2Deg(Pos2Rad(dxl_id, param_goal_position[idx]));
-        double vel_deg_s = param_goal_velocity_[idx] * 0.229 * 6.0;
         log_stream << std::fixed << std::setprecision(1)
                    << "M#" << dxl_id
                    << " Cur:" << cur_deg
-                   << " Tgt:" << tgt_deg
-                   << " Vel:" << std::setprecision(0) << vel_deg_s << "°/s";
+                   << " Tgt:" << tgt_deg;
+        if (time_profile_) {
+            log_stream << " T:" << param_goal_velocity_[idx] << "ms";
+        } else {
+            log_stream << " Vel:" << std::setprecision(0) << param_goal_velocity_[idx] * DEG_S_PER_VEL_UNIT << "°/s";
+        }
         if (dxl_id == 4 || dxl_id == 8 || dxl_id == 13) {
             log_stream << "\n";
         } else {
@@ -532,10 +603,17 @@ private:
         int dxl_id = i + DXL_MIN_ID;
         int delta_pos = std::abs(param_goal_position[i] - static_cast<int>(dxl_present_position[i]));
         double delta_deg = std::abs(Rad2Deg(Pos2Rad(dxl_id, delta_pos)));
-        // delta_deg / FRAME_PERIOD → °/s → RPM (/6) → DXL unit (/0.229), effective_max_vel로 상한
-        int vel_unit = std::min(effective_max_vel,
-                        std::max(1, static_cast<int>(delta_deg / FRAME_PERIOD / 6.0 / 0.229)));
-        param_goal_velocity_[i] = vel_unit;
+        if (time_profile_) {
+            // 프로파일 시간 = 한 주기. 안전 상한: 현재 속도 상한(워밍업 포함)보다 빨라야 하는 큰 점프만 시간을 늘린다.
+            const double v_cap = effective_max_vel * DEG_S_PER_VEL_UNIT;            // °/s
+            const int t_cap = static_cast<int>(std::ceil(delta_deg / v_cap * 1000.0));
+            param_goal_velocity_[i] = std::min(MAX_PROFILE_TIME_MS, std::max(period_ms_, t_cap));
+        } else {
+            // delta_deg / FRAME_PERIOD → °/s → RPM (/6) → DXL unit (/0.229), effective_max_vel로 상한
+            int vel_unit = std::min(effective_max_vel,
+                            std::max(1, static_cast<int>(delta_deg / FRAME_PERIOD / 6.0 / 0.229)));
+            param_goal_velocity_[i] = vel_unit;
+        }
     }
 
     // ④ GroupSyncWrite: Profile Velocity(4B) + Goal Position(4B) 한 패킷 전송 (~1.5ms)
