@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
 Poppy Slider GUI
-슬라이더로 각 모터의 목표 각도를 설정 → /joint_states 퍼블리시
-GUI 측에서 MAX_DEG_PER_SEC으로 보간하여 급격한 움직임을 방지한 뒤,
-poppy_read_write_node가 프레임 단위 속도를 추가로 계산해 모터에 전달.
+슬라이더로 15 개 모터(팔 8·머리 2·몸통 bust 2·허리 abs 3)의 목표 각도를 설정 → /joint_states 퍼블리시.
+GUI 보간은 없다 — 슬라이더 값을 그대로 보내고, poppy_read_write_node 가 프레임당 변화량으로 속도를 계산한다
+(천천히 움직일 것). 시작하면 전 모터 0° 를 보낸다.
 
 실행: python3 scripts/poppy_slider_gui.py
      (ROS2 환경이 source된 터미널에서 실행)
@@ -25,29 +25,30 @@ CONTROL_FPS = 30   # poppy_read_write_node의 CONTROL_FPS와 동일하게 유지
 # 속도 제한은 read_write_node의 MAX_PROFILE_VEL 에서 처리 (GUI 보간 없음)
 # ────────────────────────────────────────────────────────────────────────────
 
-NUM_MOTORS = 13
+NUM_MOTORS = 15
 
-# 슬라이더로 제어하는 13개 모터
+# 슬라이더로 제어하는 15개 모터 (모터 ID 1~15 순서 = read_write_node 의 msg->position[0:15])
 MOTOR_NAMES = [
     "r_shoulder_y", "r_shoulder_x", "r_arm_z",   "r_elbow_y",
     "l_shoulder_y", "l_shoulder_x", "l_arm_z",   "l_elbow_y",
     "head_z",       "head_y",
-    "bust_x",       "bust_y",       "abs_z",
+    "bust_x",       "bust_y",
+    "abs_z",        "abs_x",        "abs_y",
 ]
 
 # URDF의 모든 비고정 조인트
-# ※ 앞 13개(인덱스 0~12)는 반드시 MOTOR_NAMES 순서와 동일해야 함
+# ※ 앞 15개(인덱스 0~14)는 반드시 MOTOR_NAMES 순서와 동일해야 함
 #   → read_write_node가 msg->position[i] 인덱스로 모터 값을 읽기 때문
 ALL_JOINTS = [
-    # 인덱스 0~12: read_write_node가 인덱스로 읽는 제어 조인트 (MOTOR_NAMES 순서 유지)
+    # 인덱스 0~14: read_write_node가 인덱스로 읽는 제어 조인트 (MOTOR_NAMES 순서 유지)
     "r_shoulder_y", "r_shoulder_x", "r_arm_z",   "r_elbow_y",
     "l_shoulder_y", "l_shoulder_x", "l_arm_z",   "l_elbow_y",
     "head_z",       "head_y",
-    "bust_x",       "bust_y",       "abs_z",
-    # 인덱스 13~24: 비제어 조인트 — 0.0 고정 (시각화용)
+    "bust_x",       "bust_y",
+    "abs_z",        "abs_x",        "abs_y",
+    # 인덱스 15~24: 다리(비제어) — 0.0 고정 (시각화용)
     "r_hip_x",  "r_hip_z",  "r_hip_y",  "r_knee_y", "r_ankle_y",
     "l_hip_x",  "l_hip_z",  "l_hip_y",  "l_knee_y", "l_ankle_y",
-    "abs_y",    "abs_x",
 ]
 
 # motor_id(1-based) → (min_deg, max_deg)  — poppy_read_write_node의 CONST_DEG와 동일
@@ -64,7 +65,9 @@ CONST_DEG = {
     10: ( -45,   6),
     11: ( -40,  40),
     12: ( -67,  27),
-    13: ( -90,  90),
+    13: ( -45,  45),   # abs_z — 노드 클리핑 범위와 같게(구 ±90 은 노드가 ±45 로 잘랐음)
+    14: ( -40,  40),   # abs_x (허리 좌우)
+    15: ( -40,  40),   # abs_y (허리 앞뒤)
 }
 
 # GUI 그룹 레이아웃 (표시용)
@@ -72,7 +75,8 @@ GROUPS = [
     ("Right Arm", [1, 2, 3, 4]),
     ("Left Arm",  [5, 6, 7, 8]),
     ("Head",      [9, 10]),
-    ("Torso",     [11, 12, 13]),
+    ("Torso",     [11, 12]),
+    ("Waist",     [13, 14, 15]),
 ]
 
 
