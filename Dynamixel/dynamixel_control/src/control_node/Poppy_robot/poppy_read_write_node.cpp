@@ -11,6 +11,9 @@
 //       측정값은 속도 계산에 쓰지 않는다.
 //   read_hz (double, 기본 10.0, > 0) — timerCallback 주기: 현재 위치 GroupSyncRead + /joint_states_actual 발행.
 //       터미널 로그(③)는 read_hz 와 무관하게 약 1 초에 한 번.
+//   torque_enable (bool, 기본 true) — false 면 시각화 테스트 모드: EEPROM 기록·토크 ON·목표 쓰기를 모두 하지 않고
+//       현재 위치 읽기 + /joint_states_actual 발행만 한다(손으로 움직이며 RViz 확인, 클립 시뮬레이션).
+//       예: ros2 run dynamixel_control poppy_read_write_node --ros-args -p torque_enable:=false -p read_hz:=30.0
 #include <set>
 #include <chrono>
 #include <algorithm>
@@ -71,9 +74,10 @@ const std::set<uint8_t> MX28 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1
 #define WARMUP_START_VEL                50                  // 워밍업 시작 속도 (≈68°/s)
 // ─────────────────────────────────────────────────────────────────────────
 // ── 동작 모드 ──────────────────────────────────────────────────────────────
+// ROS 파라미터 torque_enable 의 기본값.
 // true : 정상 제어 (토크 ON, 모터에 목표각도 전송)
 // false: 시각화 테스트 (토크 OFF, 현재 각도 읽기만 — 손으로 직접 움직이며 확인)
-constexpr bool TORQUE_WRITE_ENABLED = true;
+constexpr bool DEFAULT_TORQUE_ENABLE = true;
 // ─────────────────────────────────────────────────────────────────────────
 
 #define CSV_NAME                        "250209_torque_test_2.csv"
@@ -109,14 +113,16 @@ public:
         this->declare_parameter<double>("control_fps", DEFAULT_CONTROL_FPS), DEFAULT_CONTROL_FPS);
     read_hz_ = sanitizeRate("read_hz",
         this->declare_parameter<double>("read_hz", DEFAULT_READ_HZ), DEFAULT_READ_HZ);
+    torque_enable_ = this->declare_parameter<bool>("torque_enable", DEFAULT_TORQUE_ENABLE);
     frame_period_ = 1.0 / control_fps_;
     warmup_frames_ = std::max(1, static_cast<int>(std::lround(2.0 * control_fps_)));
     log_every_ticks_ = std::max(1, static_cast<int>(std::lround(read_hz_ * LOG_PERIOD_SEC)));
     RCLCPP_INFO(this->get_logger(),
         "[파라미터] control_fps=%.3f (FRAME_PERIOD=%.6f s, WARMUP_FRAMES=%d), "
-        "read_hz=%.3f (timer %.3f ms, 터미널 로그 %d tick 마다 ≈ %.2f s)",
+        "read_hz=%.3f (timer %.3f ms, 터미널 로그 %d tick 마다 ≈ %.2f s), torque_enable=%s",
         control_fps_, frame_period_, warmup_frames_,
-        read_hz_, 1000.0 / read_hz_, log_every_ticks_, log_every_ticks_ / read_hz_);
+        read_hz_, 1000.0 / read_hz_, log_every_ticks_, log_every_ticks_ / read_hz_,
+        torque_enable_ ? "true" : "false");
 
     portHandler = dynamixel::PortHandler::getPortHandler(DEVICENAME);
     packetHandler = dynamixel::PacketHandler::getPacketHandler(PROTOCOL_VERSION);
@@ -170,7 +176,7 @@ public:
     // }
 
     disableTorque();
-    if (TORQUE_WRITE_ENABLED) {
+    if (torque_enable_) {
         setVelocityLimit(WHOLE_MOTOR, VELOCITY_LIMIT);  // EEPROM 기록 — 토크 비활성 상태에서만 가능
         setPositionLimit(WHOLE_MOTOR);
         enableTorque();
@@ -270,6 +276,7 @@ private:
   // ROS 파라미터에서 유도되는 값
   double control_fps_ = DEFAULT_CONTROL_FPS;
   double read_hz_ = DEFAULT_READ_HZ;
+  bool torque_enable_ = DEFAULT_TORQUE_ENABLE;
   double frame_period_ = 1.0 / DEFAULT_CONTROL_FPS;
   int warmup_frames_ = 120;
   int log_every_ticks_ = 10;
@@ -532,7 +539,7 @@ private:
     }
 
     // ④ GroupSyncWrite: Profile Velocity(4B) + Goal Position(4B) 한 패킷 전송 (~1.5ms)
-    if (TORQUE_WRITE_ENABLED) {
+    if (torque_enable_) {
       for (int dxl_id = DXL_MIN_ID; dxl_id <= DXL_MAX_ID; dxl_id++) {
         int idx = dxl_id - DXL_MIN_ID;
         uint8_t data[8];

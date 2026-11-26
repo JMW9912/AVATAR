@@ -38,6 +38,8 @@ ros2 run dynamixel_control read_write_node
 ros2 run dynamixel_control csv_joint_state_publisher
 # Poppy (MX-28 × 15): control_fps = 송신자 /joint_states fps (기본 60), read_hz = 현재 위치 읽기 주기 (기본 10)
 ros2 run dynamixel_control poppy_read_write_node --ros-args -p control_fps:=30.0 -p read_hz:=60.0
+# 시각화 테스트(토크 OFF, 읽기만 — 손으로 움직이며 RViz 확인): -p torque_enable:=false
+ros2 run dynamixel_control poppy_read_write_node --ros-args -p torque_enable:=false -p read_hz:=30.0
 ros2 launch moveit_gripper demo.launch.py
 ros2 launch dynamixel_control robot_visualization.launch.py
 ```
